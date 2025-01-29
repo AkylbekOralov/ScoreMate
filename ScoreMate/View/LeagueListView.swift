@@ -14,7 +14,6 @@ struct LeagueListView: View {
     var body: some View {
         NavigationView {
             List {
-                
                 ForEach(viewModel.leagues) { league in
                     NavigationLink {
                         Text(league.name)

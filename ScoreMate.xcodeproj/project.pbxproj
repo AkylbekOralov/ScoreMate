@@ -33,6 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				63331EA92D422A4A007D88F5 /* ScoreMate */,
+				634248B22D4AA07B00EE3FF8 /* Frameworks */,
 				63331EA82D422A4A007D88F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +44,13 @@
 				63331EA72D422A4A007D88F5 /* ScoreMate.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		634248B22D4AA07B00EE3FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
