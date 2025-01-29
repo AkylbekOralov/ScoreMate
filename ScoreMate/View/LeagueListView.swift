@@ -28,29 +28,6 @@ struct LeagueListView: View {
     }
 }
 
-
-struct LeagueView: View {
-    var country: String = ""
-    var league: String = ""
-    
-    var body: some View {
-        HStack(spacing: 20) {
-            Image(country)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 40, height: 40)
-                
-            VStack(alignment: .leading) {
-                Text(country)
-                    .font(.caption)
-                Text(league)
-                    .font(.headline)
-            }
-        }
-        
-    }
-}
-
 struct LeagueListView_Preview: PreviewProvider {
     static var previews: some View {
         LeagueListView(viewModel: LeagueListViewModel())
