@@ -18,7 +18,7 @@ struct LeagueListView: View {
                     NavigationLink {
                         Text(league.name)
                     } label: {
-                        LeagueView(leagueModel: league)
+                        LeagueView(leagueViewModel: LeagueViewModel(leagueModel: league))
                     }
                 }
                 
