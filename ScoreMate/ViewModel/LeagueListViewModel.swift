@@ -11,7 +11,9 @@ class LeagueListViewModel: ObservableObject {
     @Published var leagues: [LeagueModel] = []
     
     init() {
-        fetchLeagues()
+        //fetchLeagues()
+        
+        self.leagues = getMockLeagues()
     }
     
     func fetchLeagues() {
@@ -48,5 +50,14 @@ class LeagueListViewModel: ObservableObject {
                 print("Error parsing JSON: \(error)")
             }
         }.resume()
+    }
+    
+    
+    func getMockLeagues() -> [LeagueModel] {
+        return [
+            LeagueModel(id: 974, name: "A-League", country: "Australia"),
+            LeagueModel(id: 1005, name: "Tipico Bundesliga", country: "Austria"),
+            LeagueModel(id: 1609, name: "Superliga", country: "Denmark")
+        ]
     }
 }

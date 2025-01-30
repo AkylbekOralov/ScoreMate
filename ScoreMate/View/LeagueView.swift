@@ -28,3 +28,9 @@ struct LeagueView: View {
         
     }
 }
+
+struct LeagueView_Preview: PreviewProvider {
+    static var previews: some View {
+        LeagueView(country: "Denmark", league: "Superliga")
+    }
+}
