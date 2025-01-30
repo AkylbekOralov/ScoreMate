@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct LeagueView: View {
-    var country: String = ""
-    var league: String = ""
+    
+    var leagueModel: LeagueModel
     
     var body: some View {
         HStack(spacing: 20) {
-            Image(country)
+            Image(leagueModel.country)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 40, height: 40)
                 
             VStack(alignment: .leading) {
-                Text(country)
+                Text(leagueModel.country)
                     .font(.caption)
-                Text(league)
+                Text(leagueModel.name)
                     .font(.headline)
             }
         }
@@ -30,7 +30,9 @@ struct LeagueView: View {
 }
 
 struct LeagueView_Preview: PreviewProvider {
+    static var sample = LeagueModel(id: 974, name: "A-League", country: "Australia", country_id: 14)
+    
     static var previews: some View {
-        LeagueView(country: "Denmark", league: "Superliga")
+        LeagueView(leagueModel: sample)
     }
 }
