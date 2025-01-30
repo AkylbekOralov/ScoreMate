@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6373A20F2D4BA49600D8F37B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6373A20E2D4BA49600D8F37B /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		63331EA72D422A4A007D88F5 /* ScoreMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6373A20F2D4BA49600D8F37B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = ScoreMate;
 			packageProductDependencies = (
+				6373A20E2D4BA49600D8F37B /* Alamofire */,
 			);
 			productName = ScoreMate;
 			productReference = 63331EA72D422A4A007D88F5 /* ScoreMate.app */;
@@ -95,6 +101,7 @@
 			mainGroup = 63331E9E2D422A4A007D88F5;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 63331EA82D422A4A007D88F5 /* Products */;
@@ -326,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6373A20E2D4BA49600D8F37B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63331E9F2D422A4A007D88F5 /* Project object */;
 }
