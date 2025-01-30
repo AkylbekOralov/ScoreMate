@@ -13,11 +13,20 @@ struct LeagueView: View {
     
     var body: some View {
         HStack(spacing: 20) {
-            Image(leagueViewModel.leagueModel.country)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 40, height: 40)
-                
+            
+            AsyncImage(url: URL(string: leagueViewModel.country_img ?? "")) { phase in
+                if let image = phase.image {
+                    image.resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40) // Adjust as needed
+                } else if phase.error != nil {
+                    Text("Failed to load image")
+                        .foregroundColor(.red)
+                } else {
+                    ProgressView() // Show a loading indicator
+                }
+            }
+            
             VStack(alignment: .leading) {
                 Text(leagueViewModel.leagueModel.country)
                     .font(.caption)
