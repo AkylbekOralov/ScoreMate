@@ -9,11 +9,11 @@ import Foundation
 import Alamofire
 
 class LeagueListViewModel: ObservableObject {
+    
     @Published var leagues: [LeagueModel] = []
     
     init() {
         fetchLeagues()
-        
         //self.leagues = getMockLeagues()
     }
     
@@ -23,14 +23,19 @@ class LeagueListViewModel: ObservableObject {
             AF.request(url, method: .get)
                 .validate()
                 .responseDecodable(of: APIResponse.self) { response in
+                    
                     switch response.result {
+                        
                     case .success(let data):
                         DispatchQueue.main.async {
                             self.leagues = data.data.map { LeagueModel(id: Int($0.id) ?? 0, name: $0.name, country: $0.country_name, country_id: Int($0.country_id) ?? 0) }
                         }
+                        
                     case .failure(let error):
                         print("Error fetching leagues: \(error.localizedDescription)")
+                        
                     }
+                    
                 }
         }
     

@@ -14,16 +14,15 @@ struct LeagueView: View {
     var body: some View {
         HStack(spacing: 20) {
             
-            AsyncImage(url: URL(string: leagueViewModel.country_img ?? "")) { phase in
+            AsyncImage(url: URL(string: leagueViewModel.countryImage ?? "")) { phase in
                 if let image = phase.image {
                     image.resizable()
                         .scaledToFit()
-                        .frame(width: 40, height: 40) // Adjust as needed
+                        .frame(width: 40, height: 40)
                 } else if phase.error != nil {
-                    Text("Failed to load image")
-                        .foregroundColor(.red)
+                    Image("Unknown Country")
                 } else {
-                    ProgressView() // Show a loading indicator
+                    ProgressView()
                 }
             }
             
@@ -39,7 +38,7 @@ struct LeagueView: View {
 }
 
 struct LeagueView_Preview: PreviewProvider {
-    static var sample = LeagueModel(id: 974, name: "A-League", country: "Australia", country_id: 14)
+    static var sample = LeagueModel(id: 974, name: "A-League", country: "Australia", country_id: 99999999)
     
     static var leagueViewModel = LeagueViewModel(leagueModel: sample)
     

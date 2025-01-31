@@ -10,7 +10,7 @@ import Alamofire
 
 class LeagueViewModel: ObservableObject {
     var leagueModel: LeagueModel
-    @Published var country_img: String?
+    @Published var countryImage: String?
     
     init(leagueModel: LeagueModel) {
         self.leagueModel = leagueModel
@@ -18,7 +18,7 @@ class LeagueViewModel: ObservableObject {
     }
     
     func fetchImage() {
-        let url = "https://api.soccersapi.com/v2.2/countries/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=info&id=\(leagueModel.country_id)"
+        let url = "https://api.soccersapi.com/v2.2/countries/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=info&id=\(leagueModel.countryID)"
         
         AF.request(url, method: .get)
             .validate()
@@ -26,7 +26,7 @@ class LeagueViewModel: ObservableObject {
                 switch response.result {
                 case .success(let data):
                     DispatchQueue.main.async {
-                        self.country_img = data.data.img
+                        self.countryImage = data.data.img
                     }
                 case .failure(let error):
                     print("Error fetching country image: \(error.localizedDescription)")
