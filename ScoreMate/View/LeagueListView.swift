@@ -16,7 +16,7 @@ struct LeagueListView: View {
             List {
                 ForEach(viewModel.leagues) { league in
                     NavigationLink {
-                        Text(league.name)
+                        StandingTableView(standingTable: StandingTableViewModel())
                     } label: {
                         LeagueView(leagueViewModel: LeagueViewModel(leagueModel: league))
                     }

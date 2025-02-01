@@ -8,9 +8,9 @@
 import Foundation
 
 struct LeagueModel: Identifiable {
-    var id: Int
-    var name: String
-    var countryName: String
-    var countryId: Int
+    let id: Int
+    let name: String
+    let countryName: String
+    let countryId: Int
 }
 
