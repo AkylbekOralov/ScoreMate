@@ -17,45 +17,60 @@ class LeagueListViewModel: ObservableObject {
         //self.leagues = getMockLeagues()
     }
     
+    
     func fetchLeagues() {
-            let url = "https://api.soccersapi.com/v2.2/leagues/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=list"
-            
-            AF.request(url, method: .get)
-                .validate()
-                .responseDecodable(of: APIResponse.self) { response in
+        let url = "https://api.soccersapi.com/v2.2/leagues/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=list"
+
+        AF.request(url, method: .get)
+            .validate()
+            .responseDecodable(of: APIResponse.self) { response in
+                
+                switch response.result {
                     
-                    switch response.result {
+                case .success(let data):
+                    DispatchQueue.main.async {
                         
-                    case .success(let data):
-                        DispatchQueue.main.async {
-                            self.leagues = data.data.map { LeagueModel(id: Int($0.id) ?? 0, name: $0.name, country: $0.country_name, country_id: Int($0.country_id) ?? 0) }
-                        }
-                        
-                    case .failure(let error):
-                        print("Error fetching leagues: \(error.localizedDescription)")
+                        self.leagues = data.data?.compactMap { league in
+                            
+                            guard let id = Int(league.id), let countryId = Int(league.countryId) else { return nil }
+                            return LeagueModel(id: id, name: league.name, countryName: league.countryName, countryId: countryId)
+                            
+                        } ?? []
                         
                     }
                     
+                case .failure(let error):
+                    print("Error fetching leagues: \(error.localizedDescription)")
+                    
                 }
-        }
+                
+            }
+    }
     
     
     func getMockLeagues() -> [LeagueModel] {
         return [
-            LeagueModel(id: 974, name: "A-League", country: "Australia", country_id: 14),
-            LeagueModel(id: 1005, name: "Tipico Bundesliga", country: "Austria", country_id: 15),
-            LeagueModel(id: 1609, name: "Superliga", country: "Denmark", country_id: 37)
+            LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14),
+            LeagueModel(id: 1005, name: "Tipico Bundesliga", countryName: "Austria", countryId: 15),
+            LeagueModel(id: 1609, name: "Superliga", countryName: "Denmark", countryId: 37)
         ]
     }
 }
 
 struct APIResponse: Decodable {
-    let data: [LeagueData]
+    let data: [LeagueData]?
 }
 
 struct LeagueData: Decodable {
     let id: String
     let name: String
-    let country_name: String
-    let country_id: String
+    let countryName: String
+    let countryId: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case countryName = "country_name"
+        case countryId = "country_id"
+    }
 }

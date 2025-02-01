@@ -18,25 +18,37 @@ class LeagueViewModel: ObservableObject {
     }
     
     func fetchImage() {
-        let url = "https://api.soccersapi.com/v2.2/countries/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=info&id=\(leagueModel.countryID)"
+        let url = "https://api.soccersapi.com/v2.2/countries/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=info&id=\(leagueModel.countryId)"
         
         AF.request(url, method: .get)
             .validate()
             .responseDecodable(of: CountryResponse.self) { response in
+                
                 switch response.result {
+                    
                 case .success(let data):
                     DispatchQueue.main.async {
-                        self.countryImage = data.data.img
+                        if let imageUrl = data.data?.img {
+                            self.countryImage = imageUrl
+                        } else {
+                            self.countryImage = "UnknownCountry"
+                        }
                     }
+                    
                 case .failure(let error):
                     print("Error fetching country image: \(error.localizedDescription)")
+                    DispatchQueue.main.async {
+                        self.countryImage = "UnknownCountry"
+                    }
                 }
+                
             }
     }
+    
 }
 
 struct CountryResponse: Decodable {
-    let data: CountryData
+    let data: CountryData?
 }
 
 struct CountryData: Decodable {
