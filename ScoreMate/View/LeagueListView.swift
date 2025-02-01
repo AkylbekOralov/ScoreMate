@@ -12,13 +12,13 @@ struct LeagueListView: View {
     @StateObject var viewModel: LeagueListViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.leagues) { league in
                     NavigationLink {
                         Text(league.name)
                     } label: {
-                        LeagueView(country: league.country, league: league.name)
+                        LeagueView(leagueViewModel: LeagueViewModel(leagueModel: league))
                     }
                 }
                 

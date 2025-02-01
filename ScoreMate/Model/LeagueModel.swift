@@ -7,17 +7,10 @@
 
 import Foundation
 
-
-
 struct LeagueModel: Identifiable {
     var id: Int
     var name: String
-    var country: String
-    
-    init(id: Int, name: String, country: String) {
-        self.id = id
-        self.name = name
-        self.country = country
-    }
+    var countryName: String
+    var countryId: Int
 }
 

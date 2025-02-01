@@ -6,58 +6,71 @@
 //
 
 import Foundation
+import Alamofire
 
 class LeagueListViewModel: ObservableObject {
+    
     @Published var leagues: [LeagueModel] = []
     
     init() {
-        //fetchLeagues()
-        
-        self.leagues = getMockLeagues()
+        fetchLeagues()
+        //self.leagues = getMockLeagues()
     }
     
+    
     func fetchLeagues() {
-        let url = URL(string: "https://api.soccersapi.com/v2.2/leagues/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=list")!
-        
-        // Make GET request using URLSession
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error fetching leagues: \(error)")
-                return
-            }
-            
-            guard let data = data else {
-                print("No data received")
-                return
-            }
-            
-            do {
-                // Parse the JSON response
-                if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let data = jsonResponse["data"] as? [[String: Any]] {
+        let url = "https://api.soccersapi.com/v2.2/leagues/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=list"
+
+        AF.request(url, method: .get)
+            .validate()
+            .responseDecodable(of: APIResponse.self) { response in
+                
+                switch response.result {
+                    
+                case .success(let data):
                     DispatchQueue.main.async {
-                        self.leagues = data.compactMap { leagueData in
-                            guard let id = leagueData["id"] as? String,
-                                  let name = leagueData["name"] as? String,
-                                  let countryName = leagueData["country_name"] as? String else {
-                                return nil
-                            }
-                            return LeagueModel(id: Int(id) ?? 0, name: name, country: countryName)
-                        }
+                        
+                        self.leagues = data.data?.compactMap { league in
+                            
+                            guard let id = Int(league.id), let countryId = Int(league.countryId) else { return nil }
+                            return LeagueModel(id: id, name: league.name, countryName: league.countryName, countryId: countryId)
+                            
+                        } ?? []
+                        
                     }
+                    
+                case .failure(let error):
+                    print("Error fetching leagues: \(error.localizedDescription)")
+                    
                 }
-            } catch {
-                print("Error parsing JSON: \(error)")
+                
             }
-        }.resume()
     }
     
     
     func getMockLeagues() -> [LeagueModel] {
         return [
-            LeagueModel(id: 974, name: "A-League", country: "Australia"),
-            LeagueModel(id: 1005, name: "Tipico Bundesliga", country: "Austria"),
-            LeagueModel(id: 1609, name: "Superliga", country: "Denmark")
+            LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14),
+            LeagueModel(id: 1005, name: "Tipico Bundesliga", countryName: "Austria", countryId: 15),
+            LeagueModel(id: 1609, name: "Superliga", countryName: "Denmark", countryId: 37)
         ]
+    }
+}
+
+struct APIResponse: Decodable {
+    let data: [LeagueData]?
+}
+
+struct LeagueData: Decodable {
+    let id: String
+    let name: String
+    let countryName: String
+    let countryId: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case countryName = "country_name"
+        case countryId = "country_id"
     }
 }

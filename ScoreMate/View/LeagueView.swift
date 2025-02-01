@@ -8,29 +8,52 @@
 import SwiftUI
 
 struct LeagueView: View {
-    var country: String = ""
-    var league: String = ""
+    
+    @StateObject var leagueViewModel: LeagueViewModel
     
     var body: some View {
         HStack(spacing: 20) {
-            Image(country)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 40, height: 40)
-                
+            
+            AsyncImage(url: URL(string: leagueViewModel.countryImage ?? "")) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                        .frame(width: 40, height: 40)
+                    
+                case .success(let image):
+                    image.resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                case .failure:
+                    Image("UnknownCountry")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                @unknown default:
+                    EmptyView()
+                }
+            }
+        
             VStack(alignment: .leading) {
-                Text(country)
+                Text(leagueViewModel.leagueModel.countryName)
                     .font(.caption)
-                Text(league)
+                Text(leagueViewModel.leagueModel.name)
                     .font(.headline)
             }
         }
-        
     }
 }
 
 struct LeagueView_Preview: PreviewProvider {
+    static var sample = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14)
+    
+    static var leagueViewModel = LeagueViewModel(leagueModel: sample)
+    
     static var previews: some View {
-        LeagueView(country: "Denmark", league: "Superliga")
+        LeagueView(leagueViewModel: leagueViewModel)
     }
 }
