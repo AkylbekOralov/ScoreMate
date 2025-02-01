@@ -20,8 +20,16 @@ struct StandingTableView: View {
                     Spacer()
                 }
                 
-                List(standingTable.standings) { team in
+                List(Array(standingTable.standings.enumerated()), id: \.element.id) { index, team in
                     HStack {
+                        Text("\(index + 1).")
+                            .frame(width: 30, alignment: .center)
+                            .padding(.vertical, 3)
+                            .background(
+                                index+1 < 4 ? Color.accentColor : Color.clear
+                            )
+                            .cornerRadius(4)
+
                         Text(team.name)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
@@ -35,7 +43,9 @@ struct StandingTableView: View {
                             .frame(width: 30, alignment: .trailing)
                     }
                     .padding(.vertical, 4)
+                    
                 }
+                .listStyle(PlainListStyle())
 
                 
                 
