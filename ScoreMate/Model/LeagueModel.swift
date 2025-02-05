@@ -12,5 +12,7 @@ struct LeagueModel: Identifiable {
     let name: String
     let countryName: String
     let countryId: Int
+    let countryCode: String
+    let currentSeasonId: Int
 }
 

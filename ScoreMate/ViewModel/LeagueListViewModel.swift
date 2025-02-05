@@ -32,8 +32,13 @@ class LeagueListViewModel: ObservableObject {
                         
                         self.leagues = data.data?.compactMap { league in
                             
-                            guard let id = Int(league.id), let countryId = Int(league.countryId) else { return nil }
-                            return LeagueModel(id: id, name: league.name, countryName: league.countryName, countryId: countryId)
+                            guard
+                                let id = Int(league.id),
+                                let countryId = Int(league.countryId),
+                                let currentSeasonId = Int(league.currentSeasonId)
+                            else { return nil }
+                            
+                            return LeagueModel(id: id, name: league.name, countryName: league.countryName, countryId: countryId, countryCode: league.countryCode, currentSeasonId: currentSeasonId)
                             
                         } ?? []
                         
@@ -50,9 +55,9 @@ class LeagueListViewModel: ObservableObject {
     
     func getMockLeagues() -> [LeagueModel] {
         return [
-            LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14),
-            LeagueModel(id: 1005, name: "Tipico Bundesliga", countryName: "Austria", countryId: 15),
-            LeagueModel(id: 1609, name: "Superliga", countryName: "Denmark", countryId: 37)
+            LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593),
+            LeagueModel(id: 1005, name: "Tipico Bundesliga", countryName: "Austria", countryId: 15, countryCode: "at", currentSeasonId: 14418),
+            LeagueModel(id: 1609, name: "Superliga", countryName: "Denmark", countryId: 37, countryCode: "dk", currentSeasonId: 14319)
         ]
     }
 }
@@ -66,11 +71,15 @@ struct LeagueData: Decodable {
     let name: String
     let countryName: String
     let countryId: String
+    let countryCode: String
+    let currentSeasonId: String
 
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case countryName = "country_name"
         case countryId = "country_id"
+        case countryCode = "cc"
+        case currentSeasonId = "current_season_id"
     }
 }

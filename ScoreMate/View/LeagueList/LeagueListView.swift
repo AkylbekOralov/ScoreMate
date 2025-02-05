@@ -18,7 +18,7 @@ struct LeagueListView: View {
                     NavigationLink {
                         StandingTableView(standingTable: StandingTableViewModel())
                     } label: {
-                        LeagueView(leagueViewModel: LeagueViewModel(leagueModel: league))
+                        LeagueView(leagueModel: league)
                     }
                 }
                 
