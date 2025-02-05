@@ -33,6 +33,7 @@ struct LeagueView: View {
                 Text(leagueModel.name)
                     .font(.headline)
             }
+            
         }
     }
 }

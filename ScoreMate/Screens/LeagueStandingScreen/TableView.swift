@@ -8,27 +8,20 @@
 import SwiftUI
 
 struct TableView: View {
-    let columns: [GridItem] = [
-        GridItem(.fixed(30), alignment: .center),  // #
-        GridItem(.flexible(), alignment: .leading), // Team
-        GridItem(.fixed(30), alignment: .center),  // M
-        GridItem(.fixed(50), alignment: .center),  // GS/GA
-        GridItem(.fixed(30), alignment: .trailing) // P
-    ]
     
     @Binding var standings: [TeamModel]
     
     var body: some View {
         VStack  {
-            LazyVGrid(columns: columns, spacing: 8) {
+            
+            HStack {
                 Text("#").bold()
                 Text("Team").bold()
                 Text("M").bold()
                 Text("GS/GA").bold()
                 Text("P").bold()
             }
-            .padding(.horizontal, 8)
-            .background(Color.gray.opacity(0.2))
+            
             
             ScrollView {
                 VStack {
@@ -62,7 +55,6 @@ struct TableView: View {
                     }
                 }
                 .listStyle(PlainListStyle())
-                .background(Color.red)
             }
             .padding(.horizontal, 8)
         }

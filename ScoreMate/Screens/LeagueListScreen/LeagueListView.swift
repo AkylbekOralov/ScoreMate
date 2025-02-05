@@ -12,8 +12,11 @@ struct LeagueListView: View {
     @StateObject var viewModel: LeagueListViewModel
     
     var body: some View {
+        
         NavigationStack {
+            
             List {
+                
                 ForEach(viewModel.leagues) { league in
                     NavigationLink {
                         StandingTableView(standingTable: StandingTableViewModel())
@@ -24,7 +27,9 @@ struct LeagueListView: View {
                 
             }
             .navigationTitle(Text("Leagues"))
+            
         }
+        
     }
 }
 
