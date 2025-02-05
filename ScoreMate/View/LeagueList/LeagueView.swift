@@ -13,6 +13,19 @@ struct LeagueView: View {
     
     var body: some View {
         HStack(spacing: 20) {
+        
+            AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/countries/30/\(leagueModel.countryCode).png")) { phase in
+                
+                if let image = phase.image {
+                    image
+                } else if phase.error != nil {
+                    Image("UnknownCountry")
+                } else {
+                    ProgressView()
+                }
+                
+            }
+            .frame(width: 30, height: 30)
             
             VStack(alignment: .leading) {
                 Text(leagueModel.countryName)
