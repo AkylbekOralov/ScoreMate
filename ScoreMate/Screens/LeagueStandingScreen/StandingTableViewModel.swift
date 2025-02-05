@@ -9,9 +9,11 @@ import Foundation
 
 class StandingTableViewModel: ObservableObject {
     
+    let leagueModel: LeagueModel
     @Published var standings: [TeamModel] = []
     
-    init() {
+    init(leagueModel: LeagueModel) {
+        self.leagueModel = leagueModel
         self.standings = getMockData()
     }
     

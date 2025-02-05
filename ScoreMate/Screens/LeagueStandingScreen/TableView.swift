@@ -12,15 +12,29 @@ struct TableView: View {
     @Binding var standings: [TeamModel]
     
     var body: some View {
+        
         VStack  {
             
             HStack {
-                Text("#").bold()
-                Text("Team").bold()
-                Text("M").bold()
-                Text("GS/GA").bold()
-                Text("P").bold()
+                Text("#")
+                    .font(.system(size: 20, weight: .regular, design: .default))
+                    .frame(width: UIScreen.main.bounds.width * 0.08, alignment: .leading)
+                Text("Team")
+                    .font(.system(size: 20, weight: .regular, design: .default))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text("M")
+                    .font(.system(size: 20, weight: .regular, design: .default))
+                    .frame(width: UIScreen.main.bounds.width * 0.06, alignment: .center)
+                Text("GS/GA")
+                    .font(.system(size: 18, weight: .regular, design: .default))
+                    .frame(width: UIScreen.main.bounds.width * 0.14, alignment: .center)
+                Text("P")
+                    .font(.system(size: 20, weight: .regular, design: .default))
+                    .frame(width: UIScreen.main.bounds.width * 0.06, alignment: .center)
+                
             }
+            .background(Color.gray.opacity(0.3))
+            .padding(.bottom, 5)
             
             
             ScrollView {
@@ -28,45 +42,43 @@ struct TableView: View {
                     ForEach(Array(standings.enumerated()), id: \.element.id) { index, team in
                         HStack {
                             Text("\(index + 1).")
-                                .frame(width: 30, alignment: .center)
-                                .padding(.vertical, 3)
-                                .background(
-                                    index+1 < 4 ? Color.accentColor : Color.clear
-                                )
-                                .cornerRadius(4)
-                            
+                                .font(.system(size: 20, weight: .regular, design: .default))
+                                .frame(width: UIScreen.main.bounds.width * 0.08, alignment: .leading)
+                                
                             Text(team.name)
+                                .font(.system(size: 20, weight: .regular, design: .default))
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .font(.system(size: 15, weight: .medium, design: .default)) 
-                            
                             
                             Text("\(team.gamesPlayed)")
-                                .frame(width: 30, alignment: .center)
-                                .minimumScaleFactor(0.5)
+                                .font(.system(size: 20, weight: .regular, design: .default))
+                                .frame(width: UIScreen.main.bounds.width * 0.06, alignment: .center)
                             
                             Text("\(team.goalsScored)/\(team.goalsAgainst)")
-                                .frame(width: 50, alignment: .center)
-                            
+                                .font(.system(size: 20, weight: .regular, design: .default))
+                                .frame(width: UIScreen.main.bounds.width * 0.14, alignment: .center)
+                                
                             Text("\(team.points)")
-                                .frame(width: 30, alignment: .trailing)
+                                .font(.system(size: 20, weight: .regular, design: .default))
+                                .frame(width: UIScreen.main.bounds.width * 0.06, alignment: .center)
                         }
                         .padding(.vertical, 4)
-                        
                     }
+                    
                 }
-                .listStyle(PlainListStyle())
             }
-            .padding(.horizontal, 8)
+        
         }
+        .padding()
+        
     }
 }
 
 struct TableView_Preview: PreviewProvider {
     
-    static let standingTable = StandingTableViewModel()
+    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
     
     static var previews: some View {
-        TableView(standings: .constant(StandingTableViewModel().standings))
+        TableView(standings: .constant(StandingTableViewModel(leagueModel: leagueModel).standings))
     }
     
 }

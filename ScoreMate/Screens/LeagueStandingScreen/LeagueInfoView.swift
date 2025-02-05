@@ -9,13 +9,26 @@ import SwiftUI
 
 struct LeagueInfoView: View {
     
+    let leagueModel: LeagueModel
+    
     var body: some View {
         VStack  {
             VStack (alignment: .leading) {
                 HStack {
-                    Image("UnknownCountry")
-                        .cornerRadius(3)
-                    Text("Australia")
+                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/countries/30/\(leagueModel.countryCode).png")) { phase in
+                        if let image = phase.image {
+                            image
+                        } else if phase.error != nil {
+                            Image("UnknownCountry")
+                        } else {
+                            ProgressView()
+                        }
+                        
+                    }
+                    .frame(width: 30, height: 30)
+                    
+                    Text(leagueModel.countryName)
+                        .padding(.leading, 10)
                 }
                 .padding(.leading, 10)
                 .padding(.bottom, 10)
@@ -27,7 +40,7 @@ struct LeagueInfoView: View {
                         .frame(width: 70, height: 70)
                     
                     VStack (alignment: .leading, spacing: 10) {
-                        Text("A-League")
+                        Text(leagueModel.name)
                             .font(.title)
                         Text("2024/2025")
                             .font(.body)
@@ -42,8 +55,10 @@ struct LeagueInfoView: View {
 
 struct LeagueInfoView_Preview: PreviewProvider {
     
+    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
+    
     static var previews: some View {
-        LeagueInfoView()
+        LeagueInfoView(leagueModel: leagueModel)
     }
     
 }

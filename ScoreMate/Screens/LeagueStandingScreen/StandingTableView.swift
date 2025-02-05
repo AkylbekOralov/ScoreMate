@@ -16,7 +16,7 @@ struct StandingTableView: View {
         ZStack {
             VStack {
                 HStack {
-                    LeagueInfoView()
+                    LeagueInfoView(leagueModel: standingTable.leagueModel)
                     Spacer()
                 }
                 
@@ -33,8 +33,10 @@ struct StandingTableView: View {
 
 struct StandingTableView_Preview: PreviewProvider {
     
+    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
+    
     static var previews: some View {
-        StandingTableView(standingTable: StandingTableViewModel())
+        StandingTableView(standingTable: StandingTableViewModel(leagueModel: leagueModel))
     }
     
 }
