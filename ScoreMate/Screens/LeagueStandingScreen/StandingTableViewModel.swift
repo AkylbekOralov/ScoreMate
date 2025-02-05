@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class StandingTableViewModel: ObservableObject {
     
@@ -14,7 +15,41 @@ class StandingTableViewModel: ObservableObject {
     
     init(leagueModel: LeagueModel) {
         self.leagueModel = leagueModel
-        self.standings = getMockData()
+        //        self.standings = getMockData()
+        fetchStandings()
+    }
+    
+    func fetchStandings() {
+        let url = "https://api.soccersapi.com/v2.2/leagues/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=standings&season_id=\(leagueModel.currentSeasonId)"
+        
+        AF.request(url, method: .get)
+            .validate()
+            .responseDecodable(of: StandingAPIResponse.self) { response in
+                
+                switch response.result {
+                    
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        
+                        self.standings = data.data?.standings?.map { team in
+                            TeamModel(
+                                id: team.team_id,
+                                name: team.team_name,
+                                gamesPlayed: team.overall.games_played,
+                                goalsScored: team.overall.goals_scored,
+                                goalsAgainst: team.overall.goals_against,
+                                points: team.overall.points
+                            )
+                        } ?? []
+                        
+                    }
+                    
+                case .failure(let error):
+                    print("Error fetching leagues: \(error.localizedDescription)")
+                    
+                }
+                
+            }
     }
     
     func getMockData() -> [TeamModel] {
@@ -35,4 +70,25 @@ class StandingTableViewModel: ObservableObject {
         ]
     }
     
+}
+
+struct StandingAPIResponse: Decodable {
+    let data: LeagueStandingsData?
+}
+
+struct LeagueStandingsData: Decodable {
+    let standings: [TeamModelData]?
+}
+
+struct TeamModelData: Decodable {
+    let team_id: Int
+    let team_name: String
+    let overall: OverallStats
+}
+
+struct OverallStats: Decodable {
+    let games_played: Int
+    let goals_scored: Int
+    let goals_against: Int
+    let points: Int
 }

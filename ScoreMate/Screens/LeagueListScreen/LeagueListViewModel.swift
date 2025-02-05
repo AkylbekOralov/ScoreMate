@@ -23,7 +23,7 @@ class LeagueListViewModel: ObservableObject {
 
         AF.request(url, method: .get)
             .validate()
-            .responseDecodable(of: APIResponse.self) { response in
+            .responseDecodable(of: LeaguesAPIResponse.self) { response in
                 
                 switch response.result {
                     
@@ -62,7 +62,7 @@ class LeagueListViewModel: ObservableObject {
     }
 }
 
-struct APIResponse: Decodable {
+struct LeaguesAPIResponse: Decodable {
     let data: [LeagueData]?
 }
 
