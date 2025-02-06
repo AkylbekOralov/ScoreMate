@@ -20,7 +20,7 @@ class StandingTableViewModel: ObservableObject {
     }
     
     func fetchStandings() {
-        let url = "https://api.soccersapi.com/v2.2/leagues/?user=oralovv26&token=69459e6f12e2752fa14a2d95b8c64f34&t=standings&season_id=\(leagueModel.currentSeasonId)"
+        let url = "https://api.soccersapi.com/v2.2/leagues/?user=akylbekoralov2003&token=5224b1c38beea1f12750501e5cc458c0&t=standings&season_id=\(leagueModel.currentSeasonId)"
         
         AF.request(url, method: .get)
             .validate()
