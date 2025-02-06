@@ -11,7 +11,8 @@ import SwiftUI
 struct ScoreMateApp: App {
     var body: some Scene {
         WindowGroup {
-            LeagueListView(viewModel: LeagueListViewModel())
+           LeagueListView(viewModel: LeagueListViewModel())
+//            MatchLeagueView()
         }
     }
 }

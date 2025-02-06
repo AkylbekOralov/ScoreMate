@@ -27,6 +27,10 @@ struct TableView: View {
             ScrollView {
                 VStack {
                     ForEach(Array(standings.enumerated()), id: \.element.id) { index, team in
+                        
+                        NavigationLink {
+                            TeamMatchesView()
+                        } label: {
                         HStack {
                             Text("\(index + 1).")
                                 .font(.system(size: 20, weight: .regular, design: .default))
@@ -66,6 +70,8 @@ struct TableView: View {
                         }
                         .padding(.vertical, 4)
                     }
+                    }
+                    .buttonStyle(PlainButtonStyle())
                     
                 }
                 .padding(.horizontal)
@@ -79,7 +85,9 @@ struct TableView_Preview: PreviewProvider {
     static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
     
     static var previews: some View {
+        NavigationStack {
         TableView(standings: .constant(StandingTableViewModel(leagueModel: leagueModel).getMockData()))
+        }
     }
     
 }
