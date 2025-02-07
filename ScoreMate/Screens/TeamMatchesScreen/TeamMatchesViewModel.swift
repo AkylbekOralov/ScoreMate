@@ -11,13 +11,14 @@ import Alamofire
 class TeamMatchesViewModel: ObservableObject {
     let league: LeagueModel
     let team: TeamModel
-    @Published var matches: [MatchModel] = []
+    @Published var finishedMatches: [MatchModel] = []
+    @Published var UpcomingMatches: [MatchModel] = []
     
     init(league: LeagueModel, team: TeamModel) {
         self.league = league
         self.team = team
-//      self.matches = getMockMatches()
-        fetchMatches()
+        self.finishedMatches = getMockMatches()
+//        fetchMatches()
     }
     
     func fetchMatches() {
@@ -81,7 +82,7 @@ class TeamMatchesViewModel: ObservableObject {
                 }
 
                 DispatchQueue.main.async {
-                    self.matches = fetchedMatches
+                    self.finishedMatches = fetchedMatches
                 }
                 
             case .failure(let error):
