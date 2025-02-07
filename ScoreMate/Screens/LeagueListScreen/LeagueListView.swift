@@ -19,7 +19,7 @@ struct LeagueListView: View {
                 
                 ForEach(viewModel.leagues) { league in
                     NavigationLink {
-                        LeagueStandingView(standingTable: LeagueStandingViewModel(leagueModel: league))
+                        LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
                     } label: {
                         LeagueView(leagueModel: league)
                     }

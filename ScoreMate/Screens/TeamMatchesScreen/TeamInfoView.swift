@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct TeamInfoView: View {
+    
+    let league: LeagueModel
+    let team: TeamModel
+    
     var body: some View {
         HStack {
             VStack (alignment: .leading) {
                 HStack {
-                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/countries/30/au.png")) { phase in
+                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/countries/30/\(league.countryCode).png")) { phase in
                         if let image = phase.image {
                             image
                                 .resizable()
@@ -28,13 +32,13 @@ struct TeamInfoView: View {
                     }
                     .frame(width: 30, height: 30)
                     
-                    Text("Australia")
+                    Text(league.countryName)
                     
                 }
                 .padding(.leading, 15)
                 
                 HStack {
-                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/soccer/teams/80/1931466026.png")) { phase in
+                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/soccer/teams/80/\(team.id).png")) { phase in
                         if let image = phase.image {
                             image
                                 .resizable()
@@ -51,7 +55,7 @@ struct TeamInfoView: View {
                     .frame(width: 60, height: 60)
                     
                     VStack (alignment: .leading, spacing: 10) {
-                        Text("Auckland FC")
+                        Text(team.name)
                             .font(.title2)
                     }
                     
@@ -64,6 +68,13 @@ struct TeamInfoView: View {
     }
 }
 
-#Preview {
-    TeamInfoView()
+struct TeamInfoView_Preview: PreviewProvider {
+    
+    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
+    
+    static let teamModel = TeamModel(id: 1931466026, name: "Auckland FC", gamesPlayed: 15, goalsScored: 24, goalsAgainst: 12, points: 33)
+    
+    static var previews: some View {
+        TeamInfoView(league: leagueModel, team: teamModel)
+    }
 }

@@ -19,6 +19,7 @@ class TeamMatchesViewModel: ObservableObject {
     }
     
     func getMockMatches() -> [MatchModel] {
+        
         return [
             MatchModel(
                 id: 1891183,

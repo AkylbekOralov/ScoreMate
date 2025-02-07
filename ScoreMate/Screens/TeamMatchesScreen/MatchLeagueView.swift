@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct MatchLeagueView: View {
+    
+    let league: LeagueModel
+    let team: TeamModel
+    
     var body: some View {
         HStack {
-            
             Image(systemName: "soccerball.circle.fill.inverse")
                 .resizable()
                 .scaledToFit( )
@@ -49,6 +52,13 @@ struct MatchLeagueView: View {
     }
 }
 
-#Preview {
-    MatchLeagueView()
+struct MatchLeagueView_Preview: PreviewProvider {
+    
+    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
+    
+    static let teamModel = TeamModel(id: 1931466026, name: "Auckland FC", gamesPlayed: 15, goalsScored: 24, goalsAgainst: 12, points: 33)
+    
+    static var previews: some View {
+        MatchLeagueView(league: leagueModel, team: teamModel)
+    }
 }

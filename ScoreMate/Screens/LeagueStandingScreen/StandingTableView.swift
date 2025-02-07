@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LeagueTableView: View {
     
-    @Binding var standings: [TeamModel]
+    @StateObject var leagueStandingViewModel: LeagueStandingViewModel
     
     var body: some View {
         
@@ -26,10 +26,10 @@ struct LeagueTableView: View {
             
             ScrollView {
                 VStack {
-                    ForEach(Array(standings.enumerated()), id: \.element.id) { index, team in
+                    ForEach(Array(leagueStandingViewModel.standings.enumerated()), id: \.element.id) { index, team in
                         
                         NavigationLink {
-                            TeamMatchesView()
+                            TeamMatchesView(teamMatchesViewModel: TeamMatchesViewModel(league: leagueStandingViewModel.leagueModel, team: team))
                         } label: {
                         HStack {
                             Text("\(index + 1).")
@@ -86,7 +86,7 @@ struct LeagueTableView_Preview: PreviewProvider {
     
     static var previews: some View {
         NavigationStack {
-            LeagueTableView(standings: .constant(LeagueStandingViewModel(leagueModel: leagueModel).getMockData()))
+            LeagueTableView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: leagueModel))
         }
     }
     
