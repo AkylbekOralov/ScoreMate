@@ -11,6 +11,7 @@ import Alamofire
 class LeagueListViewModel: ObservableObject {
     
     @Published var leagues: [LeagueModel] = []
+    @Published var loading: Bool = false
     
     init() {
         fetchLeagues()
@@ -18,6 +19,7 @@ class LeagueListViewModel: ObservableObject {
     }
     
     func fetchLeagues() {
+        loading = true
         let url = "https://api.soccersapi.com/v2.2/leagues/?user=akylbekoralov2003&token=5224b1c38beea1f12750501e5cc458c0&t=list"
         
         AF.request(url, method: .get)
@@ -39,11 +41,11 @@ class LeagueListViewModel: ObservableObject {
                             return LeagueModel(id: id, name: league.name, countryName: league.countryName, countryId: countryId, countryCode: league.countryCode, currentSeasonId: currentSeasonId)
                             
                         } ?? []
-                        
                     }
+                    self.loading = false
                 case .failure(let error):
                     print("Error fetching leagues: \(error.localizedDescription)")
-                    
+                    self.loading = false
                 }
             }
     }

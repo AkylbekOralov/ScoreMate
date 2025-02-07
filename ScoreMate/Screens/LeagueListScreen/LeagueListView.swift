@@ -15,19 +15,21 @@ struct LeagueListView: View {
         
         NavigationStack {
             
-            List {
+            if viewModel.loading {
+                ProgressView()
+            } else {
                 
-                ForEach(viewModel.leagues) { league in
-                    NavigationLink {
-                        LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
-                    } label: {
-                        LeagueView(leagueModel: league)
+                List {
+                    ForEach(viewModel.leagues) { league in
+                        NavigationLink {
+                            LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
+                        } label: {
+                            LeagueView(leagueModel: league)
+                        }
                     }
                 }
-                
+                .navigationTitle(Text("Leagues"))
             }
-            .navigationTitle(Text("Leagues"))
-            
         }
         
     }
