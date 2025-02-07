@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class StandingTableViewModel: ObservableObject {
+class LeagueStandingViewModel: ObservableObject {
     
     let leagueModel: LeagueModel
     @Published var standings: [TeamModel] = []
@@ -33,11 +33,11 @@ class StandingTableViewModel: ObservableObject {
                         
                         self.standings = data.data?.standings?.map { team in
                             TeamModel(
-                                id: team.team_id,
-                                name: team.team_name,
-                                gamesPlayed: team.overall.games_played,
-                                goalsScored: team.overall.goals_scored,
-                                goalsAgainst: team.overall.goals_against,
+                                id: team.teamId,
+                                name: team.teamName,
+                                gamesPlayed: team.overall.gamesPlayed,
+                                goalsScored: team.overall.goalsScored,
+                                goalsAgainst: team.overall.goalsAgainst,
                                 points: team.overall.points
                             )
                         } ?? []
@@ -81,14 +81,27 @@ struct LeagueStandingsData: Decodable {
 }
 
 struct TeamModelData: Decodable {
-    let team_id: Int
-    let team_name: String
+    let teamId: Int
+    let teamName: String
     let overall: OverallStats
+    
+    enum CodingKeys: String, CodingKey {
+        case teamId = "team_id"
+        case teamName = "team_name"
+        case overall
+    }
 }
 
 struct OverallStats: Decodable {
-    let games_played: Int
-    let goals_scored: Int
-    let goals_against: Int
+    let gamesPlayed: Int
+    let goalsScored: Int
+    let goalsAgainst: Int
     let points: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case gamesPlayed = "games_played"
+        case goalsScored = "goals_scored"
+        case goalsAgainst = "goals_against"
+        case points
+    }
 }

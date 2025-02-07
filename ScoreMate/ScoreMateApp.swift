@@ -12,7 +12,6 @@ struct ScoreMateApp: App {
     var body: some Scene {
         WindowGroup {
            LeagueListView(viewModel: LeagueListViewModel())
-//            MatchLeagueView()
         }
     }
 }

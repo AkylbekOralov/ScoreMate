@@ -17,16 +17,14 @@ class LeagueListViewModel: ObservableObject {
         //self.leagues = getMockLeagues()
     }
     
-    
     func fetchLeagues() {
         let url = "https://api.soccersapi.com/v2.2/leagues/?user=akylbekoralov2003&token=5224b1c38beea1f12750501e5cc458c0&t=list"
-
+        
         AF.request(url, method: .get)
             .validate()
             .responseDecodable(of: LeaguesAPIResponse.self) { response in
                 
                 switch response.result {
-                    
                 case .success(let data):
                     DispatchQueue.main.async {
                         
@@ -43,12 +41,10 @@ class LeagueListViewModel: ObservableObject {
                         } ?? []
                         
                     }
-                    
                 case .failure(let error):
                     print("Error fetching leagues: \(error.localizedDescription)")
                     
                 }
-                
             }
     }
     
@@ -73,7 +69,7 @@ struct LeagueData: Decodable {
     let countryId: String
     let countryCode: String
     let currentSeasonId: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case name
