@@ -26,11 +26,10 @@ struct MatchView: View {
                                 .scaledToFit()
                         } else if phase.error != nil {
                             Image("UnknownTeam")
-                        } else {
-//                            ProgressView()
-                            Image("Australia")
                                 .resizable()
                                 .scaledToFit()
+                        } else {
+                            ProgressView()
                         }
                         
                     }
@@ -48,11 +47,10 @@ struct MatchView: View {
                                 .scaledToFit()
                         } else if phase.error != nil {
                             Image("UnknownTeam")
-                        } else {
-//                            ProgressView()
-                            Image("Australia")
                                 .resizable()
                                 .scaledToFit()
+                        } else {
+                            ProgressView()
                         }
                         
                     }

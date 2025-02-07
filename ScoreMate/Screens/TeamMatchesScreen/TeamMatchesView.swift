@@ -17,10 +17,12 @@ struct TeamMatchesView: View {
                 .padding(.bottom, 30)
                 .background(Color.green.opacity(0.3))
             
-            LazyVStack {
-                ForEach(teamMatchesViewModel.matches) { match in
-                    MatchView(match: match)
-                    Rectangle().fill(Color.gray.opacity(0.1)).frame(height: 2)
+            ScrollView {
+                LazyVStack {
+                    ForEach(teamMatchesViewModel.matches) { match in
+                        MatchView(match: match)
+                        Rectangle().fill(Color.gray.opacity(0.1)).frame(height: 2)
+                    }
                 }
             }
             Spacer()
