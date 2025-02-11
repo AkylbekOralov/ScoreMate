@@ -20,7 +20,7 @@ class LeagueListViewModel: ObservableObject {
     
     func fetchLeagues() {
         loading = true
-        let url = "https://api.soccersapi.com/v2.2/leagues/?user=akylbekoralov2003&token=5224b1c38beea1f12750501e5cc458c0&t=list"
+        let url = "https://api.soccersapi.com/v2.2/leagues/?user=\(ApiCall.username)&token=\(ApiCall.token)&t=list"
         
         AF.request(url, method: .get)
             .validate()

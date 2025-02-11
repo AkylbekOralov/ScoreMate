@@ -17,25 +17,7 @@ struct TeamMatchesView: View {
                 .padding(.bottom, 30)
                 .background(Color.green.opacity(0.3))
             
-            HStack {
-                Text("Results")
-                    .foregroundColor(teamMatchesViewModel.selection == .results ? .accentColor : .primary)
-                    .underline(teamMatchesViewModel.selection == .results, color: .accentColor)
-                    .onTapGesture {
-                        teamMatchesViewModel.changeSelection(selected: .results)
-                    }
-                
-                Text("Calendar")
-                    .foregroundColor(teamMatchesViewModel.selection == .calendar ? .accentColor : .primary)
-                    .underline(teamMatchesViewModel.selection == .calendar, color: .accentColor)
-                    .onTapGesture {
-                        teamMatchesViewModel.changeSelection(selected: .calendar)
-                    }
-                Spacer()
-            }
-            .padding(.leading, 20)
-            .padding(.vertical, 10)
-            .background(Color.green.opacity(0.7))
+            SelectionTabView(teamMatchesViewModel: teamMatchesViewModel)
             
             ScrollView {
                 LazyVStack {
