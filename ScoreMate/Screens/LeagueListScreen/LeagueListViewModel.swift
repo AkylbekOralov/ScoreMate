@@ -38,7 +38,14 @@ class LeagueListViewModel: ObservableObject {
                                 let currentSeasonId = Int(league.currentSeasonId)
                             else { return nil }
                             
-                            return LeagueModel(id: id, name: league.name, countryName: league.countryName, countryId: countryId, countryCode: league.countryCode, currentSeasonId: currentSeasonId)
+                            return LeagueModel(
+                                id: id,
+                                name: league.name,
+                                countryName: league.countryName,
+                                countryId: countryId,
+                                countryCode: league.countryCode,
+                                currentSeasonId: currentSeasonId
+                            )
                             
                         } ?? []
                     }

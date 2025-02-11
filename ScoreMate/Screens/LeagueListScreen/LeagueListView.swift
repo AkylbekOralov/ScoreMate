@@ -12,13 +12,10 @@ struct LeagueListView: View {
     @StateObject var viewModel: LeagueListViewModel
     
     var body: some View {
-        
         NavigationStack {
-            
             if viewModel.loading {
                 ProgressView()
             } else {
-                
                 List {
                     ForEach(viewModel.leagues) { league in
                         NavigationLink {
