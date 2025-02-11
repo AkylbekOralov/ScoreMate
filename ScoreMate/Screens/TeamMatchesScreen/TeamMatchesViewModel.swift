@@ -25,9 +25,7 @@ class TeamMatchesViewModel: ObservableObject {
         self.league = league
         self.team = team
         self.selection = .results
-        self.finishedMatches = getMockFinishedMatches()
-        self.upcomingMatches = getMockUpcomingMatches()
-        setDisplayedMatches()
+        fetchMatches()
     }
     
     func changeSelection(selected: Selection) {
@@ -35,13 +33,65 @@ class TeamMatchesViewModel: ObservableObject {
         setDisplayedMatches()
     }
     
-    func setDisplayedMatches(){
+    private func setDisplayedMatches(){
         switch selection {
         case .results:
             displayedMatches = finishedMatches
         case .calendar:
             displayedMatches = upcomingMatches
         }
+    }
+    
+    func fetchMatches() {
+        let urlString = """
+        https://api.soccersapi.com/v2.2/fixtures/?\
+        user=\(ApiCall.username)&\
+        token=\(ApiCall.token)&\
+        t=season&\
+        season_id=\(league.currentSeasonId)&\
+        team_id=\(team.id)
+        """
+        
+        AF.request(urlString, method: .get)
+          .validate()
+          .responseDecodable(of: SoccerResponse.self) { response in
+              switch response.result {
+              case .success(let soccerResponse):
+                  var finished: [MatchModel] = []
+                  var upcoming: [MatchModel] = []
+                  
+                  for matchData in soccerResponse.data {
+                      let homeScore = Int(matchData.scores.homeScore ?? "0") ?? 0
+                      let awayScore = Int(matchData.scores.awayScore ?? "0") ?? 0
+                      
+                      let match = MatchModel(
+                          id: matchData.id,
+                          date: matchData.time.date,
+                          homeTeam: matchData.teams.home.name,
+                          homeTeamId: matchData.teams.home.id,
+                          homeScore: homeScore,
+                          awayTeam: matchData.teams.away.name,
+                          awayTeamId: matchData.teams.away.id,
+                          awayScore: awayScore
+                      )
+                      
+                      if matchData.statusName == "Finished" {
+                          finished.insert(match, at: 0)
+                      } else if matchData.statusName == "Notstarted" {
+                          upcoming.append(match)
+                      }
+                  }
+                  
+                  DispatchQueue.main.async {
+                      self.finishedMatches = finished
+                      self.upcomingMatches = upcoming
+                      self.setDisplayedMatches()
+                  }
+                  
+              case .failure(let error):
+                  print("Error fetching matches: \(error.localizedDescription)")
+              }
+          }
     }
     
     func getMockFinishedMatches() -> [MatchModel] {
@@ -109,5 +159,3 @@ class TeamMatchesViewModel: ObservableObject {
         ]
     }
 }
-
-
