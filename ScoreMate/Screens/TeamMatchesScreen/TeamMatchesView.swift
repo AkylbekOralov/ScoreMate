@@ -7,15 +7,9 @@
 
 import SwiftUI
 
-enum Selection {
-    case results
-    case calendar
-}
-
 struct TeamMatchesView: View {
     
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
-    @State var selection: Selection = .results
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,17 +19,17 @@ struct TeamMatchesView: View {
             
             HStack {
                 Text("Results")
-                    .foregroundColor(selection == .results ? .accentColor : .primary)
-                    .underline(selection == .results, color: .accentColor)
+                    .foregroundColor(teamMatchesViewModel.selection == .results ? .accentColor : .primary)
+                    .underline(teamMatchesViewModel.selection == .results, color: .accentColor)
                     .onTapGesture {
-                        selection = .results
+                        teamMatchesViewModel.changeSelection(selected: .results)
                     }
                 
                 Text("Calendar")
-                    .foregroundColor(selection == .calendar ? .accentColor : .primary)
-                    .underline(selection == .calendar, color: .accentColor)
+                    .foregroundColor(teamMatchesViewModel.selection == .calendar ? .accentColor : .primary)
+                    .underline(teamMatchesViewModel.selection == .calendar, color: .accentColor)
                     .onTapGesture {
-                        selection = .calendar
+                        teamMatchesViewModel.changeSelection(selected: .calendar)
                     }
                 Spacer()
             }
@@ -45,7 +39,7 @@ struct TeamMatchesView: View {
             
             ScrollView {
                 LazyVStack {
-                    ForEach(teamMatchesViewModel.finishedMatches) { match in
+                    ForEach(teamMatchesViewModel.displayedMatches) { match in
                         MatchView(match: match)
                         Rectangle().fill(Color.gray.opacity(0.1)).frame(height: 2)
                     }

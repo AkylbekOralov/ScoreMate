@@ -11,9 +11,9 @@ struct MatchModel: Identifiable {
     let id: Int
     let date: String
     let homeTeam: String
-    let homeTeamImage: String
+    let homeTeamId: Int
     let homeScore: Int
     let awayTeam: String
-    let awayTeamImage: String
+    let awayTeamId: Int
     let awayScore: Int
 }

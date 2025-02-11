@@ -25,21 +25,7 @@ struct MatchLeagueView: View {
                     .font(.headline)
                 
                 HStack {
-                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/countries/30/au.png")) { phase in
-                        if let image = phase.image {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                        } else if phase.error != nil {
-                            Image("UnknownCountry")
-                        } else {
-//                            ProgressView()
-                            Image("Australia")
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        
-                    }
+                    CountryImageView(countryCode: league.countryCode)
                     .frame(width: 25, height: 20)
                     
                     Text("Australia")

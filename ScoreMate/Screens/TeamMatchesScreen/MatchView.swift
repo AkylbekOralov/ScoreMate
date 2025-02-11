@@ -19,20 +19,7 @@ struct MatchView: View {
             
             VStack(alignment: .leading) {
                 HStack {
-                    AsyncImage(url: URL(string: match.homeTeamImage)) { phase in
-                        if let image = phase.image {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                        } else if phase.error != nil {
-                            Image("UnknownTeam")
-                                .resizable()
-                                .scaledToFit()
-                        } else {
-                            ProgressView()
-                        }
-                        
-                    }
+                    TeamImageView(teamId: match.homeTeamId)
                     .frame(width: 25, height: 20)
                     
                     Text(match.homeTeam)
@@ -40,20 +27,7 @@ struct MatchView: View {
                 }
                 
                 HStack {
-                    AsyncImage(url: URL(string: match.awayTeamImage)) { phase in
-                        if let image = phase.image {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                        } else if phase.error != nil {
-                            Image("UnknownTeam")
-                                .resizable()
-                                .scaledToFit()
-                        } else {
-                            ProgressView()
-                        }
-                        
-                    }
+                    TeamImageView(teamId: match.awayTeamId)
                     .frame(width: 25, height: 20)
                     
                     Text(match.awayTeam)
@@ -78,10 +52,10 @@ struct MatchView_Preview: PreviewProvider {
         id: 1891183,
         date: "2024-10-19",
         homeTeam: "Auckland FC",
-        homeTeamImage: "https://cdn.soccersapi.com/images/soccer/teams/80/1931466026.png",
+        homeTeamId: 1931466026,
         homeScore: 2,
         awayTeam: "Brisbane Roar",
-        awayTeamImage: "https://cdn.soccersapi.com/images/soccer/teams/80/1105.png",
+        awayTeamId: 1105,
         awayScore: 0)
     
     static var previews: some View {
