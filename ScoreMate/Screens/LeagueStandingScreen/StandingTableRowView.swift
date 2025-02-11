@@ -18,25 +18,12 @@ struct StandingTableRowView: View {
     
     var body: some View {
         HStack {
-            Text("\(index+1).")
+            Text("\(index).")
                 .font(.system(size: 20, weight: .regular, design: .default))
                 .frame(width: UIScreen.main.bounds.width * 0.08, alignment: .leading)
             
-            AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/soccer/teams/100/\(teamId).png")) { phase in
-                if let image = phase.image {
-                    image
-                        .resizable()
-                        .scaledToFit()
-                } else if phase.error != nil {
-                    Image("UnknownCountry")
-                        .resizable()
-                        .scaledToFit()
-                } else {
-                    ProgressView()
-                }
-                
-            }
-            .frame(width: 25, height: 25)
+            TeamImageView(teamId: teamId)
+                .frame(width: 25, height: 25)
             
             Text(teamName)
                 .font(.system(size: 20, weight: .regular, design: .default))

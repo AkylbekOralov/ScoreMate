@@ -25,21 +25,8 @@ struct TeamInfoView: View {
                 .padding(.leading, 15)
                 
                 HStack {
-                    AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/soccer/teams/80/\(team.id).png")) { phase in
-                        if let image = phase.image {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                        } else if phase.error != nil {
-                            Image("UnknownTeam")
-                                .resizable()
-                                .scaledToFit()
-                        } else {
-                            ProgressView()
-                        }
-                        
-                    }
-                    .frame(width: 60, height: 60)
+                    TeamImageView(teamId: team.id)
+                        .frame(width: 60, height: 60)
                     
                     VStack (alignment: .leading, spacing: 10) {
                         Text(team.name)
