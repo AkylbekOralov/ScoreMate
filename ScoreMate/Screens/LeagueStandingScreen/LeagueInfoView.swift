@@ -15,19 +15,7 @@ struct LeagueInfoView: View {
         VStack  {
             VStack (alignment: .leading) {
                 HStack {
-                    CountryImageView(countryCode: leagueModel.countryCode)
-                        .frame(width: 30, height: 30)
-                    
-                    Text(leagueModel.countryName)
-                        .padding(.leading, 10)
-                }
-                .padding(.leading, 10)
-                .padding(.bottom, 10)
-                
-                HStack {
-                    Image(systemName: "soccerball")
-                        .resizable()
-                        .scaledToFit()
+                    LeagueImageView(leagueId: leagueModel.id)
                         .frame(width: 70, height: 70)
                     
                     VStack (alignment: .leading, spacing: 10) {
@@ -38,6 +26,15 @@ struct LeagueInfoView: View {
                     }
                     
                 }
+                
+                HStack {
+                    CountryImageView(countryCode: leagueModel.countryCode)
+                        .frame(width: 30, height: 30)
+                    
+                    Text(leagueModel.countryName)
+                        .padding(.leading, 10)
+                }
+                .padding(.leading, 10)
             }
         }
         .padding(20)
