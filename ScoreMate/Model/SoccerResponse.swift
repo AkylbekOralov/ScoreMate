@@ -13,8 +13,8 @@ struct SoccerResponse: Decodable {
 }
 
 struct MatchData: Decodable {
-    let id: Int
-    let statusName: String
+    let id: Int?
+    let statusName: String?
     let time: Time
     let teams: Teams
     let scores: Scores
@@ -30,7 +30,7 @@ struct MatchData: Decodable {
 }
 
 struct Time: Decodable {
-    let date: String
+    let date: String?
 }
 
 struct Teams: Decodable {
@@ -39,8 +39,8 @@ struct Teams: Decodable {
 }
 
 struct TeamInfo: Decodable {
-    let id: Int
-    let name: String
+    let id: Int?
+    let name: String?
 }
 
 struct Scores: Decodable {

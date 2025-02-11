@@ -20,7 +20,7 @@ struct StandingTableRowView: View {
         HStack {
             Text("\(index).")
                 .font(.system(size: 20, weight: .regular, design: .default))
-                .frame(width: UIScreen.main.bounds.width * 0.08, alignment: .leading)
+                .frame(width: UIScreen.main.bounds.width * 0.08, alignment: .leading) // extract
             
             TeamImageView(teamId: teamId)
                 .frame(width: 25, height: 25)

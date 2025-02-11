@@ -32,7 +32,7 @@ struct LeagueInfoView: View {
                         .frame(width: 30, height: 30)
                     
                     Text(leagueModel.countryName)
-                        .padding(.leading, 10)
+                        .padding(Paddings.small)
                 }
                 .padding(.leading, 10)
             }

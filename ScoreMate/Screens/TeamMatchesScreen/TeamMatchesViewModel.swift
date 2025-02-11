@@ -8,18 +8,18 @@
 import Foundation
 import Alamofire
 
-enum Selection {
-    case results
-    case calendar
-}
-
 class TeamMatchesViewModel: ObservableObject {
+    enum TeamMatchesSelection {
+        case results
+        case calendar
+    }
+    
     let league: LeagueModel
     let team: TeamModel
     var finishedMatches: [MatchModel] = []
     var upcomingMatches: [MatchModel] = []
     @Published var displayedMatches: [MatchModel] = []
-    @Published var selection: Selection
+    @Published var selection: TeamMatchesSelection
     
     init(league: LeagueModel, team: TeamModel) {
         self.league = league
@@ -28,7 +28,7 @@ class TeamMatchesViewModel: ObservableObject {
         fetchMatches()
     }
     
-    func changeSelection(selected: Selection) {
+    func changeSelection(selected: TeamMatchesSelection) {
         self.selection = selected
         setDisplayedMatches()
     }
@@ -61,18 +61,18 @@ class TeamMatchesViewModel: ObservableObject {
                   var upcoming: [MatchModel] = []
                   
                   for matchData in soccerResponse.data {
-                      let homeScore = Int(matchData.scores.homeScore ?? "0") ?? 0
-                      let awayScore = Int(matchData.scores.awayScore ?? "0") ?? 0
+                      let homeScore = Int(matchData.scores.homeScore ?? "0")
+                      let awayScore = Int(matchData.scores.awayScore ?? "0")
                       
                       let match = MatchModel(
-                          id: matchData.id,
-                          date: matchData.time.date,
-                          homeTeam: matchData.teams.home.name,
-                          homeTeamId: matchData.teams.home.id,
-                          homeScore: homeScore,
-                          awayTeam: matchData.teams.away.name,
-                          awayTeamId: matchData.teams.away.id,
-                          awayScore: awayScore
+                          id: matchData.id ?? 0,
+                          date: matchData.time.date ?? "?",
+                          homeTeam: matchData.teams.home.name ?? "Unkonwn",
+                          homeTeamId: matchData.teams.home.id ?? 0,
+                          homeScore: homeScore ?? 0,
+                          awayTeam: matchData.teams.away.name ?? "Unknown",
+                          awayTeamId: matchData.teams.away.id ?? 0,
+                          awayScore: awayScore ?? 0
                       )
                       
                       if matchData.statusName == "Finished" {
@@ -90,6 +90,20 @@ class TeamMatchesViewModel: ObservableObject {
                   
               case .failure(let error):
                   print("Error fetching matches: \(error.localizedDescription)")
+              }
+          }
+    }
+    
+    // перетащить в NetworkService и сложить туда url
+    func getData<T: Decodable>(url: String, dataType: T.Type, completion: @escaping (T?, Error?) -> Void) {
+        AF.request(url, method: .get)
+          .validate()
+          .responseDecodable(of: dataType.self) { response in
+              switch response.result {
+              case .success(let succesfulResponse):
+                  completion(succesfulResponse, nil)
+              case .failure(let error):
+                  completion(nil, error)
               }
           }
     }
