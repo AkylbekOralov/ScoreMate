@@ -9,48 +9,29 @@ import SwiftUI
 
 struct RecentMathesView: View {
     
+    @StateObject var recentMathesViewModel: RecentMathesViewModel
+    
     var body: some View {
         VStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
-                    VStack {
-                        Text("Fri")
-                        Text("07.02")
+            ScrollViewReader { proxy in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(recentMathesViewModel.recentDates, id: \.dateString ) { date in
+                            VStack {
+                                Text(date.dayOfWeek)
+                                Text(date.dateString)
+                            }
+                            .foregroundColor(date.dateString == recentMathesViewModel.selectedDate ? .red : .primary)
+                            .onTapGesture {
+                                recentMathesViewModel.changeSelectedDate(dateString: date.dateString)
+                            }
+                        }
                     }
-                    VStack {
-                        Text("Sun")
-                        Text("08.02")
-                    }
-                    VStack {
-                        Text("Sat")
-                        Text("09.02")
-                    }
-                    VStack {
-                        Text("Mon")
-                        Text("10.02")
-                    }
-                    VStack {
-                        Text("Tue")
-                        Text("11.02")
-                    }
-                    VStack {
-                        Text("Today")
-                        Text("12.02")
-                    }
-                    .foregroundColor(.red)
-                    .overlay(
-                        Rectangle()
-                            .fill(Color.red)
-                            .frame(width: .infinity, height: 1),
-                        alignment: .bottom
-                    )
-                    VStack {
-                        Text("Wed")
-                        Text("11.02")
-                    }
-                    VStack {
-                        Text("Thu")
-                        Text("11.02")
+                }
+                .onAppear {
+                    // Scroll to the selected date when the view appears
+                    DispatchQueue.main.async {
+                        proxy.scrollTo(recentMathesViewModel.selectedDate, anchor: .center)
                     }
                 }
             }
@@ -61,5 +42,5 @@ struct RecentMathesView: View {
 }
 
 #Preview {
-    RecentMathesView()
+    RecentMathesView(recentMathesViewModel: RecentMathesViewModel())
 }

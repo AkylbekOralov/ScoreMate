@@ -15,6 +15,7 @@ enum Screens {
 struct MainScreenView: View {
     @State var currentScreen: Screens = .leagues
     @State var viewModel = LeagueListViewModel()
+    @State var recentMathesViewModel = RecentMathesViewModel()
     
     var body: some View {
         ZStack {
@@ -25,7 +26,7 @@ struct MainScreenView: View {
             case .leagues:
                 LeagueListView(viewModel: viewModel)
             case .matches:
-                RecentMathesView()
+                RecentMathesView(recentMathesViewModel: recentMathesViewModel)
             }
             
             NavBarView(currentScreen: $currentScreen)
