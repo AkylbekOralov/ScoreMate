@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 struct SoccerResponse: Decodable {
-    let data: [MatchData]
+    let data: [MatchData]?
 }
 
 struct MatchData: Decodable {
@@ -19,7 +19,6 @@ struct MatchData: Decodable {
     let teams: Teams
     let scores: Scores
     
-    // Map your JSON keys to Swift property names
     enum CodingKeys: String, CodingKey {
         case id
         case statusName = "status_name"
@@ -31,6 +30,12 @@ struct MatchData: Decodable {
 
 struct Time: Decodable {
     let date: String?
+    let timeOclock: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case date
+        case timeOclock = "time"
+    }
 }
 
 struct Teams: Decodable {

@@ -13,27 +13,18 @@ struct RecentMathesView: View {
     
     var body: some View {
         VStack {
-            ScrollViewReader { proxy in
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(recentMathesViewModel.recentDates, id: \.dateString ) { date in
-                            VStack {
-                                Text(date.dayOfWeek)
-                                Text(date.dateString)
-                            }
-                            .foregroundColor(date.dateString == recentMathesViewModel.selectedDate ? .red : .primary)
-                            .onTapGesture {
-                                recentMathesViewModel.changeSelectedDate(dateString: date.dateString)
-                            }
-                        }
+            RecentDatesView(recentMathesViewModel: recentMathesViewModel)
+                .padding(.bottom, Paddings.large)
+            
+            VStack {
+                if let matches = recentMathesViewModel.selectedDateMatches {
+                    ForEach(matches) { match in
+                        RecentMatchView(match: match)
                     }
+                } else {
+                    Text("No matches")
                 }
-                .onAppear {
-                    // Scroll to the selected date when the view appears
-                    DispatchQueue.main.async {
-                        proxy.scrollTo(recentMathesViewModel.selectedDate, anchor: .center)
-                    }
-                }
+                
             }
         }
         .padding()
@@ -43,4 +34,33 @@ struct RecentMathesView: View {
 
 #Preview {
     RecentMathesView(recentMathesViewModel: RecentMathesViewModel())
+}
+
+struct RecentDatesView: View {
+    @StateObject var recentMathesViewModel: RecentMathesViewModel
+    
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    ForEach(recentMathesViewModel.recentDates) { date in
+                        VStack {
+                            Text(date.dayOfWeek)
+                            Text(date.dateString)
+                        }
+                        .foregroundColor(date.fullDateString == recentMathesViewModel.selectedDate ? .red : .primary)
+                        .onTapGesture {
+                            recentMathesViewModel.changeSelectedDate(dateString: date.fullDateString)
+                        }
+                    }
+                }
+            }
+            .onAppear {
+                // Scroll to the selected date when the view appears
+                DispatchQueue.main.async {
+                    proxy.scrollTo(recentMathesViewModel.selectedDate, anchor: .center)
+                }
+            }
+        }
+    }
 }

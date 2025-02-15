@@ -1,23 +1,18 @@
 //
-//  MatchView.swift
+//  RecentMatchView.swift
 //  ScoreMate
 //
-//  Created by Akylbek Oralov on 06.02.2025.
+//  Created by Akylbek Oralov on 15.02.2025.
 //
 
 import SwiftUI
 
-struct MatchView: View {
-    
+struct RecentMatchView: View {
     let match: MatchModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
         HStack {
-            Text(match.date)
-                .padding(.leading, 20)
-                .padding(.trailing, 10)
-            
             VStack(alignment: .leading) {
                 HStack {
                     TeamImageView(teamId: match.homeTeamId)
@@ -52,7 +47,7 @@ struct MatchView: View {
     }
 }
 
-struct MatchView_Preview: PreviewProvider {
+struct MRecentMatchView_Preview: PreviewProvider {
     
     static let match = MatchModel(
         id: 1891183,
@@ -67,6 +62,6 @@ struct MatchView_Preview: PreviewProvider {
         awayScore: 0)
     
     static var previews: some View {
-        MatchView(match: match)
+        RecentMatchView(match: match)
     }
 }

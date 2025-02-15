@@ -9,7 +9,9 @@ import Foundation
 
 struct MatchModel: Identifiable {
     let id: Int
+    let statusName: String
     let date: String
+    let time: String
     let homeTeam: String
     let homeTeamId: Int
     let homeScore: Int

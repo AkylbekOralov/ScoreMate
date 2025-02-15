@@ -21,15 +21,18 @@ struct MainScreenView: View {
         ZStack {
             Color.white
                 .ignoresSafeArea()
-            
-            switch currentScreen {
-            case .leagues:
-                LeagueListView(viewModel: viewModel)
-            case .matches:
-                RecentMathesView(recentMathesViewModel: recentMathesViewModel)
+            VStack {
+                VStack {
+                    switch currentScreen {
+                    case .leagues:
+                        LeagueListView(viewModel: viewModel)
+                    case .matches:
+                        RecentMathesView(recentMathesViewModel: recentMathesViewModel)
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                NavBarView(currentScreen: $currentScreen)
             }
-            
-            NavBarView(currentScreen: $currentScreen)
         }
     }
 }

@@ -6,33 +6,40 @@
 //
 
 import Foundation
+import Alamofire
 
 class RecentMathesViewModel: ObservableObject {
-    @Published var recentDates: [(dayOfWeek: String, dateString: String)] = []
+    @Published var recentDates: [DateModel] = []
     @Published var selectedDate: String = ""
+    @Published var selectedDateMatches: [MatchModel]?
     
     init() {
         generateRecentDates()
+        updateDisplayedMatches()
     }
     
     private func generateRecentDates() {
         let calendar = Calendar.current
-        let dateFormatter = DateFormatter()
+        let dayOfTheWeekFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "E"
+        dayOfTheWeekFormatter.dateFormat = "E"
         
-        let dateFormatterDate = DateFormatter()
-        dateFormatterDate.dateFormat = "dd.MM"
+        let dayMonthFormatter = DateFormatter()
+        dayMonthFormatter.dateFormat = "dd.MM"
+        
+        let fullDateFormatter = DateFormatter()
+        fullDateFormatter.dateFormat = "yyyy-MM-dd"
         
         let today = Date()
-        self.selectedDate = dateFormatterDate.string(from: today)
+        self.selectedDate = fullDateFormatter.string(from: today)
         
-        if let oneWeekAgo = calendar.date(byAdding: .day, value: -8, to: today) {
+        if let oneWeekAgo = calendar.date(byAdding: .day, value: -7, to: today) {
             for i in 0...14 {
                 if let date = calendar.date(byAdding: .day, value: i, to: oneWeekAgo) {
-                    let dayOfWeek = calendar.isDate(date, equalTo: today, toGranularity: .day) ? "Today" : dateFormatter.string(from: date)
-                    let dateString = dateFormatterDate.string(from: date)
-                    recentDates.append((dayOfWeek, dateString))
+                    let dayOfWeek = calendar.isDate(date, equalTo: today, toGranularity: .day) ? "Today" : dayOfTheWeekFormatter.string(from: date)
+                    let dateString = dayMonthFormatter.string(from: date)
+                    let fullDateString = fullDateFormatter.string(from: date)
+                    recentDates.append(DateModel(dayOfWeek: dayOfWeek, dateString: dateString, fullDateString: fullDateString))
                 }
             }
         }
@@ -40,5 +47,62 @@ class RecentMathesViewModel: ObservableObject {
     
     func changeSelectedDate(dateString: String) {
         self.selectedDate = dateString
+        updateDisplayedMatches()
+    }
+    
+    private func updateDisplayedMatches() {
+        let urlString = """
+            https://api.soccersapi.com/v2.2/fixtures/?\
+            user=\(ApiCall.username)&\
+            token=\(ApiCall.token)&\
+            t=schedule&\
+            d=\(self.selectedDate)
+            """
+        
+        AF.request(urlString, method: .get)
+            .validate()
+            .responseDecodable(of: SoccerResponse.self) { response in
+                switch response.result {
+                case .success(let soccerResponse):
+                    var matches: [MatchModel] = []
+                    
+                    if let matchesData = soccerResponse.data {
+                        for matchData in matchesData {
+                            let homeScore = Int(matchData.scores.homeScore ?? "0")
+                            let awayScore = Int(matchData.scores.awayScore ?? "0")
+                            
+                            var formattedMatchTime: String?
+                            if let matchTime = matchData.time.timeOclock {
+                                formattedMatchTime = String(matchTime.prefix(5))
+                            }
+                            
+                            let match = MatchModel(
+                                id: matchData.id ?? 0,
+                                statusName: matchData.statusName ?? "Unknown",
+                                date: matchData.time.date ?? "Unknown",
+                                time: formattedMatchTime ?? "Unknown",
+                                homeTeam: matchData.teams.home.name ?? "Unkonwn",
+                                homeTeamId: matchData.teams.home.id ?? 0,
+                                homeScore: homeScore ?? 0,
+                                awayTeam: matchData.teams.away.name ?? "Unknown",
+                                awayTeamId: matchData.teams.away.id ?? 0,
+                                awayScore: awayScore ?? 0
+                            )
+                            matches.insert(match, at: 0)
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        if !matches.isEmpty {
+                            self.selectedDateMatches = matches
+                        } else {
+                            self.selectedDateMatches = nil
+                        }
+                    }
+                    
+                case .failure(let error):
+                    print("Error fetching matches: \(error.localizedDescription)")
+                }
+            }
     }
 }

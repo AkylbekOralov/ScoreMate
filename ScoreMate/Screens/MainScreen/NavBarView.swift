@@ -12,7 +12,6 @@ struct NavBarView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
             Rectangle()
                 .frame(height: 0.5)
                 .foregroundColor(.secondary)
@@ -20,19 +19,29 @@ struct NavBarView: View {
                 Button {
                     currentScreen = .leagues
                 } label: {
-                    Text("Leagues 🏆")
-                        .padding(Paddings.medium)
-                        .bold(currentScreen == .leagues)
-                        .foregroundColor(.primary)
+                    VStack {
+                        Image(systemName: currentScreen == .leagues ? "trophy.fill" : "trophy")
+                            .foregroundColor(.primary)
+                            .font(.system(size: 20))
+                        Text("Leagues")
+                            .padding(Paddings.medium)
+                            .bold(currentScreen == .leagues)
+                            .foregroundColor(.primary)
+                    }
                 }
                 
                 Button {
                     currentScreen = .matches
                 } label: {
-                    Text("Matches ⚽")
-                        .padding(Paddings.medium)
-                        .bold(currentScreen == .matches)
-                        .foregroundColor(.primary)
+                    VStack {
+                        Image(systemName: currentScreen == .matches ? "soccerball.inverse" : "soccerball")
+                            .foregroundColor(.primary)
+                            .font(.system(size: 20))
+                        Text("Matches")
+                            .padding(Paddings.medium)
+                            .bold(currentScreen == .matches)
+                            .foregroundColor(.primary)
+                    }
                 }
             }
             .frame(maxWidth: .infinity)
