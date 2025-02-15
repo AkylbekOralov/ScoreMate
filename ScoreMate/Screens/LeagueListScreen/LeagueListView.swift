@@ -16,16 +16,21 @@ struct LeagueListView: View {
             if viewModel.loading {
                 ProgressView()
             } else {
-                List {
-                    ForEach(viewModel.leagues) { league in
-                        NavigationLink {
-                            LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
-                        } label: {
-                            LeagueView(leagueModel: league)
+                HStack {
+                    VStack (alignment: .leading) {
+                        ForEach(viewModel.leagues) { league in
+                            NavigationLink {
+                                LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
+                            } label: {
+                                LeagueView(leagueModel: league)
+                            }
                         }
                     }
+                    .padding(.leading, Paddings.large)
+                    Spacer()
                 }
                 .navigationTitle(Text("Leagues"))
+                Spacer()
             }
         }
         

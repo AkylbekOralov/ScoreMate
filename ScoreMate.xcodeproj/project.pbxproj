@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635CB5822D60D43700509D55 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 635CB5812D60D43700509D55 /* SDWebImageSwiftUI */; };
 		6373A20F2D4BA49600D8F37B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6373A20E2D4BA49600D8F37B /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635CB5822D60D43700509D55 /* SDWebImageSwiftUI in Frameworks */,
 				6373A20F2D4BA49600D8F37B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = ScoreMate;
 			packageProductDependencies = (
 				6373A20E2D4BA49600D8F37B /* Alamofire */,
+				635CB5812D60D43700509D55 /* SDWebImageSwiftUI */,
 			);
 			productName = ScoreMate;
 			productReference = 63331EA72D422A4A007D88F5 /* ScoreMate.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				635CB5802D60D43700509D55 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 63331EA82D422A4A007D88F5 /* Products */;
@@ -337,6 +341,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		635CB5802D60D43700509D55 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
 		6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -348,6 +360,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		635CB5812D60D43700509D55 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635CB5802D60D43700509D55 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		6373A20E2D4BA49600D8F37B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */;

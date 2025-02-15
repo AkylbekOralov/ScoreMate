@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct RecentMathesView: View {
     
@@ -23,9 +24,14 @@ struct RecentMathesView: View {
                     }
                 } else {
                     Text("No matches")
+                    AnimatedImage(name: "BouncingFootball.gif", isAnimating: .constant(true))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
                 }
                 
             }
+            .background(.red)
         }
         .padding()
         Spacer()
