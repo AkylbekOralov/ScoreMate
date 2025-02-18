@@ -16,4 +16,5 @@ enum Paddings {
     static let medium3: CGFloat = 24
     static let large: CGFloat = 28
     static let large2: CGFloat = 32
+    static let extraLarge: CGFloat = 40
 }

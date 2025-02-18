@@ -12,6 +12,14 @@ enum Screens {
     case matches
 }
 
+enum LeaguesScreen {
+    case leagueLists, leagueStandings(model: LeagueModel), teamMatches
+}
+
+enum MatchesScreen {
+    case selectedDate, matchesList, matchStatistics
+}
+
 struct MainScreenView: View {
     @State var currentScreen: Screens = .leagues
     @State var viewModel = LeagueListViewModel()
@@ -21,8 +29,8 @@ struct MainScreenView: View {
         ZStack {
             VStack (spacing: 0) {
                 VStack {
-                    switch currentScreen {
-                    case .leagues:
+                    switch currentScreen { // TODO: Switch between enums
+                    case .leagues: // FIXME:
                         LeagueListView(viewModel: viewModel)
                     case .matches:
                         RecentMathesView(recentMathesViewModel: recentMathesViewModel)

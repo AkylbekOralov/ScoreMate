@@ -16,10 +16,12 @@ struct CountryImageView: View {
                 image
                     .resizable()
                     .scaledToFit()
+                    .cornerRadius(Radii.small)
             } else if phase.error != nil {
                 Image("UnknownCountry")
                     .resizable()
                     .scaledToFit()
+                    .cornerRadius(Radii.small)
             } else {
                 ProgressView()
             }

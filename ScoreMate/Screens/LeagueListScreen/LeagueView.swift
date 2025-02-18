@@ -12,17 +12,22 @@ struct LeagueView: View {
     let leagueModel: LeagueModel
     
     var body: some View {
-        HStack(spacing: 20) {
-            CountryImageView(countryCode: leagueModel.countryCode)
+        HStack(spacing: Paddings.small3) {
+            LeagueImageView(leagueId: leagueModel.id)
                 .frame(width: 35, height: 35)
-            
-            VStack(alignment: .leading) {
-                Text(leagueModel.countryName)
-                    .font(.subheadline)
-                Text(leagueModel.name)
-                    .font(.headline)
-            }
+                .padding(.trailing, Paddings.small3)
+            Text(leagueModel.name)
+                .font(.system(size: FontSizes.body, weight: .medium))
+                .foregroundColor(.black)
+            Spacer()
+            Image("chevronForward")
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, Paddings.medium)
+        .padding(.vertical, Paddings.small3)
+        .background(.white)
+        .cornerRadius(Radii.medium)
+        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
     }
 }
 
@@ -32,8 +37,12 @@ struct LeagueView_Preview: PreviewProvider {
                                     countryName: "Australia",
                                     countryId: 14, countryCode: "au",
                                     currentSeasonId: 14593)
+    static let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     static var previews: some View {
-        LeagueView(leagueModel: sample)
+        VStack {
+            LeagueView(leagueModel: sample)
+        }
+        .frame(maxWidth: screenWidth*0.9, maxHeight: .infinity, alignment: .top)
     }
 }
