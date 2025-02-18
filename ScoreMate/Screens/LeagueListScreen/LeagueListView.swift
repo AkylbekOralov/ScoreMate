@@ -34,8 +34,6 @@ struct LeagueListView: View {
                             }
                         }
                         .foregroundColor(.primary)
-                        
-                        
                     }
                 }
                 .padding(.top, screenWidth*0.1)

@@ -31,6 +31,7 @@ struct MainScreenView: View {
                 NavBarView(currentScreen: $currentScreen)
             }
         }
+        .ignoresSafeArea(.all)
     }
 }
 

@@ -9,39 +9,42 @@ import SwiftUI
 
 struct NavBarView: View {
     @Binding var currentScreen: Screens
+    let screenWidth = UIScreen.main.bounds.width
     
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 0) {
             Rectangle()
-                .frame(height: 0.5)
+                .frame(height: 1)
                 .foregroundColor(.secondary)
-            HStack(spacing: 40) {
-                VStack {
+            HStack(spacing: screenWidth * 0.1) {
+                VStack(spacing: Paddings.small3) {
                     Image(systemName: currentScreen == .leagues ? "trophy.fill" : "trophy")
-                        .foregroundColor(.primary)
-                        .font(.system(size: 20))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 27, height: 30)
                     Text("Leagues")
-                        .padding(Paddings.medium)
+                        .font(.system(size: FontSizes.body))
                         .bold(currentScreen == .leagues)
-                        .foregroundColor(.primary)
                 }
                 .onTapGesture {
                     currentScreen = .leagues
                 }
                 
-                VStack {
+                VStack(spacing: Paddings.small3) {
                     Image(systemName: currentScreen == .matches ? "soccerball.inverse" : "soccerball")
-                        .foregroundColor(.primary)
-                        .font(.system(size: 20))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
                     Text("Matches")
-                        .padding(Paddings.medium)
+                        .font(.system(size: FontSizes.body))
                         .bold(currentScreen == .matches)
-                        .foregroundColor(.primary)
                 }
                 .onTapGesture {
                     currentScreen = .matches
                 }
             }
+            .padding(.top, Paddings.small2)
+            .padding(.bottom, Paddings.large2)
         }
     }
 }
@@ -49,6 +52,12 @@ struct NavBarView: View {
 
 struct NavBarView_Preview: PreviewProvider {
     static var previews: some View {
-        NavBarView(currentScreen: .constant(Screens.leagues))
+        ZStack {
+            VStack {
+                Spacer()
+                NavBarView(currentScreen: .constant(Screens.leagues))
+            }
+        }
+        .ignoresSafeArea(.all)
     }
 }
