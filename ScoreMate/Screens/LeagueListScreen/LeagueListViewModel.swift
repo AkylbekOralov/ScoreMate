@@ -9,17 +9,15 @@ import Foundation
 import Alamofire
 
 class LeagueListViewModel: ObservableObject {
-    
     @Published var leagues: [LeagueModel] = []
     @Published var loading: Bool = false
     
     init() {
-        fetchLeagues()
-        //self.leagues = getMockLeagues()
+         fetchLeagues()
     }
     
     func fetchLeagues() {
-        loading = true
+        self.loading = true
         let url = "https://api.soccersapi.com/v2.2/leagues/?user=\(ApiCall.username)&token=\(ApiCall.token)&t=list"
         
         AF.request(url, method: .get)
@@ -55,15 +53,6 @@ class LeagueListViewModel: ObservableObject {
                     self.loading = false
                 }
             }
-    }
-    
-    
-    func getMockLeagues() -> [LeagueModel] {
-        return [
-            LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593),
-            LeagueModel(id: 1005, name: "Tipico Bundesliga", countryName: "Austria", countryId: 15, countryCode: "at", currentSeasonId: 14418),
-            LeagueModel(id: 1609, name: "Superliga", countryName: "Denmark", countryId: 37, countryCode: "dk", currentSeasonId: 14319)
-        ]
     }
 }
 

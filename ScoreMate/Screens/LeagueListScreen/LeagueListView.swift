@@ -8,30 +8,43 @@
 import SwiftUI
 
 struct LeagueListView: View {
-    
     @StateObject var viewModel: LeagueListViewModel
+    let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
         NavigationStack {
-            if viewModel.loading {
-                ProgressView()
-            } else {
-                HStack {
-                    VStack (alignment: .leading) {
-                        ForEach(viewModel.leagues) { league in
-                            NavigationLink {
-                                LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
-                            } label: {
-                                LeagueView(leagueModel: league)
+            VStack {
+                VStack {
+                    if viewModel.loading {
+                        JumpingBallView()
+                        Spacer()
+                    } else {
+                        VStack (alignment: .leading, spacing: 2) {
+                            ForEach(viewModel.leagues) { league in
+                                NavigationLink {
+                                    LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
+                                } label: {
+                                    VStack {
+                                        LeagueView(leagueModel: league)
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, screenWidth*0.1)
+                                    .padding(.vertical, 5)
+                                }
                             }
                         }
+                        .foregroundColor(.primary)
+                        
+                        
                     }
-                    .padding(.leading, Paddings.large)
-                    Spacer()
                 }
-                .navigationTitle(Text("Leagues"))
-                Spacer()
+                .padding(.top, screenWidth*0.1)
             }
+            .frame(maxWidth: .infinity,
+                   maxHeight: .infinity,
+                   alignment:.topLeading
+            )
+            .navigationTitle("Leagues")
         }
         
     }

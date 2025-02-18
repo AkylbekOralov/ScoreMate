@@ -19,9 +19,7 @@ struct MainScreenView: View {
     
     var body: some View {
         ZStack {
-            Color.white
-                .ignoresSafeArea()
-            VStack {
+            VStack (spacing: 0) {
                 VStack {
                     switch currentScreen {
                     case .leagues:
@@ -30,7 +28,6 @@ struct MainScreenView: View {
                         RecentMathesView(recentMathesViewModel: recentMathesViewModel)
                     }
                 }
-                .frame(maxHeight: .infinity)
                 NavBarView(currentScreen: $currentScreen)
             }
         }

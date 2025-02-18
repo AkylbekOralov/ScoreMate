@@ -14,11 +14,11 @@ struct LeagueView: View {
     var body: some View {
         HStack(spacing: 20) {
             CountryImageView(countryCode: leagueModel.countryCode)
-                .frame(width: 30, height: 30)
+                .frame(width: 35, height: 35)
             
             VStack(alignment: .leading) {
                 Text(leagueModel.countryName)
-                    .font(.caption)
+                    .font(.subheadline)
                 Text(leagueModel.name)
                     .font(.headline)
             }
@@ -27,7 +27,11 @@ struct LeagueView: View {
 }
 
 struct LeagueView_Preview: PreviewProvider {
-    static var sample = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
+    static var sample = LeagueModel(id: 974,
+                                    name: "A-League",
+                                    countryName: "Australia",
+                                    countryId: 14, countryCode: "au",
+                                    currentSeasonId: 14593)
     
     static var previews: some View {
         LeagueView(leagueModel: sample)

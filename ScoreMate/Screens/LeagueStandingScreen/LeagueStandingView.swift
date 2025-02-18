@@ -12,7 +12,6 @@ struct LeagueStandingView: View {
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
     
     var body: some View {
-        ZStack {
             VStack {
                 HStack {
                     LeagueInfoView(leagueModel: leagueStandingViewModel.leagueModel)
@@ -20,7 +19,6 @@ struct LeagueStandingView: View {
                 }
                 LeagueTableView(leagueStandingViewModel: leagueStandingViewModel)
             }
-        }
     }
 }
 
