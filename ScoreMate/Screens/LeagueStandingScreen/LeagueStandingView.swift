@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct LeagueStandingView: View {
-    
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-            VStack {
-                HStack {
-                    LeagueInfoView(leagueModel: leagueStandingViewModel.leagueModel)
-                    Spacer()
-                }
+        ZStack(alignment: .topLeading) {
+            Button(action: {
+                dismiss()
+            }) {
+                Image("backButton")
+                    .padding(.leading, Paddings.x4)
+                    .padding(.top, Paddings.x1)
+            }
+            .zIndex(1)
+            
+            VStack(spacing: 0) {
+                LeagueInfoView(leagueModel: leagueStandingViewModel.leagueModel)
                 LeagueTableView(leagueStandingViewModel: leagueStandingViewModel)
             }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

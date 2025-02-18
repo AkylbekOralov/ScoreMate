@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct LeagueView: View {
-    
     let leagueModel: LeagueModel
     
     var body: some View {
-        HStack(spacing: Paddings.small3) {
+        HStack(spacing: Paddings.x3) {
             LeagueImageView(leagueId: leagueModel.id)
                 .frame(width: 35, height: 35)
-                .padding(.trailing, Paddings.small3)
+                .padding(.trailing, Paddings.x3)
             Text(leagueModel.name)
                 .font(.system(size: FontSizes.body, weight: .medium))
                 .foregroundColor(.black)
@@ -23,8 +22,8 @@ struct LeagueView: View {
             Image("chevronForward")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, Paddings.medium)
-        .padding(.vertical, Paddings.small3)
+        .padding(.horizontal, Paddings.x4)
+        .padding(.vertical, Paddings.x3)
         .background(.white)
         .cornerRadius(Radii.medium)
         .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)

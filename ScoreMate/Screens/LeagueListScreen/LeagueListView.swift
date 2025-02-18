@@ -20,18 +20,18 @@ struct LeagueListView: View {
                             .font(.system(size: FontSizes.large, weight: .bold))
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, Paddings.extraLarge)
-                    .padding(.bottom, Paddings.large2)
+                    .padding(.top, Paddings.x13)
+                    .padding(.bottom, Paddings.x8)
                     
                     VStack {
                         if viewModel.loading {
                             JumpingBallView()
                             Spacer()
                         } else {
-                            VStack (alignment: .leading, spacing: Paddings.medium3) {
+                            VStack (alignment: .leading, spacing: Paddings.x6) {
                                 ForEach(viewModel.leagues) { league in
                                     VStack {
-                                        HStack(spacing: Paddings.small2) {
+                                        HStack(spacing: Paddings.x2) {
                                             CountryImageView(countryCode: league.countryCode)
                                                 .frame(width: 35, height: 35)
                                             Text(league.countryName)
@@ -40,7 +40,7 @@ struct LeagueListView: View {
                                                 .foregroundColor(.black)
                                         }
                                         .frame(maxWidth: .infinity, alignment: .leading)
-                                        .padding(.leading, Paddings.small2)
+                                        .padding(.leading, Paddings.x2)
                                         NavigationLink {
                                             LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
                                         } label: {

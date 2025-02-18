@@ -14,7 +14,7 @@ struct RecentMathesView: View {
     var body: some View {
         VStack {
             RecentDatesView(recentMathesViewModel: recentMathesViewModel)
-                .padding(.bottom, Paddings.large)
+                .padding(.bottom, Paddings.x7)
             
             VStack {
                 if let matches = recentMathesViewModel.selectedDateMatches {

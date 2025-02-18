@@ -17,7 +17,7 @@ struct NavBarView: View {
                 .frame(height: 1)
                 .foregroundColor(.secondary)
             HStack(spacing: screenWidth * 0.1) {
-                VStack(spacing: Paddings.small3) {
+                VStack(spacing: Paddings.x3) {
                     Image(systemName: currentScreen == .leagues ? "trophy.fill" : "trophy")
                         .resizable()
                         .scaledToFit()
@@ -30,7 +30,7 @@ struct NavBarView: View {
                     currentScreen = .leagues
                 }
                 
-                VStack(spacing: Paddings.small3) {
+                VStack(spacing: Paddings.x3) {
                     Image(systemName: currentScreen == .matches ? "soccerball.inverse" : "soccerball")
                         .resizable()
                         .scaledToFit()
@@ -43,8 +43,8 @@ struct NavBarView: View {
                     currentScreen = .matches
                 }
             }
-            .padding(.top, Paddings.small2)
-            .padding(.bottom, Paddings.large2)
+            .padding(.top, Paddings.x2)
+            .padding(.bottom, Paddings.x8)
         }
     }
 }
