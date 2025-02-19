@@ -13,6 +13,17 @@ struct LeagueStandingView: View {
     
     var body: some View {
         ZStack(alignment: .topLeading) {
+            LinearGradient(
+                stops: [
+                    Gradient.Stop(color: .white, location: 0.00),
+                    Gradient.Stop(color: Color(red: 1, green: 0.45, blue: 0.21), location: 0.25),
+                ],
+                startPoint: UnitPoint(x: 0.5, y: 0),
+                endPoint: UnitPoint(x: 0.5, y: 1)
+            )
+            .edgesIgnoringSafeArea(.all)
+
+            
             Button(action: {
                 dismiss()
             }) {
@@ -24,10 +35,38 @@ struct LeagueStandingView: View {
             
             VStack(spacing: 0) {
                 LeagueInfoView(leagueModel: leagueStandingViewModel.leagueModel)
-                LeagueTableView(leagueStandingViewModel: leagueStandingViewModel)
+                VStack {
+                    LeagueTableView(leagueStandingViewModel: leagueStandingViewModel)
+                }
+                .padding(.top, Paddings.x6)
+                .frame(maxHeight: .infinity)
+                .background(.white)
+                .cornerRadius(35, corners: [.topLeft, .topRight])
+                .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
             }
         }
         .navigationBarBackButtonHidden(true)
+    }
+}
+
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
+
+struct RoundedCorner: Shape {
+    let radius: CGFloat
+    let corners: UIRectCorner
+
+    init(radius: CGFloat = .infinity, corners: UIRectCorner = .allCorners) {
+        self.radius = radius
+        self.corners = corners
+    }
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
     }
 }
 
