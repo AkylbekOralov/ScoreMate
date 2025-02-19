@@ -8,27 +8,53 @@
 import SwiftUI
 
 struct TeamMatchesView: View {
-    
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        VStack(spacing: 0) {
-            TeamInfoView(league: teamMatchesViewModel.league, team: teamMatchesViewModel.team)
-                .padding(.bottom, 30)
-                .background(Color.green.opacity(0.3))
+        ZStack(alignment: .topLeading) {
+            LinearGradient(
+                stops: [
+                    Gradient.Stop(color: Color(red: 0.88, green: 0.91, blue: 0.93), location: 0.00),
+                    Gradient.Stop(color: .white, location: 0.35),
+                ],
+                startPoint: UnitPoint(x: 0.5, y: 0),
+                endPoint: UnitPoint(x: 0.5, y: 1)
+            )
+            .ignoresSafeArea(.all)
             
-            SelectionTabView(teamMatchesViewModel: teamMatchesViewModel)
+            Button(action: {
+                dismiss()
+            }) {
+                Image("backButton")
+                    .padding(.leading, Paddings.x4)
+                    .padding(.top, Paddings.x1)
+            }
+            .zIndex(1)
             
-            ScrollView {
-                LazyVStack {
-                    ForEach(teamMatchesViewModel.displayedMatches) { match in
-                        MatchView(match: match)
-                        Rectangle().fill(Color.gray.opacity(0.1)).frame(height: 2)
+            VStack(spacing: 0) {
+                TeamInfoView(league: teamMatchesViewModel.league, team: teamMatchesViewModel.team)
+                
+                //SelectionTabView(teamMatchesViewModel: teamMatchesViewModel)
+                VStack {
+                    ToggleNavBar()
+                }
+                .padding(3)
+                .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                .cornerRadius(25)
+                
+                ScrollView {
+                    LazyVStack {
+                        ForEach(teamMatchesViewModel.displayedMatches) { match in
+                            MatchView(match: match)
+                            Rectangle().fill(Color.gray.opacity(0.1)).frame(height: 2)
+                        }
                     }
                 }
+                .padding(.top, 20)
+                Spacer()
             }
-            .padding(.top, 20)
-            Spacer()
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

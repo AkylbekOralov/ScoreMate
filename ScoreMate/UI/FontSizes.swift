@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum FontSizes {
+    static var extraSmall: CGFloat { 14 }
     static var small: CGFloat { 15 }
     static var body: CGFloat { 17 }
     static var large: CGFloat { 22 }

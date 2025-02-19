@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MatchView: View {
-    
     let match: MatchModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
@@ -53,7 +52,6 @@ struct MatchView: View {
 }
 
 struct MatchView_Preview: PreviewProvider {
-    
     static let match = MatchModel(
         id: 1891183,
         statusName: "Finished",
