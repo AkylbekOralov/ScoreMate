@@ -57,7 +57,6 @@ struct TeamMatchesView: View {
                         }
                     }
                     .padding(.top, Paddings.x5)
-                    .animation(.easeIn, value: teamMatchesViewModel.displayedMatches)
                 }
             }
             .navigationBarBackButtonHidden(true)

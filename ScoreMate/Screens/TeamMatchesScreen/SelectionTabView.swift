@@ -22,7 +22,9 @@ struct SelectionTabView: View {
                         Animation.default
                     )
                     .onTapGesture {
-                        teamMatchesViewModel.changeSelection(selected: .results)
+                        withAnimation {
+                            teamMatchesViewModel.changeSelection(selected: .results)
+                        }
                     }
                 
                 Text("Calendar")
@@ -31,7 +33,9 @@ struct SelectionTabView: View {
                         Animation.default
                     )
                     .onTapGesture {
-                        teamMatchesViewModel.changeSelection(selected: .calendar)
+                        withAnimation {
+                            teamMatchesViewModel.changeSelection(selected: .calendar)
+                        }
                     }
             }
             .font(.system(size: FontSizes.body, weight: .medium))
@@ -42,9 +46,6 @@ struct SelectionTabView: View {
                     .frame(width: teamMatchesViewModel.selection == .results ? 109 : 122, height: 36, alignment: .leading)
                     .cornerRadius(25)
                     .offset(x: teamMatchesViewModel.selection == .results ? -55 : 48)
-                    .animation(
-                        Animation.default
-                    )
             )
         }
         .background(lightGrayColor)
