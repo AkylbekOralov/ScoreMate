@@ -10,4 +10,6 @@ import Foundation
 enum Radii {
     static let small: CGFloat = 2
     static let medium: CGFloat = 16
+    static let large: CGFloat = 25
+    static let large2: CGFloat = 35
 }

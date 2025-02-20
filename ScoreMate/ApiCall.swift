@@ -5,23 +5,18 @@
 //  Created by Akylbek Oralov on 11.02.2025.
 //
 
-//class ApiCall {
-//    static var username: String = "akylbekoralov2003"
-//    static var token: String = "5224b1c38beea1f12750501e5cc458c0"
-//}
-//
-//class ApiCall {
-//    static var username: String = "oralovv26"
-//    static var token: String = "69459e6f12e2752fa14a2d95b8c64f34"
-//}
+import Foundation
 
-class ApiCall {
-    static var username: String = "akylbek.oralov"
-    static var token: String = "ec719d9fb47e5fa98676aa446b844ecd"
+struct ApiKeys {
+    static let list: [(String, String)] = [
+        ("akylbekoralov2003", "5224b1c38beea1f12750501e5cc458c0"),
+        ("oralovv26", "69459e6f12e2752fa14a2d95b8c64f34"),
+        ("akylbek.oralov", "ec719d9fb47e5fa98676aa446b844ecd"),
+        ("oakylbek7", "83fe1ed61448e7fccb4a52e024677a34")
+    ]
 }
 
-// akylbekoralov2003
-// 5224b1c38beea1f12750501e5cc458c0
-
-// oralovv26
-// 69459e6f12e2752fa14a2d95b8c64f34
+class ApiCall {
+    static var username: String = ApiKeys.list[3].0
+    static var token: String = ApiKeys.list[3].1
+}

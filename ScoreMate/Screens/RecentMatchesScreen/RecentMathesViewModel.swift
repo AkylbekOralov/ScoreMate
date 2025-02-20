@@ -45,9 +45,23 @@ class RecentMathesViewModel: ObservableObject {
         }
     }
     
-    func changeSelectedDate(dateString: String) {
+    func changeSelectedDate(dateString: String) -> Double {
+        var result: Double = isEarlier(self.selectedDate, dateString) ? 1 : -1
         self.selectedDate = dateString
         updateDisplayedMatches()
+        return result
+    }
+    
+    private func isEarlier(_ dateString1: String, _ dateString2: String) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        if let date1 = dateFormatter.date(from: dateString1),
+           let date2 = dateFormatter.date(from: dateString2) {
+            return date1 < date2
+        }
+        
+        return false
     }
     
     private func updateDisplayedMatches() {

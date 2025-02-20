@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Colors {
-    static var largeTitle: CGFloat { 34 }
+    static var lightText: Color = .white
+    static var darkText: Color = .black
+    static var lightCard: Color = .white
+    static var lightBackground: Color = Color(red: 0.96, green: 0.96, blue: 0.96)
 }

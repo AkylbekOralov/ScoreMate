@@ -41,22 +41,18 @@ struct TeamMatchesView: View {
                 .padding(3)
                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                 .cornerRadius(25)
-                
+
                 ScrollView {
                     LazyVStack(spacing: Paddings.x4) {
                         ForEach(teamMatchesViewModel.displayedMatches) { match in
                             if teamMatchesViewModel.selection == .results {
                                 FinishedMatchView(match: match)
-                                    .transition(.asymmetric(insertion: .scale,
-                                                            removal: .opacity))
                             } else {
                                 UpcomingMatchView(match: match)
-                                    .transition(.asymmetric(insertion: .scale,
-                                                            removal: .opacity))
                             }
                         }
                     }
-                    .padding(.top, Paddings.x5)
+                    .padding(.top, Paddings.x8)
                 }
             }
             .navigationBarBackButtonHidden(true)
