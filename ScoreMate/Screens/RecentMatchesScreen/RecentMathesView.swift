@@ -13,8 +13,17 @@ struct RecentMathesView: View {
     
     var body: some View {
         VStack {
-            RecentDatesView(recentMathesViewModel: recentMathesViewModel)
-                .padding(.bottom, Paddings.x7)
+            VStack(spacing: 0) {
+                Image("football23")
+                Rectangle()
+                    .fill(.white.opacity(0.7))
+                    .frame(height: 1)
+                    .padding(.bottom, Paddings.x2)
+                RecentDatesView(recentMathesViewModel: recentMathesViewModel)
+            }
+            .padding(.top, 70)
+            .padding(.bottom, Paddings.x4)
+            .background(Color(red: 0.75, green: 0.26, blue: 0.26))
             
             VStack {
                 if let matches = recentMathesViewModel.selectedDateMatches {
@@ -24,16 +33,22 @@ struct RecentMathesView: View {
                 } else {
                     Text("No matches")
                 }
-                
             }
+            .padding(.top, 70)
         }
-        .padding()
-        Spacer()
+        .frame(maxWidth: .infinity,
+               maxHeight: .infinity,
+               alignment: .top
+        )
+        .background(Color(red: 0.96, green: 0.96, blue: 0.96))
     }
 }
 
 #Preview {
-    RecentMathesView(recentMathesViewModel: RecentMathesViewModel())
+    ZStack {
+        RecentMathesView(recentMathesViewModel: RecentMathesViewModel())
+    }
+    .ignoresSafeArea(.all)
 }
 
 struct RecentDatesView: View {
@@ -42,13 +57,15 @@ struct RecentDatesView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
+                HStack(spacing: Paddings.x4) {
                     ForEach(recentMathesViewModel.recentDates) { date in
-                        VStack {
+                        VStack(spacing: Paddings.x1) {
                             Text(date.dayOfWeek)
+                                .font(.system(size: FontSizes.body, weight: .medium))
                             Text(date.dateString)
+                                .font(.system(size: FontSizes.body, weight: .semibold))
                         }
-                        .foregroundColor(date.fullDateString == recentMathesViewModel.selectedDate ? .red : .primary)
+                        .foregroundColor(date.fullDateString == recentMathesViewModel.selectedDate ? .white : .white.opacity(0.7))
                         .onTapGesture {
                             recentMathesViewModel.changeSelectedDate(dateString: date.fullDateString)
                         }
@@ -56,7 +73,6 @@ struct RecentDatesView: View {
                 }
             }
             .onAppear {
-                // Scroll to the selected date when the view appears
                 DispatchQueue.main.async {
                     proxy.scrollTo(recentMathesViewModel.selectedDate, anchor: .center)
                 }
