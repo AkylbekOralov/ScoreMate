@@ -44,6 +44,7 @@ struct LeagueTableView: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                     .padding(.horizontal, Paddings.x4 )
+                    .padding(.top, Paddings.x2)
                 }
             }
         }

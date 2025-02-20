@@ -17,7 +17,7 @@ struct TeamImageView: View {
                     .resizable()
                     .scaledToFit()
             } else if phase.error != nil {
-                Image("UnknownCountry")
+                Image("UnknownTeam")
                     .resizable()
                     .scaledToFit()
             } else {
@@ -29,5 +29,5 @@ struct TeamImageView: View {
 }
 
 #Preview {
-    TeamImageView(teamId: 11)
+    TeamImageView(teamId: 1)
 }

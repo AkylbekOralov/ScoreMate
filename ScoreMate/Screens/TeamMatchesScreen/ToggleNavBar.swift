@@ -12,19 +12,27 @@ struct ToggleNavBar: View {
     @State private var selectedTab: String = "Results"
     
     let tabs = ["Results", "Calendar"]
-
+    
     var body: some View {
         HStack {
-            ForEach(tabs, id: \.self) { tab in
-                Button(action: {
-                    withAnimation(.easeOut(duration: 0.3)) {
-                        selectedTab = tab
-                    }
-                }) {
-                    Text(tab)
-                        .font(.system(size: FontSizes.body, weight: .medium))
-                        .foregroundColor(selectedTab == tab ? .white : Color(red: 0.44, green: 0.44, blue: 0.44))
+            Button(action: {
+                withAnimation(.easeOut(duration: 0.3)) {
+                    selectedTab = "Results"
                 }
+            }) {
+                Text("Results")
+                    .font(.system(size: FontSizes.body, weight: .medium))
+                    .foregroundColor(selectedTab == "Results" ? .white : Color(red: 0.44, green: 0.44, blue: 0.44))
+            }
+            
+            Button(action: {
+                withAnimation(.easeOut(duration: 0.3)) {
+                    selectedTab = "Calendar"
+                }
+            }) {
+                Text("Calendar")
+                    .font(.system(size: FontSizes.body, weight: .medium))
+                    .foregroundColor(selectedTab == "Calendar" ? .white : Color(red: 0.44, green: 0.44, blue: 0.44))
             }
         }
         .padding(5)
@@ -34,7 +42,7 @@ struct ToggleNavBar: View {
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.red)
                         .frame(width: geometry.size.width / CGFloat(tabs.count), height: geometry.size.height)
-                        .offset(x: selectedTab == "Calendar" ? geometry.size.width / 2 : 0)
+                        .offset(x: selectedTab == "Calendar" ? geometry.size.width / 2 - 5 : -5)
                 }
             }
         )
@@ -43,5 +51,8 @@ struct ToggleNavBar: View {
 }
 
 #Preview {
-    ToggleNavBar()
+    VStack {
+        ToggleNavBar()
+        Spacer()
+    }
 }

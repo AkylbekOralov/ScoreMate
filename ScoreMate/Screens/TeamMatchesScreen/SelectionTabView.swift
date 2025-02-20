@@ -14,23 +14,41 @@ struct SelectionTabView: View {
     var redColor = Color(red: 0.8, green: 0.18, blue: 0.17)
     
     var body: some View {
-        ZStack {
-            HStack {
+        VStack {
+            HStack(spacing: Paddings.x11) {
                 Text("Results")
                     .foregroundColor(teamMatchesViewModel.selection == .results ? .white : grayColor)
-                    .background(.red)
+                    .animation(
+                        Animation.default
+                    )
                     .onTapGesture {
                         teamMatchesViewModel.changeSelection(selected: .results)
                     }
                 
                 Text("Calendar")
                     .foregroundColor(teamMatchesViewModel.selection == .calendar ? .white : grayColor)
+                    .animation(
+                        Animation.default
+                    )
                     .onTapGesture {
                         teamMatchesViewModel.changeSelection(selected: .calendar)
                     }
-                
             }
+            .font(.system(size: FontSizes.body, weight: .medium))
+            .frame(width: 226, height: 42)
+            .background(
+                Rectangle()
+                    .fill(redColor)
+                    .frame(width: teamMatchesViewModel.selection == .results ? 109 : 122, height: 36, alignment: .leading)
+                    .cornerRadius(25)
+                    .offset(x: teamMatchesViewModel.selection == .results ? -55 : 48)
+                    .animation(
+                        Animation.default
+                    )
+            )
         }
+        .background(lightGrayColor)
+        .cornerRadius(25)
     }
 }
 
@@ -40,17 +58,13 @@ struct SelectionTabView_Preview: PreviewProvider {
     
     static var previews: some View {
         ZStack {
-            LinearGradient(
-                stops: [
-                    Gradient.Stop(color: Color(red: 0.88, green: 0.91, blue: 0.93), location: 0.00),
-                    Gradient.Stop(color: .white, location: 0.35),
-                ],
-                startPoint: UnitPoint(x: 0.5, y: 0),
-                endPoint: UnitPoint(x: 0.5, y: 1)
-            )
-            .ignoresSafeArea()
+            Color.green
+                .ignoresSafeArea()
             
-            SelectionTabView(teamMatchesViewModel: TeamMatchesViewModel(league: leagueModel, team: teamModel))
+            VStack {
+                SelectionTabView(teamMatchesViewModel: TeamMatchesViewModel(league: leagueModel, team: teamModel))
+                Spacer()
+            }
         }
     }
 }

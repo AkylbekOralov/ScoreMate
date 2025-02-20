@@ -82,9 +82,11 @@ class RecentMathesViewModel: ObservableObject {
                                 date: matchData.time.date ?? "Unknown",
                                 time: formattedMatchTime ?? "Unknown",
                                 homeTeam: matchData.teams.home.name ?? "Unkonwn",
+                                homeTeamCode: matchData.teams.home.nameCode ?? "UNK",
                                 homeTeamId: matchData.teams.home.id ?? 0,
                                 homeScore: homeScore ?? 0,
                                 awayTeam: matchData.teams.away.name ?? "Unknown",
+                                awayTeamCode: matchData.teams.away.nameCode ?? "UNK",
                                 awayTeamId: matchData.teams.away.id ?? 0,
                                 awayScore: awayScore ?? 0
                             )

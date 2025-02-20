@@ -35,24 +35,30 @@ struct TeamMatchesView: View {
             VStack(spacing: 0) {
                 TeamInfoView(league: teamMatchesViewModel.league, team: teamMatchesViewModel.team)
                 
-                //SelectionTabView(teamMatchesViewModel: teamMatchesViewModel)
                 VStack {
-                    ToggleNavBar()
+                    SelectionTabView(teamMatchesViewModel: teamMatchesViewModel)
                 }
                 .padding(3)
                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                 .cornerRadius(25)
                 
                 ScrollView {
-                    LazyVStack {
+                    LazyVStack(spacing: Paddings.x4) {
                         ForEach(teamMatchesViewModel.displayedMatches) { match in
-                            MatchView(match: match)
-                            Rectangle().fill(Color.gray.opacity(0.1)).frame(height: 2)
+                            if teamMatchesViewModel.selection == .results {
+                                FinishedMatchView(match: match)
+                                    .transition(.asymmetric(insertion: .scale,
+                                                            removal: .opacity))
+                            } else {
+                                UpcomingMatchView(match: match)
+                                    .transition(.asymmetric(insertion: .scale,
+                                                            removal: .opacity))
+                            }
                         }
                     }
+                    .padding(.top, Paddings.x5)
+                    .animation(.easeIn, value: teamMatchesViewModel.displayedMatches)
                 }
-                .padding(.top, 20)
-                Spacer()
             }
             .navigationBarBackButtonHidden(true)
         }

@@ -16,5 +16,6 @@ enum Paddings {
     static let x6: CGFloat = 24
     static let x7: CGFloat = 28
     static let x8: CGFloat = 32
+    static let x11: CGFloat = 44
     static let x13: CGFloat = 52
 }

@@ -55,9 +55,11 @@ struct MRecentMatchView_Preview: PreviewProvider {
         date: "2024-10-19",
         time: "18:00",
         homeTeam: "Auckland FC",
+        homeTeamCode: "AUC",
         homeTeamId: 1931466026,
         homeScore: 2,
         awayTeam: "Brisbane Roar",
+        awayTeamCode: "BRR",
         awayTeamId: 1105,
         awayScore: 0)
     

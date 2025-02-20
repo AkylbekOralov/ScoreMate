@@ -46,6 +46,13 @@ struct Teams: Decodable {
 struct TeamInfo: Decodable {
     let id: Int?
     let name: String?
+    let nameCode: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case nameCode = "short_code"
+    }
 }
 
 struct Scores: Decodable {

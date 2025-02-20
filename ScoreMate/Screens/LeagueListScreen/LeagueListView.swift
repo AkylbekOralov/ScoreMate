@@ -28,28 +28,30 @@ struct LeagueListView: View {
                             JumpingBallView()
                             Spacer()
                         } else {
-                            VStack (alignment: .leading, spacing: Paddings.x6) {
-                                ForEach(viewModel.leagues) { league in
-                                    VStack {
-                                        HStack(spacing: Paddings.x2) {
-                                            CountryImageView(countryCode: league.countryCode)
-                                                .frame(width: 35, height: 35)
-                                            Text(league.countryName)
-                                                .font(.subheadline)
-                                                .font(.system(size: FontSizes.small, weight: .light))
-                                                .foregroundColor(.black)
-                                        }
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .padding(.leading, Paddings.x2)
-                                        NavigationLink {
-                                            LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
-                                        } label: {
-                                            VStack {
-                                                LeagueView(leagueModel: league)
+                            ScrollView {
+                                VStack (alignment: .leading, spacing: Paddings.x6) {
+                                    ForEach(viewModel.leagues) { league in
+                                        VStack {
+                                            HStack(spacing: Paddings.x2) {
+                                                CountryImageView(countryCode: league.countryCode)
+                                                    .frame(width: 35, height: 35)
+                                                Text(league.countryName)
+                                                    .font(.subheadline)
+                                                    .font(.system(size: FontSizes.small, weight: .light))
+                                                    .foregroundColor(.black)
+                                            }
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(.leading, Paddings.x2)
+                                            NavigationLink {
+                                                LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
+                                            } label: {
+                                                VStack {
+                                                    LeagueView(leagueModel: league)
+                                                }
                                             }
                                         }
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                     }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             }
                         }
