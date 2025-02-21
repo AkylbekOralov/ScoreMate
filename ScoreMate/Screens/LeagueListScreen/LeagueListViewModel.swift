@@ -50,13 +50,13 @@ class LeagueListViewModel: ObservableObject {
                             
                         } ?? []
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.loading = false
                     }
                 case .failure(let error):
                     print("LeagueListViewModel error fetching leagues: \(error.localizedDescription)")
                     self.errorMessage = "Failed to load leagues. Please try again."
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.loading = false
                     }
                 }
