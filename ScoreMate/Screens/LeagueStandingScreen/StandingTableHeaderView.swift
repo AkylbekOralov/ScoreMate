@@ -34,7 +34,7 @@ struct StandingTableHeaderView: View {
                     .frame(width: screenWidth * 0.14, alignment: .center)
                     .padding(.trailing, Paddings.x2)
                 Text("P")
-                    .frame(width: screenWidth * 0.06, alignment: .center)
+                    .frame(width: screenWidth * 0.07, alignment: .center)
             }
             .font(.system(size: FontSizes.body, weight: .medium))
             .foregroundColor(Color(red: 0.38, green: 0.38, blue: 0.38))

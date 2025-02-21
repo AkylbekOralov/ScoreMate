@@ -17,6 +17,6 @@ struct ApiKeys {
 }
 
 class ApiCall {
-    static var username: String = ApiKeys.list[3].0
-    static var token: String = ApiKeys.list[3].1
+    static var username: String = ApiKeys.list[0].0
+    static var token: String = ApiKeys.list[0].1
 }

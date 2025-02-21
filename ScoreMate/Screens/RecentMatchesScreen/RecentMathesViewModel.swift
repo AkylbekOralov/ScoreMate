@@ -12,6 +12,7 @@ class RecentMathesViewModel: ObservableObject {
     @Published var recentDates: [DateModel] = []
     @Published var selectedDate: String = ""
     @Published var selectedDateMatches: [MatchModel]?
+    @Published var errorMessage: String? = nil
     
     init() {
         generateRecentDates()
@@ -48,6 +49,7 @@ class RecentMathesViewModel: ObservableObject {
     func changeSelectedDate(dateString: String) -> Double {
         var result: Double = isEarlier(self.selectedDate, dateString) ? 1 : -1
         self.selectedDate = dateString
+        self.selectedDateMatches = nil
         updateDisplayedMatches()
         return result
     }
@@ -72,6 +74,7 @@ class RecentMathesViewModel: ObservableObject {
             t=schedule&\
             d=\(self.selectedDate)
             """
+        self.errorMessage = nil
         
         AF.request(urlString, method: .get)
             .validate()
@@ -117,7 +120,8 @@ class RecentMathesViewModel: ObservableObject {
                     }
                     
                 case .failure(let error):
-                    print("Error fetching matches: \(error.localizedDescription)")
+                    print("RecentMatchesViewModel error fetching matches: \(error.localizedDescription)")
+                    self.errorMessage = "Failed to load mathces"
                 }
             }
     }

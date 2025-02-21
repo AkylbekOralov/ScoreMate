@@ -43,7 +43,7 @@ struct TeamMatchesView: View {
                 .cornerRadius(25)
 
                 ScrollView {
-                    LazyVStack(spacing: Paddings.x4) {
+                    VStack(spacing: Paddings.x4) {
                         ForEach(teamMatchesViewModel.displayedMatches) { match in
                             if teamMatchesViewModel.selection == .results {
                                 FinishedMatchView(match: match)
@@ -52,6 +52,7 @@ struct TeamMatchesView: View {
                             }
                         }
                     }
+                    .frame(maxWidth: .infinity)
                     .padding(.top, Paddings.x8)
                 }
             }

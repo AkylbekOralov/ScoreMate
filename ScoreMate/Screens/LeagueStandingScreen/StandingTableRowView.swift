@@ -46,7 +46,7 @@ struct StandingTableRowView: View {
             
             Text("\(points)")
                 .font(.system(size: 20, weight: .regular, design: .default))
-                .frame(width: screenWidth * 0.06, alignment: .center)
+                .frame(width: screenWidth * 0.07, alignment: .center)
         }
         .font(.system(size: FontSizes.body, weight: .medium))
         .foregroundColor(.black)

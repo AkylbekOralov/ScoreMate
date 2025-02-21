@@ -11,12 +11,13 @@ struct LeagueStandingView: View {
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
     @Environment(\.dismiss) private var dismiss
     
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
                     Gradient.Stop(color: .white, location: 0.00),
-                    Gradient.Stop(color: Color(red: 1, green: 0.45, blue: 0.21), location: 0.25),
+                    Gradient.Stop(color: leagueStandingViewModel.accentColor, location: 0.25),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)
