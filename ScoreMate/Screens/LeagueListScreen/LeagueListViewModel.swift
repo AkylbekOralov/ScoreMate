@@ -11,13 +11,16 @@ import Alamofire
 class LeagueListViewModel: ObservableObject {
     @Published var leagues: [LeagueModel] = []
     @Published var loading: Bool = false
+    @Published var errorMessage: String? = nil
     
     init() {
-         fetchLeagues()
+        fetchLeagues()
     }
     
     func fetchLeagues() {
         self.loading = true
+        self.errorMessage = nil
+        
         let url = "https://api.soccersapi.com/v2.2/leagues/?user=\(ApiCall.username)&token=\(ApiCall.token)&t=list"
         
         AF.request(url, method: .get)
@@ -47,10 +50,15 @@ class LeagueListViewModel: ObservableObject {
                             
                         } ?? []
                     }
-                    self.loading = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        self.loading = false
+                    }
                 case .failure(let error):
-                    print("Error fetching leagues: \(error.localizedDescription)")
-                    self.loading = false
+                    print("LeagueListViewModel error fetching leagues: \(error.localizedDescription)")
+                    self.errorMessage = "Failed to load leagues. Please try again."
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        self.loading = false
+                    }
                 }
             }
     }

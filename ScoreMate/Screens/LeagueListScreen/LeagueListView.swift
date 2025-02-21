@@ -19,8 +19,9 @@ struct LeagueListView: View {
                     
                     VStack {
                         if viewModel.loading {
-                            JumpingBallView()
-                            Spacer()
+                            BouncingBallAnimationView()
+                        } else if let errorMessage = viewModel.errorMessage {
+                            errorView(errorMessage: errorMessage)
                         } else {
                             LeaguesScrollView(leagues: viewModel.leagues)
                         }
@@ -51,7 +52,26 @@ private extension LeagueListView {
         .padding(.bottom, Paddings.x8)
     }
     
-    
+    func errorView(errorMessage: String) -> some View {
+        VStack(spacing: Paddings.x4) {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .multilineTextAlignment(.leading)
+
+                Button(action: {
+                    viewModel.fetchLeagues()
+                }) {
+                    Text("Retry")
+                        .font(.system(size: 18, weight: .bold))
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
+            .frame(alignment: .leading)
+        }
 }
 
 struct LeagueListView_Preview: PreviewProvider {

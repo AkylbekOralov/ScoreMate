@@ -29,8 +29,8 @@ struct MainScreenView: View {
         ZStack {
             VStack (spacing: 0) {
                 VStack {
-                    switch currentScreen { // TODO: Switch between enums
-                    case .leagues: // FIXME:
+                    switch currentScreen {
+                    case .leagues:
                         LeagueListView(viewModel: viewModel)
                     case .matches:
                         RecentMathesView(recentMathesViewModel: recentMathesViewModel)
