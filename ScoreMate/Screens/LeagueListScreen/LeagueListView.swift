@@ -67,7 +67,6 @@ private extension LeagueListView {
                         .cornerRadius(10)
                 }
             }
-            .padding()
             .frame(alignment: .leading)
         }
 }
