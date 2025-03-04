@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TeamInfoView: View {
+struct TeamHeaderView: View {
     let league: LeagueModel
     let team: TeamModel
     
@@ -37,7 +37,7 @@ struct TeamInfoView_Preview: PreviewProvider {
     
     static var previews: some View {
         VStack {
-            TeamInfoView(league: leagueModel, team: teamModel)
+            TeamHeaderView(league: leagueModel, team: teamModel)
             Spacer()
         }
     }

@@ -34,7 +34,7 @@ struct LeagueStandingView: View {
             .zIndex(1)
             
             VStack(spacing: 0) {
-                LeagueInfoView(leagueModel: leagueStandingViewModel.leagueModel)
+                LeagueHeaderView(leagueModel: leagueStandingViewModel.leagueModel)
                 VStack {
                     LeagueTableView(leagueStandingViewModel: leagueStandingViewModel)
                 }

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class LeagueListViewModel: ObservableObject {
+class LeaguesViewModel: ObservableObject {
     @Published var leagues: [LeagueModel] = []
     @Published var errorMessage: String? = nil
     

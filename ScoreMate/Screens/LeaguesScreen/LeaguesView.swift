@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct LeagueListView: View {
-    @StateObject var viewModel: LeagueListViewModel
+struct LeaguesView: View {
+    @StateObject var viewModel: LeaguesViewModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
@@ -21,7 +21,7 @@ struct LeagueListView: View {
                         if let errorMessage = viewModel.errorMessage {
                             errorView(errorMessage: errorMessage)
                         } else {
-                            LeaguesScrollView(leagues: viewModel.leagues)
+                            LeaguesListView(leagues: viewModel.leagues)
                         }
                     }
                 }
@@ -39,7 +39,7 @@ struct LeagueListView: View {
     }
 }
 
-private extension LeagueListView {
+private extension LeaguesView {
     func headerView() -> some View {
         VStack {
             Text("Football Leagues")
@@ -73,6 +73,6 @@ private extension LeagueListView {
 
 struct LeagueListView_Preview: PreviewProvider {
     static var previews: some View {
-        LeagueListView(viewModel: LeagueListViewModel())
+        LeaguesView(viewModel: LeaguesViewModel())
     }
 }

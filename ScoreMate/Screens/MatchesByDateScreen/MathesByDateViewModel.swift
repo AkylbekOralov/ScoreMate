@@ -8,8 +8,8 @@
 import Foundation
 import Alamofire
 
-class RecentMathesViewModel: ObservableObject {
-    @Published var recentDates: [DateModel] = []
+class MathesByDateViewModel: ObservableObject {
+    @Published var dates: [DateModel] = []
     @Published var selectedDate: String = ""
     @Published var selectedDateMatches: [MatchModel]?
     @Published var errorMessage: String? = nil
@@ -40,14 +40,14 @@ class RecentMathesViewModel: ObservableObject {
                     let dayOfWeek = calendar.isDate(date, equalTo: today, toGranularity: .day) ? "Today" : dayOfTheWeekFormatter.string(from: date)
                     let dateString = dayMonthFormatter.string(from: date)
                     let fullDateString = fullDateFormatter.string(from: date)
-                    recentDates.append(DateModel(dayOfWeek: dayOfWeek, dateString: dateString, fullDateString: fullDateString))
+                    dates.append(DateModel(dayOfWeek: dayOfWeek, dateString: dateString, fullDateString: fullDateString))
                 }
             }
         }
     }
     
     func changeSelectedDate(dateString: String) -> Double {
-        self.selectedDateMatches = nil
+        self.selectedDateMatches = []
         var result: Double = isEarlier(self.selectedDate, dateString) ? 1 : -1
         self.selectedDate = dateString
         updateDisplayedMatches()
@@ -111,10 +111,10 @@ class RecentMathesViewModel: ObservableObject {
                         }
                     }
                     
-                    if !matches.isEmpty {
-                        self.selectedDateMatches = matches
-                    } else {
+                    if matches.isEmpty {
                         self.selectedDateMatches = nil
+                    } else {
+                        self.selectedDateMatches = matches
                     }
                     
                 case .failure(let error):

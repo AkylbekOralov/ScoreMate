@@ -11,7 +11,7 @@ import SwiftUI
 struct ScoreMateApp: App {
     var body: some Scene {
         WindowGroup {
-           MainScreenView()
+           MainView()
         }
     }
 }

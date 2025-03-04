@@ -20,10 +20,10 @@ enum MatchesScreen {
     case selectedDate, matchesList, matchStatistics
 }
 
-struct MainScreenView: View {
+struct MainView: View {
     @State var currentScreen: Screens = .leagues
-    @State var viewModel = LeagueListViewModel()
-    @State var recentMathesViewModel = RecentMathesViewModel()
+    @State var viewModel = LeaguesViewModel()
+    @State var recentMathesViewModel = MathesByDateViewModel()
     
     var body: some View {
         ZStack {
@@ -31,12 +31,12 @@ struct MainScreenView: View {
                 VStack {
                     switch currentScreen {
                     case .leagues:
-                        LeagueListView(viewModel: viewModel)
+                        LeaguesView(viewModel: viewModel)
                     case .matches:
-                        RecentMathesView(recentMathesViewModel: recentMathesViewModel)
+                        MathesByDateView(mathesByDateViewModel: recentMathesViewModel)
                     }
                 }
-                NavBarView(currentScreen: $currentScreen)
+                AppNavigationBarView(currentScreen: $currentScreen)
             }
         }
         .ignoresSafeArea(.all)
@@ -44,5 +44,5 @@ struct MainScreenView: View {
 }
 
 #Preview {
-    MainScreenView()
+    MainView()
 }

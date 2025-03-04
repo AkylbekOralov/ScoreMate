@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectionTabView: View {
+struct MatchFilterTabView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
     var grayColor = Color(red: 0.44, green: 0.44, blue: 0.44)
     var lightGrayColor = Color(red: 0.96, green: 0.96, blue: 0.96)
@@ -59,11 +59,11 @@ struct SelectionTabView_Preview: PreviewProvider {
     
     static var previews: some View {
         ZStack {
-            Color.green
+            Color.gray.opacity(0.3)
                 .ignoresSafeArea()
             
             VStack {
-                SelectionTabView(teamMatchesViewModel: TeamMatchesViewModel(league: leagueModel, team: teamModel))
+                MatchFilterTabView(teamMatchesViewModel: TeamMatchesViewModel(league: leagueModel, team: teamModel))
                 Spacer()
             }
         }

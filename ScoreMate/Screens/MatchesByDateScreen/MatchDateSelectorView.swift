@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RecentDatesView: View {
-    @StateObject var recentMathesViewModel: RecentMathesViewModel
+struct MatchDateSelectorView: View {
+    @StateObject var recentMathesViewModel: MathesByDateViewModel
     @Binding var rotationAngle: Double
     @Binding var rotationDirection: Double
     
@@ -18,7 +18,7 @@ struct RecentDatesView: View {
                 HStack(spacing: Paddings.x4) {
                     Spacer()
                         .frame(width: UIScreen.main.bounds.width / 2 - 40)
-                    ForEach(recentMathesViewModel.recentDates) { date in
+                    ForEach(recentMathesViewModel.dates) { date in
                         VStack(spacing: Paddings.x1) {
                             Text(date.dayOfWeek)
                                 .font(.system(size: FontSizes.body, weight: .medium))

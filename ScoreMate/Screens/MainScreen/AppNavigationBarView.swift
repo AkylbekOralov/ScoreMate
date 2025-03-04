@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavBarView: View {
+struct AppNavigationBarView: View {
     @Binding var currentScreen: Screens
     let screenWidth = UIScreen.main.bounds.width
     
@@ -55,7 +55,7 @@ struct NavBarView_Preview: PreviewProvider {
         ZStack {
             VStack {
                 Spacer()
-                NavBarView(currentScreen: .constant(Screens.leagues))
+                AppNavigationBarView(currentScreen: .constant(Screens.leagues))
             }
         }
         .ignoresSafeArea(.all)

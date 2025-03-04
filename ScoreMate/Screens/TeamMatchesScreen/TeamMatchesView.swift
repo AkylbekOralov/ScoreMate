@@ -33,10 +33,10 @@ struct TeamMatchesView: View {
             .zIndex(1)
             
             VStack(spacing: 0) {
-                TeamInfoView(league: teamMatchesViewModel.league, team: teamMatchesViewModel.team)
+                TeamHeaderView(league: teamMatchesViewModel.league, team: teamMatchesViewModel.team)
                 
                 VStack {
-                    SelectionTabView(teamMatchesViewModel: teamMatchesViewModel)
+                    MatchFilterTabView(teamMatchesViewModel: teamMatchesViewModel)
                 }
                 .padding(3)
                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))

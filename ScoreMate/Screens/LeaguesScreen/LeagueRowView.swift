@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LeagueView: View {
+struct LeagueRowView: View {
     let leagueModel: LeagueModel
     
     var body: some View {
@@ -42,7 +42,7 @@ struct LeagueView_Preview: PreviewProvider {
     
     static var previews: some View {
         VStack {
-            LeagueView(leagueModel: sample)
+            LeagueRowView(leagueModel: sample)
         }
         .frame(maxWidth: screenWidth*0.9, maxHeight: .infinity, alignment: .top)
     }

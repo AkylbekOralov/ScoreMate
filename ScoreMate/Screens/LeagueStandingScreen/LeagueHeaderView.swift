@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LeagueInfoView: View {
+struct LeagueHeaderView: View {
     let leagueModel: LeagueModel
     let screenHeight: CGFloat = UIScreen.main.bounds.height
     
@@ -31,7 +31,7 @@ struct LeagueInfoView_Preview: PreviewProvider {
         ZStack(alignment: .top) {
             Color.gray
                 .ignoresSafeArea()
-            LeagueInfoView(leagueModel: leagueModel)
+            LeagueHeaderView(leagueModel: leagueModel)
         }
     }
 }

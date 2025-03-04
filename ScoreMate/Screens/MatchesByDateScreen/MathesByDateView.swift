@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RecentMathesView: View {
-    @StateObject var recentMathesViewModel: RecentMathesViewModel
+struct MathesByDateView: View {
+    @StateObject var mathesByDateViewModel: MathesByDateViewModel
     @State private var rotationAngle: Double = 0
     @State private var rotationDirection: Double = 0
     
@@ -25,7 +25,7 @@ struct RecentMathesView: View {
                     .fill(.white.opacity(0.7))
                     .frame(height: 1)
                     .padding(.bottom, Paddings.x2)
-                RecentDatesView(recentMathesViewModel: recentMathesViewModel, rotationAngle: $rotationAngle, rotationDirection: $rotationDirection)
+                MatchDateSelectorView(recentMathesViewModel: mathesByDateViewModel, rotationAngle: $rotationAngle, rotationDirection: $rotationDirection)
             }
             .padding(.top, 70)
             .padding(.bottom, Paddings.x4)
@@ -33,14 +33,14 @@ struct RecentMathesView: View {
             
             ScrollView {
                 VStack(spacing: Paddings.x4) {
-                    if let errorMessage = recentMathesViewModel.errorMessage {
+                    if let errorMessage = mathesByDateViewModel.errorMessage {
                         Text(errorMessage)
-                    } else if let matches = recentMathesViewModel.selectedDateMatches {
+                    } else if let matches = mathesByDateViewModel.selectedDateMatches {
                         ForEach(matches) { match in
                             if match.statusName == "Finihed" {
                                 RecentFinishedMatchView(match: match)
                             } else if match.statusName == "Notstarted" {
-                                RecentUpcomingMatchView(match: match)
+                                UpcomingMatchView(match: match)
                             }
                         }
                     } else {
@@ -62,7 +62,7 @@ struct RecentMathesView: View {
 
 #Preview {
     ZStack {
-        RecentMathesView(recentMathesViewModel: RecentMathesViewModel())
+        MathesByDateView(mathesByDateViewModel: MathesByDateViewModel())
     }
     .ignoresSafeArea(.all)
 }

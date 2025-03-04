@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LeaguesScrollView: View {
+struct LeaguesListView: View {
     let leagues: [LeagueModel]
     
     var body: some View {
@@ -21,7 +21,7 @@ struct LeaguesScrollView: View {
     }
 }
 
-extension LeaguesScrollView {
+extension LeaguesListView {
     func leagueItemView(league: LeagueModel) -> some View {
         VStack {
             HStack(spacing: Paddings.x2) {
@@ -38,7 +38,7 @@ extension LeaguesScrollView {
                 LeagueStandingView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: league))
             } label: {
                 VStack {
-                    LeagueView(leagueModel: league)
+                    LeagueRowView(leagueModel: league)
                 }
             }
         }
