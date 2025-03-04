@@ -12,7 +12,6 @@ class RecentMathesViewModel: ObservableObject {
     @Published var recentDates: [DateModel] = []
     @Published var selectedDate: String = ""
     @Published var selectedDateMatches: [MatchModel]?
-    @Published var loading: Bool = false
     @Published var errorMessage: String? = nil
     
     init() {
@@ -48,10 +47,9 @@ class RecentMathesViewModel: ObservableObject {
     }
     
     func changeSelectedDate(dateString: String) -> Double {
-        self.loading = true
+        self.selectedDateMatches = nil
         var result: Double = isEarlier(self.selectedDate, dateString) ? 1 : -1
         self.selectedDate = dateString
-        self.selectedDateMatches = nil
         updateDisplayedMatches()
         return result
     }
@@ -69,7 +67,6 @@ class RecentMathesViewModel: ObservableObject {
     }
     
     private func updateDisplayedMatches() {
-        self.loading = true
         let urlString = """
             https://api.soccersapi.com/v2.2/fixtures/?\
             user=\(ApiCall.username)&\
@@ -114,13 +111,10 @@ class RecentMathesViewModel: ObservableObject {
                         }
                     }
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        if !matches.isEmpty {
-                            self.selectedDateMatches = matches
-                        } else {
-                            self.selectedDateMatches = nil
-                        }
-                        self.loading = false
+                    if !matches.isEmpty {
+                        self.selectedDateMatches = matches
+                    } else {
+                        self.selectedDateMatches = nil
                     }
                     
                 case .failure(let error):

@@ -29,12 +29,10 @@ struct LeagueInfoView_Preview: PreviewProvider {
     
     static var previews: some View {
         ZStack(alignment: .top) {
-            Color.black
+            Color.gray
                 .ignoresSafeArea()
             LeagueInfoView(leagueModel: leagueModel)
         }
-        
     }
-    
 }
 

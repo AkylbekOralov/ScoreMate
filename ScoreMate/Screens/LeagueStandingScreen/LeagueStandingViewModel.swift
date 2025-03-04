@@ -13,7 +13,6 @@ class LeagueStandingViewModel: ObservableObject {
     let leagueModel: LeagueModel
     let accentColor: Color
     @Published var standings: [TeamModel] = []
-    @Published var loading: Bool = false
     @Published var errorMessage: String? = nil
     
     init(leagueModel: LeagueModel) {
@@ -32,7 +31,6 @@ class LeagueStandingViewModel: ObservableObject {
     }
     
     func fetchStandings() {
-        self.loading = true
         self.errorMessage = nil
         let url = "https://api.soccersapi.com/v2.2/leagues/?user=\(ApiCall.username)&token=\(ApiCall.token)&t=standings&season_id=\(leagueModel.currentSeasonId)"
         
@@ -57,16 +55,9 @@ class LeagueStandingViewModel: ObservableObject {
                         } ?? []
                         
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self.loading = false
-                    }
                 case .failure(let error):
                     print("LeagueStandingViewModel error fetching league standings: \(error.localizedDescription)")
                     self.errorMessage = "Failed to load leagues. Please try again."
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self.loading = false
-                    }
-                    
                 }
                 
             }

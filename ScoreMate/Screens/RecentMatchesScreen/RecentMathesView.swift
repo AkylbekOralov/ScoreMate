@@ -31,30 +31,27 @@ struct RecentMathesView: View {
             .padding(.bottom, Paddings.x4)
             .background(Color(red: 0.75, green: 0.26, blue: 0.26))
             
-            if recentMathesViewModel.loading {
-                BouncingBallAnimationView()
-            } else {
-                ScrollView {
-                    VStack(spacing: Paddings.x4) {
-                        if let errorMessage = recentMathesViewModel.errorMessage {
-                            Text(errorMessage)
-                        } else if let matches = recentMathesViewModel.selectedDateMatches {
-                            ForEach(matches) { match in
-                                if match.statusName == "Finihed" {
-                                    RecentFinishedMatchView(match: match)
-                                } else if match.statusName == "Notstarted" {
-                                    RecentUpcomingMatchView(match: match)
-                                }
+            ScrollView {
+                VStack(spacing: Paddings.x4) {
+                    if let errorMessage = recentMathesViewModel.errorMessage {
+                        Text(errorMessage)
+                    } else if let matches = recentMathesViewModel.selectedDateMatches {
+                        ForEach(matches) { match in
+                            if match.statusName == "Finihed" {
+                                RecentFinishedMatchView(match: match)
+                            } else if match.statusName == "Notstarted" {
+                                RecentUpcomingMatchView(match: match)
                             }
-                        } else {
-                            Text("No matches")
                         }
+                    } else {
+                        Text("No matches")
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding(.top, Paddings.x8)
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.top, Paddings.x8)
             }
         }
+        
         .frame(maxWidth: .infinity,
                maxHeight: .infinity,
                alignment: .top

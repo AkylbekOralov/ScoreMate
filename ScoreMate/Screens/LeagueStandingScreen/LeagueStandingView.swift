@@ -11,7 +11,6 @@ struct LeagueStandingView: View {
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
     @Environment(\.dismiss) private var dismiss
     
-    
     var body: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
@@ -44,6 +43,7 @@ struct LeagueStandingView: View {
                 .background(.white)
                 .cornerRadius(35, corners: [.topLeft, .topRight])
                 .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
+                .ignoresSafeArea(.all, edges: .bottom)
             }
         }
         .navigationBarBackButtonHidden(true)

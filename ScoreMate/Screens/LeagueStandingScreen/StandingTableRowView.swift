@@ -54,7 +54,6 @@ struct StandingTableRowView: View {
 }
 
 struct StandingTableRowView_Preview: PreviewProvider {
-    
     static var previews: some View {
         VStack {
             StandingTableRowView(

@@ -43,7 +43,6 @@ struct StandingTableHeaderView: View {
             line
         }
     }
-    
 }
 
 #Preview {
@@ -51,5 +50,4 @@ struct StandingTableHeaderView: View {
         StandingTableHeaderView()
         Spacer()
     }
-    
 }
