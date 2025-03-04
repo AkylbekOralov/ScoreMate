@@ -12,7 +12,7 @@ struct LeaguesView: View {
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
-        NavigationStack {
+        
             VStack {
                 VStack(spacing: 0) {
                     headerView()
@@ -35,8 +35,6 @@ struct LeaguesView: View {
             )
             .background(Colors.lightBackground)
         }
-        
-    }
 }
 
 private extension LeaguesView {

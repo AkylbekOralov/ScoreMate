@@ -31,6 +31,11 @@ struct MatchDateSelectorView: View {
                                 rotationDirection = recentMathesViewModel.changeSelectedDate(dateString: date.fullDateString)
                             }
                         }
+                        .gesture(
+                            DragGesture()
+                                .onChanged { _ in
+                                }
+                        )
                     }
                     Spacer()
                         .frame(width: UIScreen.main.bounds.width / 2 - 40)

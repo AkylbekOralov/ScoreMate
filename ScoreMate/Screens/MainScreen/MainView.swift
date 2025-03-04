@@ -31,7 +31,10 @@ struct MainView: View {
                 VStack {
                     switch currentScreen {
                     case .leagues:
-                        LeaguesView(viewModel: viewModel)
+                        NavigationStack {
+                            LeaguesView(viewModel: viewModel)
+                            MathesByDateView(mathesByDateViewModel: recentMathesViewModel)
+                        }
                     case .matches:
                         MathesByDateView(mathesByDateViewModel: recentMathesViewModel)
                     }
