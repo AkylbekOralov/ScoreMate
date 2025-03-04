@@ -18,9 +18,7 @@ struct LeagueListView: View {
                     headerView()
                     
                     VStack {
-                        if viewModel.loading {
-                            BouncingBallAnimationView()
-                        } else if let errorMessage = viewModel.errorMessage {
+                        if let errorMessage = viewModel.errorMessage {
                             errorView(errorMessage: errorMessage)
                         } else {
                             LeaguesScrollView(leagues: viewModel.leagues)
