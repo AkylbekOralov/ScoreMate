@@ -13,6 +13,7 @@ class LeaguesViewModel: ObservableObject {
     @Published var errorMessage: String? = nil
     
     init() {
+        // TODO: await/completetion handler
         fetchLeagues()
     }
     

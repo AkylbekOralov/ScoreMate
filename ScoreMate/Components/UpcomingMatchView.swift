@@ -53,6 +53,17 @@ struct UpcomingMatchView: View {
     }
 }
 
+//struct customModifier: ViewModifier {
+//    func body(content: Content) -> some View {
+//            content
+//                .font(.largeTitle)
+//                .foregroundStyle(.white)
+//                .padding()
+//                .background(.blue)
+//                .clipShape(.rect(cornerRadius: 10))
+//    }
+//}
+
 struct UpcomingMatchView_Preview: PreviewProvider {
     static let match = MatchModel(
         id: 1891183,

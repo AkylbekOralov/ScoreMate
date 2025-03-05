@@ -8,12 +8,15 @@
 import Foundation
 import Alamofire
 
-class MathesByDateViewModel: ObservableObject {
+class MatchesByDateViewModel: ObservableObject {
     @Published var dates: [DateModel] = []
     @Published var selectedDate: String = ""
     @Published var selectedDateMatches: [MatchModel]?
     @Published var errorMessage: String? = nil
     
+    @Published var rotationAngle: Double = 0
+    private var rotationDirection: Double = 1
+
     init() {
         generateRecentDates()
         updateDisplayedMatches()
@@ -46,12 +49,12 @@ class MathesByDateViewModel: ObservableObject {
         }
     }
     
-    func changeSelectedDate(dateString: String) -> Double {
+    func changeSelectedDate(dateString: String) {
         self.selectedDateMatches = []
-        var result: Double = isEarlier(self.selectedDate, dateString) ? 1 : -1
+        self.rotationDirection = isEarlier(self.selectedDate, dateString) ? 1 : -1
+        self.rotationAngle += 360*1.3*self.rotationDirection
         self.selectedDate = dateString
         updateDisplayedMatches()
-        return result
     }
     
     private func isEarlier(_ dateString1: String, _ dateString2: String) -> Bool {
@@ -78,7 +81,7 @@ class MathesByDateViewModel: ObservableObject {
         
         AF.request(urlString, method: .get)
             .validate()
-            .responseDecodable(of: SoccerResponse.self) { response in
+            .responseDecodable(of: TeamMatchesModel.self) { response in
                 switch response.result {
                 case .success(let soccerResponse):
                     var matches: [MatchModel] = []

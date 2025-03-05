@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppNavigationBarView: View {
-    @Binding var currentScreen: Screens
+    @Binding var currentScreen: AppScreens
     let screenWidth = UIScreen.main.bounds.width
     
     var body: some View {
@@ -31,16 +31,16 @@ struct AppNavigationBarView: View {
                 }
                 
                 VStack(spacing: Paddings.x3) {
-                    Image(systemName: currentScreen == .matches ? "soccerball.inverse" : "soccerball")
+                    Image(systemName: currentScreen == .matchesByDate ? "soccerball.inverse" : "soccerball")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
                     Text("Matches")
                         .font(.system(size: FontSizes.body))
-                        .bold(currentScreen == .matches)
+                        .bold(currentScreen == .matchesByDate)
                 }
                 .onTapGesture {
-                    currentScreen = .matches
+                    currentScreen = .matchesByDate
                 }
             }
             .padding(.top, Paddings.x2)
@@ -55,7 +55,7 @@ struct NavBarView_Preview: PreviewProvider {
         ZStack {
             VStack {
                 Spacer()
-                AppNavigationBarView(currentScreen: .constant(Screens.leagues))
+                AppNavigationBarView(currentScreen: .constant(AppScreens.leagues))
             }
         }
         .ignoresSafeArea(.all)

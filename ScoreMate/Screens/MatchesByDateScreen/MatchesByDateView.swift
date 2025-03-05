@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct MathesByDateView: View {
-    @StateObject var mathesByDateViewModel: MathesByDateViewModel
-    @State private var rotationAngle: Double = 0
-    @State private var rotationDirection: Double = 0
+struct MatchesByDateView: View {
+    @ObservedObject var mathesByDateViewModel: MatchesByDateViewModel
     
     var body: some View {
         VStack {
@@ -19,13 +17,13 @@ struct MathesByDateView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 25, height: 25)
-                    .rotationEffect(.degrees(rotationAngle))
-                    .animation(.easeInOut(duration: 0.5), value: rotationAngle)
+                    .rotationEffect(.degrees(mathesByDateViewModel.rotationAngle))
+                    .animation(.easeInOut(duration: 0.5), value: mathesByDateViewModel.rotationAngle)
                 Rectangle()
                     .fill(.white.opacity(0.7))
                     .frame(height: 1)
                     .padding(.bottom, Paddings.x2)
-                MatchDateSelectorView(recentMathesViewModel: mathesByDateViewModel, rotationAngle: $rotationAngle, rotationDirection: $rotationDirection)
+                MatchDateSelectorView(matchesByDateViewModel: mathesByDateViewModel)
             }
             .padding(.top, 70)
             .padding(.bottom, Paddings.x4)
@@ -37,8 +35,8 @@ struct MathesByDateView: View {
                         Text(errorMessage)
                     } else if let matches = mathesByDateViewModel.selectedDateMatches {
                         ForEach(matches) { match in
-                            if match.statusName == "Finihed" {
-                                RecentFinishedMatchView(match: match)
+                            if match.statusName == "Finished" {
+                                FinishedMatchView(match: match, showDate: false)
                             } else if match.statusName == "Notstarted" {
                                 UpcomingMatchView(match: match)
                             }
@@ -62,7 +60,7 @@ struct MathesByDateView: View {
 
 #Preview {
     ZStack {
-        MathesByDateView(mathesByDateViewModel: MathesByDateViewModel())
+        MatchesByDateView(mathesByDateViewModel: MatchesByDateViewModel())
     }
     .ignoresSafeArea(.all)
 }

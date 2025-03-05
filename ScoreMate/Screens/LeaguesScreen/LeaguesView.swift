@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct LeaguesView: View {
-    @StateObject var viewModel: LeaguesViewModel
+    @ObservedObject var leaguesViewModel: LeaguesViewModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
-        
-            VStack {
+        VStack {
                 VStack(spacing: 0) {
                     headerView()
                     
                     VStack {
-                        if let errorMessage = viewModel.errorMessage {
+                        if let errorMessage = leaguesViewModel.errorMessage {
                             errorView(errorMessage: errorMessage)
                         } else {
-                            LeaguesListView(leagues: viewModel.leagues)
+                            LeaguesListView(leagues: leaguesViewModel.leagues)
                         }
                     }
                 }
@@ -55,7 +54,7 @@ private extension LeaguesView {
                     .multilineTextAlignment(.leading)
 
                 Button(action: {
-                    viewModel.fetchLeagues()
+                    leaguesViewModel.fetchLeagues()
                 }) {
                     Text("Retry")
                         .font(.system(size: 18, weight: .bold))
@@ -71,6 +70,6 @@ private extension LeaguesView {
 
 struct LeagueListView_Preview: PreviewProvider {
     static var previews: some View {
-        LeaguesView(viewModel: LeaguesViewModel())
+        LeaguesView(leaguesViewModel: LeaguesViewModel())
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinishedMatchView: View {
     let match: MatchModel
+    let showDate: Bool
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
@@ -33,9 +34,11 @@ struct FinishedMatchView: View {
                         .font(.system(size: FontSizes.small))
                 }
             }
-            Text(match.date)
-                .font(.system(size: FontSizes.small))
-              .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
+            if showDate {
+                Text(match.date)
+                    .font(.system(size: FontSizes.small))
+                    .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
+            }
         }
         .padding(.horizontal, Paddings.x11)
         .padding(.vertical, Paddings.x3)
@@ -70,6 +73,6 @@ struct FinishedMatchView_Preview: PreviewProvider {
         awayScore: 0)
     
     static var previews: some View {
-        FinishedMatchView(match: match)
+        FinishedMatchView(match: match, showDate: true)
     }
 }

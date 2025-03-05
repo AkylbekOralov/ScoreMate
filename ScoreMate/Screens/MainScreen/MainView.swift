@@ -7,23 +7,10 @@
 
 import SwiftUI
 
-enum Screens {
-    case leagues
-    case matches
-}
-
-enum LeaguesScreen {
-    case leagueLists, leagueStandings(model: LeagueModel), teamMatches
-}
-
-enum MatchesScreen {
-    case selectedDate, matchesList, matchStatistics
-}
-
 struct MainView: View {
-    @State var currentScreen: Screens = .leagues
-    @State var viewModel = LeaguesViewModel()
-    @State var recentMathesViewModel = MathesByDateViewModel()
+    @State var currentScreen: AppScreens = .leagues
+    @State var leaguesViewModel = LeaguesViewModel()
+    @State var mathesByDateViewModel = MatchesByDateViewModel()
     
     var body: some View {
         ZStack {
@@ -32,11 +19,10 @@ struct MainView: View {
                     switch currentScreen {
                     case .leagues:
                         NavigationStack {
-                            LeaguesView(viewModel: viewModel)
-                            MathesByDateView(mathesByDateViewModel: recentMathesViewModel)
+                            LeaguesView(leaguesViewModel: leaguesViewModel)
                         }
-                    case .matches:
-                        MathesByDateView(mathesByDateViewModel: recentMathesViewModel)
+                    case .matchesByDate:
+                        MatchesByDateView(mathesByDateViewModel: mathesByDateViewModel)
                     }
                 }
                 AppNavigationBarView(currentScreen: $currentScreen)

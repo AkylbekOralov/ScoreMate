@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct SoccerResponse: Decodable {
+struct TeamMatchesModel: Decodable {
     let data: [MatchData]?
 }
 
