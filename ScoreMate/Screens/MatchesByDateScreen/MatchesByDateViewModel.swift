@@ -16,10 +16,13 @@ class MatchesByDateViewModel: ObservableObject {
     
     @Published var rotationAngle: Double = 0
     private var rotationDirection: Double = 1
+    
+    private var matchesByDateService: MatchesByDateService = MatchesByDateService()
 
     init() {
         generateRecentDates()
-        updateDisplayedMatches()
+        self.matchesByDateService = MatchesByDateService()
+        fetchSelectedDateMatches()
     }
     
     private func generateRecentDates() {
@@ -54,7 +57,7 @@ class MatchesByDateViewModel: ObservableObject {
         self.rotationDirection = isEarlier(self.selectedDate, dateString) ? 1 : -1
         self.rotationAngle += 360*1.3*self.rotationDirection
         self.selectedDate = dateString
-        updateDisplayedMatches()
+        fetchSelectedDateMatches()
     }
     
     private func isEarlier(_ dateString1: String, _ dateString2: String) -> Bool {
@@ -69,61 +72,19 @@ class MatchesByDateViewModel: ObservableObject {
         return false
     }
     
-    private func updateDisplayedMatches() {
-        let urlString = """
-            https://api.soccersapi.com/v2.2/fixtures/?\
-            user=\(ApiCall.username)&\
-            token=\(ApiCall.token)&\
-            t=schedule&\
-            d=\(self.selectedDate)
-            """
+    private func fetchSelectedDateMatches() {
         self.errorMessage = nil
         
-        AF.request(urlString, method: .get)
-            .validate()
-            .responseDecodable(of: TeamMatchesModel.self) { response in
-                switch response.result {
-                case .success(let soccerResponse):
-                    var matches: [MatchModel] = []
-                    
-                    if let matchesData = soccerResponse.data {
-                        for matchData in matchesData {
-                            let homeScore = Int(matchData.scores.homeScore ?? "0")
-                            let awayScore = Int(matchData.scores.awayScore ?? "0")
-                            
-                            var formattedMatchTime: String?
-                            if let matchTime = matchData.time.timeOclock {
-                                formattedMatchTime = String(matchTime.prefix(5))
-                            }
-                            
-                            let match = MatchModel(
-                                id: matchData.id ?? 0,
-                                statusName: matchData.statusName ?? "Unknown",
-                                date: matchData.time.date ?? "Unknown",
-                                time: formattedMatchTime ?? "Unknown",
-                                homeTeam: matchData.teams.home.name ?? "Unkonwn",
-                                homeTeamCode: matchData.teams.home.nameCode ?? "UNK",
-                                homeTeamId: matchData.teams.home.id ?? 0,
-                                homeScore: homeScore ?? 0,
-                                awayTeam: matchData.teams.away.name ?? "Unknown",
-                                awayTeamCode: matchData.teams.away.nameCode ?? "UNK",
-                                awayTeamId: matchData.teams.away.id ?? 0,
-                                awayScore: awayScore ?? 0
-                            )
-                            matches.insert(match, at: 0)
-                        }
-                    }
-                    
-                    if matches.isEmpty {
-                        self.selectedDateMatches = nil
-                    } else {
-                        self.selectedDateMatches = matches
-                    }
-                    
+        matchesByDateService.fetchMatchesByDate(date: self.selectedDate) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let matchesByDate):
+                    self.selectedDateMatches = matchesByDate
                 case .failure(let error):
-                    print("RecentMatchesViewModel error fetching matches: \(error.localizedDescription)")
-                    self.errorMessage = "Failed to load mathces"
+                    print("MatchesByDateViewModel fetchSelectedDateMatches error: \(error.localizedDescription)")
+                    self.errorMessage = error.localizedDescription
                 }
             }
+        }
     }
 }

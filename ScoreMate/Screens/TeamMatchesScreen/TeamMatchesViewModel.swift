@@ -54,7 +54,7 @@ class TeamMatchesViewModel: ObservableObject {
         
         AF.request(urlString, method: .get)
             .validate()
-            .responseDecodable(of: TeamMatchesModel.self) { response in
+            .responseDecodable(of: TeamMatchesAPIResponse.self) { response in
                 switch response.result {
                 case .success(let soccerResponse):
                     var finished: [MatchModel] = []

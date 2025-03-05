@@ -19,7 +19,7 @@ class LeagueStandingViewModel: ObservableObject {
     
     init(leagueModel: LeagueModel) {
         self.leagueModel = leagueModel
-        leagueStandingService = LeagueStandingService(
+        self.leagueStandingService = LeagueStandingService(
             seasonId: String(self.leagueModel.currentSeasonId)
         )
         
