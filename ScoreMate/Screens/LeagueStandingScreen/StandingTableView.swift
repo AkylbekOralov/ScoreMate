@@ -25,8 +25,8 @@ struct LeagueTableView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(leagueStandingViewModel.standings.indices, id: \.self) { index in
-                            let team = leagueStandingViewModel.standings[index]
+                        ForEach(leagueStandingViewModel.leagueStanding.indices, id: \.self) { index in
+                            let team = leagueStandingViewModel.leagueStanding[index]
                             let teamViewModel = TeamMatchesViewModel(league: leagueStandingViewModel.leagueModel, team: team)
                             
                             NavigationLink(destination: TeamMatchesView(teamMatchesViewModel: teamViewModel)) {

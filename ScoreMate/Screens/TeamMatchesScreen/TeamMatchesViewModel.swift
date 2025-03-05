@@ -104,18 +104,4 @@ class TeamMatchesViewModel: ObservableObject {
                 }
             }
     }
-    
-    // TODO: перетащить в NetworkService и сложить туда url
-    func getData<T: Decodable>(url: String, dataType: T.Type, completion: @escaping (T?, Error?) -> Void) {
-        AF.request(url, method: .get)
-            .validate()
-            .responseDecodable(of: dataType.self) { response in
-                switch response.result {
-                case .success(let succesfulResponse):
-                    completion(succesfulResponse, nil)
-                case .failure(let error):
-                    completion(nil, error)
-                }
-            }
-    }
 }
