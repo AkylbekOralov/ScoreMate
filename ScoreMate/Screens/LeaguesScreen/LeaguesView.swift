@@ -40,7 +40,7 @@ private extension LeaguesView {
     func headerView() -> some View {
         VStack {
             Text("Football Leagues")
-                .font(.system(size: FontSizes.large, weight: .bold))
+                .font(.system(size: FontSizes.title2, weight: .bold))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, Paddings.x13)

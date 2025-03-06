@@ -17,7 +17,7 @@ struct LeagueHeaderView: View {
                 .frame(width: 107, height: 107)
             
             Text(leagueModel.name)
-                .font(.system(size: FontSizes.extraLarge, weight: .medium))
+                .font(.system(size: FontSizes.title1, weight: .medium))
                 .foregroundColor(Colors.lightText)
         }
         .padding(.bottom, Paddings.x4)

@@ -17,7 +17,7 @@ struct FinishedMatchView: View {
             HStack(spacing: Paddings.x1) {
                 HStack(spacing: Paddings.x4) {
                     Text(match.homeTeamCode)
-                        .font(.system(size: FontSizes.small))
+                        .font(.system(size: FontSizes.caption))
                     TeamImageView(teamId: match.homeTeamId)
                         .frame(width: 41, height: 41)
                 }
@@ -31,12 +31,12 @@ struct FinishedMatchView: View {
                     TeamImageView(teamId: match.awayTeamId)
                         .frame(width: 41, height: 41)
                     Text(match.awayTeamCode)
-                        .font(.system(size: FontSizes.small))
+                        .font(.system(size: FontSizes.caption))
                 }
             }
             if showDate {
                 Text(match.date)
-                    .font(.system(size: FontSizes.small))
+                    .font(.system(size: FontSizes.caption))
                     .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
             }
         }

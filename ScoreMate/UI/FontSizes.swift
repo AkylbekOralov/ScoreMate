@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum FontSizes {
-    static var extraSmall: CGFloat = 14
-    static var small: CGFloat = 15
+    static var footNote: CGFloat = 14
+    static var caption: CGFloat = 15
     static var body: CGFloat = 17
-    static var large: CGFloat = 22
-    static var extraLarge: CGFloat = 28
+    static var title2: CGFloat = 22
+    static var title1: CGFloat = 28
 }

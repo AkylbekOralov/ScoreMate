@@ -28,8 +28,8 @@ extension LeaguesListView {
                 CountryImageView(countryCode: league.countryCode)
                     .frame(width: 35, height: 35)
                 Text(league.countryName)
-                    .font(.system(size: FontSizes.small, weight: .light))
-                    .foregroundColor(Colors.darkText)
+                    .font(.system(size: FontSizes.caption, weight: .light))
+                    .foregroundColor(Colors.blackText)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, Paddings.x2)

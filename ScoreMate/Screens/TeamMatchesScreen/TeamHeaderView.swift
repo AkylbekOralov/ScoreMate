@@ -23,7 +23,7 @@ struct TeamHeaderView: View {
                 .padding(.bottom, Paddings.x2)
             
             Text("\(league.countryName) \(league.name)")
-                .font(.system(size: FontSizes.extraSmall))
+                .font(.system(size: FontSizes.footNote))
                 .foregroundColor(Color(red: 0.38, green: 0.38, blue: 0.38))
         }
         .padding(.top, Paddings.x8)

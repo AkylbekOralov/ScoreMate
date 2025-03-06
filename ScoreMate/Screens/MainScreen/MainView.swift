@@ -29,6 +29,7 @@ struct MainView: View {
             }
         }
         .ignoresSafeArea(.all)
+        .preferredColorScheme(.light)
     }
 }
 

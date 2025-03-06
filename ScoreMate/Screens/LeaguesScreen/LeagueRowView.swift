@@ -17,7 +17,7 @@ struct LeagueRowView: View {
             
             Text(leagueModel.name)
                 .font(.system(size: FontSizes.body, weight: .medium))
-                .foregroundColor(Colors.darkText)
+                .foregroundColor(Colors.blackText)
             
             Spacer()
             
