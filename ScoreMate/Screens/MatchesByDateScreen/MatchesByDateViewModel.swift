@@ -79,7 +79,11 @@ class MatchesByDateViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let matchesByDate):
-                    self.selectedDateMatches = matchesByDate
+                    if matchesByDate.isEmpty {
+                        self.selectedDateMatches = nil
+                    } else {
+                        self.selectedDateMatches = matchesByDate
+                    }
                 case .failure(let error):
                     print("MatchesByDateViewModel fetchSelectedDateMatches error: \(error.localizedDescription)")
                     self.errorMessage = error.localizedDescription

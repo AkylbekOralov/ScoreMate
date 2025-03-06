@@ -32,11 +32,11 @@ class MatchesByDateService {
                         homeTeam: match.teams.home.name ?? "Unkonwn",
                         homeTeamCode: match.teams.home.nameCode ?? "UNK",
                         homeTeamId: match.teams.home.id ?? 0,
-                        homeScore: homeScore ?? 0,
+                        homeScore: homeScore,
                         awayTeam: match.teams.away.name ?? "Unknown",
                         awayTeamCode: match.teams.away.nameCode ?? "UNK",
                         awayTeamId: match.teams.away.id ?? 0,
-                        awayScore: awayScore ?? 0
+                        awayScore: awayScore
                     )
                 } ?? []
                 

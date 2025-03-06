@@ -19,10 +19,7 @@ enum APIEndpoints {
     }
     
     static func matchesByDate(date: String) -> String {
-        return """
-            \(baseURL)/fixtures/?user=\(user)&token=\(token)
-            &t=schedule&d=\(date)
-        """
+        return "\(baseURL)/fixtures/?user=\(user)&token=\(token)&t=schedule&d=\(date)"
     }
     
     static func teamMatches(seasonId: String, teamId: String) -> String {
