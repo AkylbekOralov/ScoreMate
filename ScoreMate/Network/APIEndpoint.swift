@@ -23,13 +23,6 @@ enum APIEndpoints {
     }
     
     static func teamMatches(seasonId: String, teamId: String) -> String {
-        return """
-            https://api.soccersapi.com/v2.2/fixtures/?\
-            user=\(user)&\
-            token=\(token)&\
-            t=season&\
-            season_id=\(seasonId)&\
-            team_id=\(teamId)
-        """
+        return "https://api.soccersapi.com/v2.2/fixtures/?user=\(user)&token=\(token)&t=season&season_id=\(seasonId)&team_id=\(teamId)"
     }
 }

@@ -21,7 +21,6 @@ class MatchesByDateViewModel: ObservableObject {
 
     init() {
         generateRecentDates()
-        self.matchesByDateService = MatchesByDateService()
         fetchSelectedDateMatches()
     }
     
