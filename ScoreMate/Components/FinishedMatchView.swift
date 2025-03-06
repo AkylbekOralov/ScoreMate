@@ -40,20 +40,7 @@ struct FinishedMatchView: View {
                     .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
             }
         }
-        .padding(.horizontal, Paddings.x11)
-        .padding(.vertical, Paddings.x3)
-        .background(
-            LinearGradient(
-                stops: [
-                    Gradient.Stop(color: .white, location: 0.00),
-                    Gradient.Stop(color: Color(red: 0.98, green: 0.98, blue: 0.98), location: 1.00),
-                ],
-                startPoint: UnitPoint(x: 0.22, y: 0),
-                endPoint: UnitPoint(x: 0.82, y: 1)
-            )
-        )
-        .cornerRadius(16)
-        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
+        .matchCardStyle()
     }
 }
 
