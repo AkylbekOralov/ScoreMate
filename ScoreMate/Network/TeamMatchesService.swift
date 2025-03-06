@@ -14,6 +14,7 @@ class TeamMatchesService {
         NetworkService.getData(url: url, dataType: TeamMatchesAPIResponse.self) { result in
             switch result {
             case .success(let data):
+                // TODO: Make a new struct for both 
                 var finishedMatches: [MatchModel] = []
                 var upcomingMatches: [MatchModel] = []
                 

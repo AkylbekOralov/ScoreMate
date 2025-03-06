@@ -41,7 +41,7 @@ class LeagueStandingViewModel: ObservableObject {
         self.errorMessage = nil
         
         leagueStandingService.fetchLeagueStanding { result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { // TODO: Remove
                 switch result {
                 case .success(let leagueStanding):
                     self.leagueStanding = leagueStanding
