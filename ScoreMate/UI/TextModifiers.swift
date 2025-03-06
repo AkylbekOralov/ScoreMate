@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum TextModifiers {
-    struct Title: ViewModifier {
+    struct BodyTextModifier: ViewModifier {
         func body(content: Content) -> some View {
             content
                 .font(.largeTitle)
@@ -18,38 +18,11 @@ enum TextModifiers {
                 .clipShape(.rect(cornerRadius: 10))
         }
     }
-
-    struct Subtitle: ViewModifier {
-        func body(content: Content) -> some View {
-            content
-                .font(.title2)
-                .foregroundStyle(.gray)
-                .padding()
-        }
-    }
-
-    struct Highlighted: ViewModifier {
-        func body(content: Content) -> some View {
-            content
-                .font(.headline)
-                .foregroundStyle(.yellow)
-                .background(.black)
-                .padding()
-                .clipShape(.capsule)
-        }
-    }
 }
 
 extension View {
-    func titleStyle() -> some View {
-        self.modifier(TextModifiers.Title())
+    func bodyTextStyle() -> some View {
+        self.modifier(TextModifiers.BodyTextModifier())
     }
 
-    func subtitleStyle() -> some View {
-        self.modifier(TextModifiers.Subtitle())
-    }
-
-    func highlightedStyle() -> some View {
-        self.modifier(TextModifiers.Highlighted())
-    }
 }
