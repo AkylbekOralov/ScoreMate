@@ -8,13 +8,12 @@
 import Foundation
 
 class TeamMatchesService {
-    func fetchTeamMatches(seasonId: Int, teamId: Int, completion: @escaping (Result<([MatchModel], [MatchModel]), APIError>) -> Void) {
+    func fetchTeamMatches(seasonId: Int, teamId: Int, completion: @escaping (Result<TeamMatchesModel, APIError>) -> Void) {
         let url = APIEndpoints.teamMatches(seasonId: String(seasonId), teamId: String(teamId))
         
         NetworkService.getData(url: url, dataType: TeamMatchesAPIResponse.self) { result in
             switch result {
             case .success(let data):
-                // TODO: Make a new struct for both 
                 var finishedMatches: [MatchModel] = []
                 var upcomingMatches: [MatchModel] = []
                 
@@ -51,7 +50,9 @@ class TeamMatchesService {
                     }
                 }
                 
-                completion(.success((finishedMatches, upcomingMatches)))
+                let teamMatchesModel = TeamMatchesModel(finishedMatches: finishedMatches, upcomingMatches: upcomingMatches)
+                
+                completion(.success(teamMatchesModel))
                 
             case .failure(let error):
                 completion(.failure(error))

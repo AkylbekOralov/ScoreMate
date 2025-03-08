@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  TeamHeaderView.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 06.02.2025.

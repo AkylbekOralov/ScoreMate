@@ -1,5 +1,5 @@
 //
-//  LeagueInfoView.swift
+//  LeagueHeaderView.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 01.02.2025.

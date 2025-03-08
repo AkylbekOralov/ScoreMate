@@ -51,9 +51,9 @@ class TeamMatchesViewModel: ObservableObject {
         teamMatchesService.fetchTeamMatches(seasonId: league.currentSeasonId, teamId: team.id) { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let (finished, upcoming)):
-                    self.finishedMatches = finished
-                    self.upcomingMatches = upcoming
+                case .success(let teamMatchesModel):
+                    self.finishedMatches = teamMatchesModel.finishedMatches
+                    self.upcomingMatches = teamMatchesModel.upcomingMatches
                     self.setDisplayedMatches()
                 case .failure(let error):
                     print("TeamMatchesViewModel: fetchMatches error: \(error.localizedDescription)")

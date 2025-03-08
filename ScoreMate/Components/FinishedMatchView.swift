@@ -1,5 +1,5 @@
 //
-//  MatchView.swift
+//  FinishedMatchView.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 06.02.2025.
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FinishedMatchView: View {
     let match: MatchModel
-    let showDate: Bool
+    let withDate: Bool
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
@@ -34,7 +34,7 @@ struct FinishedMatchView: View {
                         .font(.system(size: FontSizes.caption))
                 }
             }
-            if showDate {
+            if withDate {
                 Text(match.date)
                     .font(.system(size: FontSizes.caption))
                     .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
@@ -60,6 +60,6 @@ struct FinishedMatchView_Preview: PreviewProvider {
         awayScore: 0)
     
     static var previews: some View {
-        FinishedMatchView(match: match, showDate: true)
+        FinishedMatchView(match: match, withDate: true)
     }
 }

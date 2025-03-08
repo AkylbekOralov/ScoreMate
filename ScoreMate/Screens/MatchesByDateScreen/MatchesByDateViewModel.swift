@@ -1,5 +1,5 @@
 //
-//  RecentMathesViewModel.swift
+//  MatchesByDateViewModel.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 12.02.2025.

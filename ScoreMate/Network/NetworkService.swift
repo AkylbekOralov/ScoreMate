@@ -1,11 +1,9 @@
 //
-//  Untitled.swift
+//  NetworkService.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 04.03.2025.
 //
-
-// TODO: перетащить в NetworkService и сложить туда url
 
 import Foundation
 import Alamofire

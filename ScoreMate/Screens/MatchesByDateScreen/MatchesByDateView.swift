@@ -1,5 +1,5 @@
 //
-//  TodayMathesView.swift
+//  MatchesByDateView.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 11.02.2025.
@@ -36,7 +36,7 @@ struct MatchesByDateView: View {
                     } else if let matches = mathesByDateViewModel.selectedDateMatches {
                         ForEach(matches) { match in
                             if match.statusName == "Finished" {
-                                FinishedMatchView(match: match, showDate: false)
+                                FinishedMatchView(match: match, withDate: false)
                             } else if match.statusName == "Notstarted" {
                                 UpcomingMatchView(match: match)
                             }

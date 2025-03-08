@@ -1,5 +1,5 @@
 //
-//  LeaguesSrvice.swift
+//  LeaguesService.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 05.03.2025.
