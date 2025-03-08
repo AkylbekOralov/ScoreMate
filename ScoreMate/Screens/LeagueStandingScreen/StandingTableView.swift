@@ -29,7 +29,6 @@ struct LeagueTableView: View {
                             let team = leagueStandingViewModel.leagueStanding[index]
                             let teamViewModel = TeamMatchesViewModel(league: leagueStandingViewModel.leagueModel, team: team)
                             
-                            NavigationLink(destination: TeamMatchesView(teamMatchesViewModel: teamViewModel)) {
                                 StandingTableRowView(
                                     teamId: team.id,
                                     index: index + 1,
@@ -37,9 +36,9 @@ struct LeagueTableView: View {
                                     gamesPlayed: team.gamesPlayed,
                                     goalsScored: team.goalsScored,
                                     goalsAgainst: team.goalsAgainst,
-                                    points: team.points
+                                    points: team.points,
+                                    teamViewModel: teamViewModel
                                 )
-                            }
                         }
                         .buttonStyle(PlainButtonStyle())
                     }

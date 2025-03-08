@@ -22,7 +22,7 @@ struct LeagueStandingView: View {
                 endPoint: UnitPoint(x: 0.5, y: 1)
             )
             .edgesIgnoringSafeArea(.all)
-
+            
             
             Button(action: {
                 dismiss()
@@ -47,6 +47,14 @@ struct LeagueStandingView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .gesture(
+            DragGesture()
+                .onEnded { gesture in
+                    if gesture.translation.width > 100 {
+                        dismiss()
+                    }
+                }
+        )
     }
 }
 

@@ -57,6 +57,14 @@ struct TeamMatchesView: View {
                 }
             }
             .navigationBarBackButtonHidden(true)
+            .gesture(
+                DragGesture()
+                    .onEnded { gesture in
+                        if gesture.translation.width > 100 {
+                            dismiss()
+                        }
+                    }
+            )
         }
     }
 }
