@@ -16,31 +16,57 @@ struct StandingTableRowView: View {
     var goalsAgainst: Int
     var points: Int
     
+    let screenWidth = UIScreen.main.bounds.width
+    
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             Text("\(index).")
                 .font(.system(size: 20, weight: .regular, design: .default))
-                .frame(width: UIScreen.main.bounds.width * 0.08, alignment: .leading) // extract
+                .frame(width: screenWidth * 0.08, alignment: .leading)
+                .padding(.trailing, Paddings.x1)
             
             TeamImageView(teamId: teamId)
                 .frame(width: 25, height: 25)
+                .padding(.trailing, Paddings.x2)
             
             Text(teamName)
                 .font(.system(size: 20, weight: .regular, design: .default))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.trailing, Paddings.x1)
             
             Text("\(gamesPlayed)")
                 .font(.system(size: 20, weight: .regular, design: .default))
-                .frame(width: UIScreen.main.bounds.width * 0.06, alignment: .center)
+                .frame(width: screenWidth * 0.06, alignment: .center)
+                .padding(.trailing, Paddings.x2)
             
             Text("\(goalsScored)/\(goalsAgainst)")
                 .font(.system(size: 20, weight: .regular, design: .default))
-                .frame(width: UIScreen.main.bounds.width * 0.14, alignment: .center)
+                .frame(width: screenWidth * 0.14, alignment: .center)
+                .padding(.trailing, Paddings.x2)
             
             Text("\(points)")
                 .font(.system(size: 20, weight: .regular, design: .default))
-                .frame(width: UIScreen.main.bounds.width * 0.06, alignment: .center)
+                .frame(width: screenWidth * 0.07, alignment: .center)
         }
-        .padding(.vertical, 4)
+        .font(.system(size: FontSizes.body, weight: .medium))
+        .foregroundColor(.black)
+    }
+}
+
+struct StandingTableRowView_Preview: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            StandingTableRowView(
+                teamId: 1,
+                index: 1,
+                teamName: "Team Name",
+                gamesPlayed: 19,
+                goalsScored: 20,
+                goalsAgainst: 11,
+                points: 29
+            )
+            Spacer()
+        }
+        .padding(.horizontal, Paddings.x4)
     }
 }

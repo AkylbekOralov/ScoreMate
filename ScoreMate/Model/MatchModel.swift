@@ -7,13 +7,17 @@
 
 import Foundation
 
-struct MatchModel: Identifiable {
+struct MatchModel: Identifiable, Equatable {
     let id: Int
+    let statusName: String
     let date: String
+    let time: String
     let homeTeam: String
+    let homeTeamCode: String
     let homeTeamId: Int
     let homeScore: Int
     let awayTeam: String
+    let awayTeamCode: String
     let awayTeamId: Int
     let awayScore: Int
 }
