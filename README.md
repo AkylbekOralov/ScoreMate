@@ -1,7 +1,15 @@
 # ScoreMate
 
 ## About the Project
-This iOS application provides football enthusiasts with up-to-date information on leagues, standings, and matches. Users can browse a list of leagues, view current tables, check match schedules for specific teams, and explore games by date. The app delivers a seamless and intuitive experience using Swift and SwiftUI for a modern UI.
+This iOS app provides football enthusiasts with real-time league standings, match schedules, and team fixtures. With a modern SwiftUI interface, users can easily navigate leagues, teams, and match details.
 
 ## Purpose
-The goal of this project is to offer an easy-to-use platform for football fans to stay informed about their favorite leagues and teams. Whether you want to check standings, track upcoming matches, or explore past results, this app ensures quick access to all the essential football data in one place.
+The app offers a simple and efficient way for football fans to stay updated on their favorite leagues and teams, all in one place.
+
+## Technologies Used
+- Swift
+- SwiftUI
+- MVVM Architecture
+- Alamofire
+- Git & GitHub
+
