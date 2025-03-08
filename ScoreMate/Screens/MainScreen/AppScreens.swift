@@ -9,5 +9,3 @@ enum AppScreens: Hashable {
     case leagues
     case matchesByDate
 }
-
-
