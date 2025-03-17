@@ -11,7 +11,6 @@ enum APIEndpoints {
     static let token = ApiCall.token
     
     static func leagues() -> String {
-        print("\(user),\(token)")
         return "\(baseURL)/leagues/?user=\(user)&token=\(token)&t=list"
     }
     
