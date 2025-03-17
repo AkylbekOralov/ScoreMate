@@ -11,6 +11,7 @@ enum APIEndpoints {
     static let token = ApiCall.token
     
     static func leagues() -> String {
+        print("\(user),\(token)")
         return "\(baseURL)/leagues/?user=\(user)&token=\(token)&t=list"
     }
     
@@ -24,5 +25,15 @@ enum APIEndpoints {
     
     static func teamMatches(seasonId: String, teamId: String) -> String {
         return "https://api.soccersapi.com/v2.2/fixtures/?user=\(user)&token=\(token)&t=season&season_id=\(seasonId)&team_id=\(teamId)"
+    }
+}
+
+enum ApiCall {
+    static var username: String {
+        return EncryptionHelper.decrypt(base64Ciphertext: ApiKeys.encryptedList[3].0) ?? ""
+    }
+
+    static var token: String {
+        return EncryptionHelper.decrypt(base64Ciphertext: ApiKeys.encryptedList[3].1) ?? ""
     }
 }

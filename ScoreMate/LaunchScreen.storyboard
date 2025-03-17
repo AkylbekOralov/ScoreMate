@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,38 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <rect key="frame" x="0.0" y="832" width="393" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="football23" translatesAutoresizingMaskIntoConstraints="NO" id="WDk-o4-cLA">
-                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stadium" translatesAutoresizingMaskIntoConstraints="NO" id="fhN-DK-HSL">
+                                <rect key="frame" x="76.666666666666686" y="362" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="8fs-Tc-3Mv"/>
-                                    <constraint firstAttribute="height" constant="200" id="MxO-hg-OgN"/>
+                                    <constraint firstAttribute="height" constant="128" id="YZr-gM-wZS"/>
+                                    <constraint firstAttribute="width" constant="240" id="yAO-bb-frU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScoreMate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJH-ts-jPV">
-                                <rect key="frame" x="117.66666666666669" y="542" width="158" height="40.666666666666629"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScoreMate" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="105.66666666666667" y="292" width="181.66666666666663" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181.66999999999999" id="mmI-Q7-0aE"/>
+                                    <constraint firstAttribute="height" constant="54" id="q66-vw-Si4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="WDk-o4-cLA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6p1-XB-8RQ"/>
-                            <constraint firstItem="WDk-o4-cLA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Oyd-XX-T1D"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
-                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="WDk-o4-cLA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cwO-U1-m6j"/>
-                            <constraint firstItem="KJH-ts-jPV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="d22-fU-dPv"/>
-                            <constraint firstItem="WDk-o4-cLA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="u2w-OF-Zss"/>
-                            <constraint firstItem="KJH-ts-jPV" firstAttribute="top" secondItem="WDk-o4-cLA" secondAttribute="bottom" constant="16" id="ztg-6c-4sj"/>
+                            <constraint firstItem="fhN-DK-HSL" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="16" id="EoA-MC-Yp3"/>
+                            <constraint firstItem="fhN-DK-HSL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="MaP-il-34K"/>
+                            <constraint firstItem="fhN-DK-HSL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NIL-5f-aly"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Odp-Kh-UA9"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -56,10 +48,8 @@
             <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="football23" width="256" height="256"/>
-        <systemColor name="underPageBackgroundColor">
-            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="Stadium" width="512" height="512"/>
     </resources>
 </document>

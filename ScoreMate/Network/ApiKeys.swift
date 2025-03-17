@@ -1,5 +1,5 @@
 //
-//  ApiCall.swift
+//  ApiKeys.swift
 //  ScoreMate
 //
 //  Created by Akylbek Oralov on 11.02.2025.
@@ -8,15 +8,10 @@
 import Foundation
 
 struct ApiKeys {
-    static let list: [(String, String)] = [
-        ("akylbekoralov2003", "5224b1c38beea1f12750501e5cc458c0"),
-        ("oralovv26", "69459e6f12e2752fa14a2d95b8c64f34"),
-        ("akylbek.oralov", "ec719d9fb47e5fa98676aa446b844ecd"),
-        ("oakylbek7", "83fe1ed61448e7fccb4a52e024677a34")
+    static let encryptedList: [(String, String)] = [
+        ("leSjMEi+SeR7oTfvJZfbMXJbnQhxaLTnj+BrN7ksjQ5ED0kWAYnHjGi/fpIQ", "bMadb+V/c425SiG4/qgU8FbcZwzZo9knG6C1Cxm+AuA8XxnIacRUkhcQCkvmUA6j4c/l03QfPen6TfE6"),
+        ("8UKThCX/H+tR8nXEgaVpyoV0TSITB5+m0uFoABcCFb6rpdU/OQ==", "Da3o/fbcAfuDOcEwHYckj0uJOIQZa3ftTXrFng0V+rRVTgqFXcGLJDaITgpeWQ+4yCfZX0RtFSPLU+rr"),
+        ("GvRhC04NJCegArHBhs2BXTiIn43EXhXDcZDlPYjoSQWiBV8QMldCer7y", "5pgPI7D5qlks68Hcp2QsthYlyVImQBgKXyiIWqy/S810R/AJ8M7uYz+AlZFkfWCX/b/Uz0qk0+el0qdB"),
+        ("PpuAVwKazOdEF0D9P8xSNGZE6qx7l3+TlAWyyNqBI+i4iq3Rqg==", "JeKgWqX4rr9pmW7WheVpQwHHt28BJgJq8Va0CDKU3nxOnCtR+abyxgMV1bRoNOve9qR8JLFdQDIH1a9f")
     ]
-}
-
-class ApiCall {
-    static var username: String = ApiKeys.list[0].0
-    static var token: String = ApiKeys.list[0].1
 }
