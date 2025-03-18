@@ -20,7 +20,7 @@ This project was created to learn SwiftUI and gain hands-on experience in iOS ap
 - SoccersAPI
 
 ## Screenshots
-<p align="center">
+<p align="left">
   <img src="https://github.com/user-attachments/assets/cd4b9833-f597-4212-a059-40bbc1e40361" width="200">
   <img src="https://github.com/user-attachments/assets/435ca71e-b097-410d-a7ea-699795706066" width="200">
   <img src="https://github.com/user-attachments/assets/7ad69dee-c5bb-4f9f-a00f-3444677abc3a" width="200">
