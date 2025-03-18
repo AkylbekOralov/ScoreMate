@@ -1,4 +1,4 @@
-# ScoreMate
+# ScoreMate ⚽️
 
 ## About the Project
 This iOS app provides football enthusiasts with real-time league standings, match schedules, and team fixtures. With a modern SwiftUI interface, users can easily navigate leagues, teams, and match details.
