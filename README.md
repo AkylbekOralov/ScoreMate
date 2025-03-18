@@ -9,7 +9,7 @@ The app offers a simple and efficient way for football fans to stay updated on t
 ## Technologies Used
 - Swift
 - SwiftUI
-- MVVM Architecture
+- MVVM
 - Alamofire
-- Git & GitHub
-
+- SoccersAPI
+  
