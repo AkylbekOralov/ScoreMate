@@ -20,9 +20,12 @@ This project was created to learn SwiftUI and gain hands-on experience in iOS ap
 - SoccersAPI
 
 ## Screenshots
-![Image](https://github.com/user-attachments/assets/cd4b9833-f597-4212-a059-40bbc1e40361)
-![Image](https://github.com/user-attachments/assets/435ca71e-b097-410d-a7ea-699795706066)
-![Image](https://github.com/user-attachments/assets/7ad69dee-c5bb-4f9f-a00f-3444677abc3a)
-![Image](https://github.com/user-attachments/assets/b4a50125-a12b-4f1c-9e33-007e09ec754f)
-![Image](https://github.com/user-attachments/assets/0d5f3f47-a7f3-4fd4-919f-108e57b4220e)
-![Image](https://github.com/user-attachments/assets/160be8a5-9cd0-40c3-916b-0f893b77ce26)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cd4b9833-f597-4212-a059-40bbc1e40361" width="200">
+  <img src="https://github.com/user-attachments/assets/435ca71e-b097-410d-a7ea-699795706066" width="200">
+  <img src="https://github.com/user-attachments/assets/7ad69dee-c5bb-4f9f-a00f-3444677abc3a" width="200">
+  <br>
+  <img src="https://github.com/user-attachments/assets/b4a50125-a12b-4f1c-9e33-007e09ec754f" width="200">
+  <img src="https://github.com/user-attachments/assets/0d5f3f47-a7f3-4fd4-919f-108e57b4220e" width="200">
+  <img src="https://github.com/user-attachments/assets/160be8a5-9cd0-40c3-916b-0f893b77ce26" width="200">
+</p>
