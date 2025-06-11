@@ -27,7 +27,13 @@ struct MainView: View {
                 .tabItem {
                     Label("Matches", systemImage: "soccerball")
                 }
+            
+            Rectangle()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
+        .accentColor(.black)
     }
 }
 
