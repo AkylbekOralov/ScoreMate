@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var currentScreen: AppScreens = .leagues
     @State var leaguesViewModel = LeaguesViewModel()
     @State var mathesByDateViewModel = MatchesByDateViewModel()
     
     var body: some View {
-        ZStack {
-            VStack (spacing: 0) {
-                VStack {
-                    switch currentScreen {
-                    case .leagues:
-                        NavigationStack {
-                            LeaguesView(leaguesViewModel: leaguesViewModel)
-                        }
-                    case .matchesByDate:
-                        MatchesByDateView(mathesByDateViewModel: mathesByDateViewModel)
-                    }
+        TabView {
+            LeaguesView(leaguesViewModel: leaguesViewModel)
+                .tabItem {
+                    Label("Leagues", systemImage: "trophy")
                 }
-                AppNavigationBarView(currentScreen: $currentScreen)
-            }
+            
+            TeamImageView(teamId: 1)
+                .tabItem {
+                    Label("Favorites", systemImage: "heart")
+                }
+            
+            MatchesByDateView(mathesByDateViewModel: mathesByDateViewModel)
+                .tabItem {
+                    Label("Matches", systemImage: "soccerball")
+                }
         }
-        .ignoresSafeArea(.all)
-        .preferredColorScheme(.light)
     }
 }
 

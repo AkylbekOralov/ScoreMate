@@ -12,7 +12,8 @@ struct LeaguesView: View {
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
-        VStack {
+        NavigationStack {
+            VStack {
                 VStack(spacing: 0) {
                     headerView()
                     
@@ -34,6 +35,7 @@ struct LeaguesView: View {
             )
             .background(Colors.lightBackground)
         }
+    }
 }
 
 private extension LeaguesView {
@@ -49,23 +51,23 @@ private extension LeaguesView {
     
     func errorView(errorMessage: String) -> some View {
         VStack(spacing: Paddings.x4) {
-                Text(errorMessage)
-                    .foregroundColor(.red)
-                    .multilineTextAlignment(.leading)
-
-                Button(action: {
-                    leaguesViewModel.fetchLeagues()
-                }) {
-                    Text("Retry")
-                        .font(.system(size: 18, weight: .bold))
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
+            Text(errorMessage)
+                .foregroundColor(.red)
+                .multilineTextAlignment(.leading)
+            
+            Button(action: {
+                leaguesViewModel.fetchLeagues()
+            }) {
+                Text("Retry")
+                    .font(.system(size: 18, weight: .bold))
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             }
-            .frame(alignment: .leading)
         }
+        .frame(alignment: .leading)
+    }
 }
 
 struct LeagueListView_Preview: PreviewProvider {
