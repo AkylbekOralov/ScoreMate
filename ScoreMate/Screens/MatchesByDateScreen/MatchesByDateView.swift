@@ -23,9 +23,10 @@ struct MatchesByDateView: View {
                     .fill(.white.opacity(0.7))
                     .frame(height: 1)
                     .padding(.bottom, Paddings.x2)
+                
                 MatchDateSelectorView(matchesByDateViewModel: mathesByDateViewModel)
             }
-            .padding(.top, 70)
+            .padding(.top, Paddings.x4)
             .padding(.bottom, Paddings.x4)
             .background(Color(red: 0.75, green: 0.26, blue: 0.26))
             
@@ -49,18 +50,20 @@ struct MatchesByDateView: View {
                 .padding(.top, Paddings.x8)
             }
         }
-        
-        .frame(maxWidth: .infinity,
-               maxHeight: .infinity,
-               alignment: .top
-        )
-        .background(Color(red: 0.96, green: 0.96, blue: 0.96))
     }
 }
 
 #Preview {
-    ZStack {
+    
+    TabView {
         MatchesByDateView(mathesByDateViewModel: MatchesByDateViewModel())
+            .tabItem {
+                Label("Matches", systemImage: "soccerball")
+            }
+        
+        Rectangle()
+            .tabItem {
+                Label("Leagues", systemImage: "trophy")
+            }
     }
-    .ignoresSafeArea(.all)
 }
