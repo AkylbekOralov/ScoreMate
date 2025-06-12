@@ -15,7 +15,6 @@ struct LeagueTableView: View {
             VStack {
                 Text("League Rankings")
                     .font(.system(size: FontSizes.body, weight: .semibold))
-                    .foregroundColor(.black)
                     .padding(.leading, Paddings.x4)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -46,16 +45,6 @@ struct LeagueTableView: View {
                     .padding(.top, Paddings.x2)
                 }
             }
-        }
-    }
-}
-
-struct LeagueTableView_Preview: PreviewProvider {
-    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
-    
-    static var previews: some View {
-        NavigationStack {
-            LeagueTableView(leagueStandingViewModel: LeagueStandingViewModel(leagueModel: leagueModel))
         }
     }
 }

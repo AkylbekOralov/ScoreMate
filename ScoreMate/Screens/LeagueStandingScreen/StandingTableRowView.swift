@@ -49,6 +49,5 @@ struct StandingTableRowView: View {
                 .font(.system(size: FontSizes.body, weight: .medium, design: .default))
                 .frame(width: 25, alignment: .center)
         }
-        .foregroundColor(.black)
     }
 }

@@ -10,13 +10,14 @@ import SwiftUI
 struct TeamMatchesView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
     @Environment(\.dismiss) private var dismiss
+    @ObservedObject private var colors = Colors.shared
     
     var body: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
-                    Gradient.Stop(color: Color(red: 0.88, green: 0.91, blue: 0.93), location: 0.00),
-                    Gradient.Stop(color: .white, location: 0.35),
+                    Gradient.Stop(color: colors.teamMathcesScreenTop, location: 0.00),
+                    Gradient.Stop(color: Color(UIColor.systemBackground), location: 0.35),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)
@@ -39,7 +40,7 @@ struct TeamMatchesView: View {
                     MatchFilterTabView(teamMatchesViewModel: teamMatchesViewModel)
                 }
                 .padding(3)
-                .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                .background(colors.cardBackground)
                 .cornerRadius(25)
 
                 ScrollView {

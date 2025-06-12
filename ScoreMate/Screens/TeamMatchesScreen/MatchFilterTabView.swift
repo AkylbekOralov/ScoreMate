@@ -10,8 +10,8 @@ import SwiftUI
 struct MatchFilterTabView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
     var grayColor = Color(red: 0.44, green: 0.44, blue: 0.44)
-    var lightGrayColor = Color(red: 0.96, green: 0.96, blue: 0.96)
     var redColor = Color(red: 0.8, green: 0.18, blue: 0.17)
+    @ObservedObject private var colors = Colors.shared
     
     var body: some View {
         VStack {
@@ -19,10 +19,10 @@ struct MatchFilterTabView: View {
                 Text("Results")
                     .foregroundColor(teamMatchesViewModel.selection == .results ? .white : grayColor)
                     .animation(
-                        Animation.default
+                        Animation.easeInOut(duration: 0.2)
                     )
                     .onTapGesture {
-                        withAnimation {
+                        withAnimation(.easeInOut(duration: 0.2)) {
                             teamMatchesViewModel.changeSelection(selected: .results)
                         }
                     }
@@ -30,10 +30,10 @@ struct MatchFilterTabView: View {
                 Text("Calendar")
                     .foregroundColor(teamMatchesViewModel.selection == .calendar ? .white : grayColor)
                     .animation(
-                        Animation.default
+                        Animation.easeInOut(duration: 0.2)
                     )
                     .onTapGesture {
-                        withAnimation {
+                        withAnimation(.easeInOut(duration: 0.2)) {
                             teamMatchesViewModel.changeSelection(selected: .calendar)
                         }
                     }
@@ -48,7 +48,7 @@ struct MatchFilterTabView: View {
                     .offset(x: teamMatchesViewModel.selection == .results ? -55 : 48)
             )
         }
-        .background(lightGrayColor)
+        .background(colors.cardBackground)
         .cornerRadius(25)
     }
 }

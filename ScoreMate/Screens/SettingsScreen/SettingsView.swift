@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("selectedTheme") private var selectedThemeRaw: String = AppTheme.system.rawValue
-
-    private var selectedTheme: AppTheme {
-        get { AppTheme(rawValue: selectedThemeRaw) ?? .system }
-        set { selectedThemeRaw = newValue.rawValue }
-    }
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
 
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Appearance")) {
-                    Picker("Theme", selection: $selectedThemeRaw) {
+                    Picker("Theme", selection: $selectedTheme) {
                         ForEach(AppTheme.allCases) { theme in
-                            Text(theme.displayName).tag(theme.rawValue)
+                            Text(theme.displayName).tag(theme)
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())

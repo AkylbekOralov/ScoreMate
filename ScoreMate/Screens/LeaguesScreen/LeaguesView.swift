@@ -33,7 +33,6 @@ struct LeaguesView: View {
                 maxHeight: .infinity,
                 alignment: .center
             )
-            .background(Colors.lightBackground)
         }
     }
 }

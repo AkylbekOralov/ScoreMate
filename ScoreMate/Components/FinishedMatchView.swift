@@ -11,6 +11,7 @@ struct FinishedMatchView: View {
     let match: MatchModel
     let withDate: Bool
     let screenWidth: CGFloat = UIScreen.main.bounds.width
+    @ObservedObject private var colors = Colors.shared
     
     var body: some View {
         VStack(spacing: Paddings.x2) {
@@ -25,7 +26,6 @@ struct FinishedMatchView: View {
                     .font(.system(size: FontSizes.body, weight: .medium))
                     .padding(.vertical, Paddings.x1)
                     .padding(.horizontal, Paddings.x2)
-                    .background(Color(red: 0.97, green: 0.97, blue: 0.97))
                     .cornerRadius(19)
                 HStack(spacing: Paddings.x4) {
                     TeamImageView(teamId: match.awayTeamId)
@@ -40,7 +40,11 @@ struct FinishedMatchView: View {
                     .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
             }
         }
-        .matchCardStyle()
+        .padding(.horizontal, Paddings.x11)
+        .padding(.vertical, Paddings.x3)
+        .background(colors.cardBackground)
+        .cornerRadius(Radii.medium)
+        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
     }
 }
 
@@ -60,6 +64,10 @@ struct FinishedMatchView_Preview: PreviewProvider {
         awayScore: 0)
     
     static var previews: some View {
-        FinishedMatchView(match: match, withDate: true)
+        ZStack {
+            FinishedMatchView(match: match, withDate: true)
+        }
+        .preferredColorScheme(.dark)
+        
     }
 }

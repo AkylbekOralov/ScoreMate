@@ -10,11 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State var leaguesViewModel = LeaguesViewModel()
     @State var mathesByDateViewModel = MatchesByDateViewModel()
-    @AppStorage("selectedTheme") private var selectedThemeRaw: String = AppTheme.system.rawValue
-    
-    var selectedTheme: AppTheme {
-            AppTheme(rawValue: selectedThemeRaw) ?? .system
-        }
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
     
     var body: some View {
         TabView {
@@ -38,7 +34,7 @@ struct MainView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
-        .accentColor(.black)
+        .accentColor(.primary)
         .preferredColorScheme(selectedTheme.colorScheme)
     }
 }
