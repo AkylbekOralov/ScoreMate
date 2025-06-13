@@ -24,12 +24,9 @@ Built as a hands-on learning experience with SwiftUI and iOS development, ScoreM
   <img src="https://github.com/user-attachments/assets/923dafa4-e630-4ca2-8e9e-daeebb7b774d" width="200">
   <img src="https://github.com/user-attachments/assets/a04deb03-4af5-40a3-8f2e-a28e756238bb" width="200">
   <img src="https://github.com/user-attachments/assets/db748a1f-7ed2-4302-9e2e-7cb6f60f0ea2" width="200">
-  <img src="https://github.com/user-attachments/assets/5397de14-e87f-43ae-8241-0a2caf58743d" width="200">
   <img src="https://github.com/user-attachments/assets/7456f1bf-21f1-4a7a-b569-876f46e18014" width="200">
+  <img src="https://github.com/user-attachments/assets/5397de14-e87f-43ae-8241-0a2caf58743d" width="200">
   <img src="https://github.com/user-attachments/assets/b8502305-2ae0-46f4-904a-c9c5dfbda474" width="200">
-  <br>
-  <img src="https://github.com/user-attachments/assets/f8ecd225-5725-446e-bce0-4bfc53bb2e97" width="200">
-  <img src="https://github.com/user-attachments/assets/db748a1f-7ed2-4302-9e2e-7cb6f60f0ea2" width="200">
   <img src="https://github.com/user-attachments/assets/5397de14-e87f-43ae-8241-0a2caf58743d" width="200">
   <br>
   <img src="https://github.com/user-attachments/assets/85ec769e-ea05-4e54-9a3e-50f02e2fe78b" width="200">
