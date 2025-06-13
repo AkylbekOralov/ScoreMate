@@ -34,7 +34,6 @@ struct UpcomingMatchView: View {
                 .padding(.top, Paddings.x2)
             Text(match.time)
                 .font(.system(size: FontSizes.body, weight: .medium))
-                .foregroundColor(.black)
                 .padding(.top, Paddings.x1)
         }
         .padding(.horizontal, Paddings.x11)
