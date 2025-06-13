@@ -1,20 +1,20 @@
 # ScoreMate ⚽️
 
-## About the Project
-This is a simple and intuitive iOS app that provides real-time football league standings, match schedules, and team fixtures. With a modern SwiftUI interface, users can browse leagues, check team performance, and view upcoming and past matches.
+## Overview
+This is a simple iOS app built with SwiftUI to check live football standings, match schedules, and team fixtures. Supports light and dark mode.
 
-## Purpose
-This project was created to learn SwiftUI and gain hands-on experience in iOS app development. The app utilizes a free-tier API, allowing access to data from three football leagues.
+## Why This Project
+Built as a hands-on learning experience with SwiftUI and iOS development, ScoreMate integrates a free-tier football API to provide real data from three leagues.
 
 ## Features
-- Browse available leagues
-- View league standings
-- Check team match history and upcoming fixtures
-- Browse match schedules by date
+- Browse available football leagues
+- View live league standings
+- Check upcoming and past matches for any team
+- Explore daily match schedules
+- Optimized for both light and dark mode
 
 ## Technologies Used
-- Swift
-- SwiftUI
+- Swift + SwiftUI
 - MVVM
 - Alamofire
 - SoccersAPI
