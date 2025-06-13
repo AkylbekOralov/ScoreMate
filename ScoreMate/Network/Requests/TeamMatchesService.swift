@@ -9,9 +9,9 @@ import Foundation
 
 class TeamMatchesService {
     func fetchTeamMatches(seasonId: Int, teamId: Int, completion: @escaping (Result<TeamMatchesModel, APIError>) -> Void) {
-        let url = APIEndpoints.teamMatches(seasonId: String(seasonId), teamId: String(teamId))
-        
-        NetworkService.getData(url: url, dataType: TeamMatchesAPIResponse.self) { result in
+        let url = APIEndpoints.shared.teamMatches(seasonId: String(seasonId), teamId: String(teamId))
+         
+        NetworkService.getData(url: url, dataType: TeamMatchesResponse.self) { result in
             switch result {
             case .success(let data):
                 var finishedMatches: [MatchModel] = []

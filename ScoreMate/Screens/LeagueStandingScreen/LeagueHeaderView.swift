@@ -18,21 +18,9 @@ struct LeagueHeaderView: View {
             
             Text(leagueModel.name)
                 .font(.system(size: FontSizes.title1, weight: .medium))
-                .foregroundColor(Colors.lightText)
+                .foregroundColor(.white)
         }
         .padding(.bottom, Paddings.x4)
-    }
-}
-
-struct LeagueInfoView_Preview: PreviewProvider {
-    static let leagueModel = LeagueModel(id: 974, name: "A-League", countryName: "Australia", countryId: 14, countryCode: "au", currentSeasonId: 14593)
-    
-    static var previews: some View {
-        ZStack(alignment: .top) {
-            Color.gray
-                .ignoresSafeArea()
-            LeagueHeaderView(leagueModel: leagueModel)
-        }
     }
 }
 

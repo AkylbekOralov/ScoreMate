@@ -29,7 +29,6 @@ extension LeaguesListView {
                     .frame(width: 35, height: 35)
                 Text(league.countryName)
                     .font(.system(size: FontSizes.caption, weight: .light))
-                    .foregroundColor(Colors.blackText)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, Paddings.x2)

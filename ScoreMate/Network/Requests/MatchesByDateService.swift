@@ -7,9 +7,9 @@
 
 class MatchesByDateService {
     func fetchMatchesByDate(date: String, completion: @escaping (Result<[MatchModel], APIError>) -> Void)  {
-        let url = APIEndpoints.matchesByDate(date: date)
+        let url = APIEndpoints.shared.matchesByDate(date: date)
         
-        NetworkService.getData(url: url, dataType: TeamMatchesAPIResponse.self) { result in
+        NetworkService.getData(url: url, dataType: TeamMatchesResponse.self) { result in
             switch result {
             case .success(let data):
                 let matchesByDate: [MatchModel] = data.data?.compactMap { match in

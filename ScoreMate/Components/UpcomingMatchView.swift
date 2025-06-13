@@ -10,6 +10,7 @@ import SwiftUI
 struct UpcomingMatchView: View {
     let match: MatchModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
+    @ObservedObject private var colors = Colors.shared
     
     var body: some View {
         VStack(spacing: 0) {
@@ -33,10 +34,13 @@ struct UpcomingMatchView: View {
                 .padding(.top, Paddings.x2)
             Text(match.time)
                 .font(.system(size: FontSizes.body, weight: .medium))
-                .foregroundColor(.black)
                 .padding(.top, Paddings.x1)
         }
-        .matchCardStyle()
+        .padding(.horizontal, Paddings.x11)
+        .padding(.vertical, Paddings.x3)
+        .background(colors.cardBackground)
+        .cornerRadius(Radii.medium)
+        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
     }
 }
 

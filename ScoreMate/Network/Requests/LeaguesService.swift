@@ -9,9 +9,9 @@ import Foundation
 
 class LeaguesService {
     func fetchLeagues(completion: @escaping (Result<[LeagueModel], APIError>) -> Void) {
-        let url = APIEndpoints.leagues()
+        let url = APIEndpoints.shared.leagues()
         
-        NetworkService.getData(url: url, dataType: LeaguesAPIResponse.self) { result in
+        NetworkService.getData(url: url, dataType: LeaguesResponse.self) { result in
             switch result {
             case .success(let data):
                 let leagues: [LeagueModel] = data.data?.compactMap { league in
@@ -37,27 +37,5 @@ class LeaguesService {
                 completion(.failure(error))
             }
         }
-    }
-}
-
-struct LeaguesAPIResponse: Decodable {
-    let data: [LeagueData]?
-}
-
-struct LeagueData: Decodable {
-    let id: String
-    let name: String
-    let countryName: String
-    let countryId: String
-    let countryCode: String
-    let currentSeasonId: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case countryName = "country_name"
-        case countryId = "country_id"
-        case countryCode = "cc"
-        case currentSeasonId = "current_season_id"
     }
 }

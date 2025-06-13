@@ -11,9 +11,9 @@ import SwiftUI
 
 class LeagueStandingViewModel: ObservableObject {
     let leagueModel: LeagueModel
-    let accentColor: Color
     @Published var leagueStanding: [TeamModel] = []
     @Published var errorMessage: String? = nil
+    @ObservedObject private var colors = Colors.shared
     
     private let leagueStandingService: LeagueStandingService
     
@@ -22,17 +22,6 @@ class LeagueStandingViewModel: ObservableObject {
         self.leagueStandingService = LeagueStandingService(
             seasonId: String(self.leagueModel.currentSeasonId)
         )
-        
-        switch leagueModel.name {
-        case "A-League":
-            self.accentColor = Backgrounds.aLeague
-        case "Tipico Bundesliga":
-            self.accentColor = Backgrounds.tipicoBundusligo
-        case "Superliga":
-            self.accentColor = Backgrounds.superLiga
-        default:
-            self.accentColor = Backgrounds.aLeague
-        }
         
         fetchLeagueStanding()
     }

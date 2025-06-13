@@ -5,7 +5,7 @@
 //  Created by Akylbek Oralov on 06.03.2025.
 //
 
-struct TeamMatchesAPIResponse: Decodable {
+struct TeamMatchesResponse: Decodable {
     let data: [MatchData]?
 }
 
