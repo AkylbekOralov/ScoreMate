@@ -19,11 +19,6 @@ struct MainView: View {
                     Label("Leagues", systemImage: "trophy")
                 }
             
-            TeamImageView(teamId: 1)
-                .tabItem {
-                    Label("Favorites", systemImage: "heart")
-                }
-            
             MatchesByDateView(mathesByDateViewModel: mathesByDateViewModel)
                 .tabItem {
                     Label("Matches", systemImage: "soccerball")
@@ -37,8 +32,4 @@ struct MainView: View {
         .accentColor(.primary)
         .preferredColorScheme(selectedTheme.colorScheme)
     }
-}
-
-#Preview {
-    MainView()
 }

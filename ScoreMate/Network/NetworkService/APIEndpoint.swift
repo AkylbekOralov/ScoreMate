@@ -37,7 +37,7 @@ public class APIEndpoints {
 }
 
 fileprivate class ApiCall {
-    private let index = 3
+    private let index = 1
     private let encryptedList: [(String, String)] = [
         ("leSjMEi+SeR7oTfvJZfbMXJbnQhxaLTnj+BrN7ksjQ5ED0kWAYnHjGi/fpIQ", "bMadb+V/c425SiG4/qgU8FbcZwzZo9knG6C1Cxm+AuA8XxnIacRUkhcQCkvmUA6j4c/l03QfPen6TfE6"),
         ("8UKThCX/H+tR8nXEgaVpyoV0TSITB5+m0uFoABcCFb6rpdU/OQ==", "Da3o/fbcAfuDOcEwHYckj0uJOIQZa3ftTXrFng0V+rRVTgqFXcGLJDaITgpeWQ+4yCfZX0RtFSPLU+rr"),
