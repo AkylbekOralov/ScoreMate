@@ -25,7 +25,7 @@ Built as a hands-on learning experience with SwiftUI and iOS development, ScoreM
 
   
   
-  <img src="https://github.com/user-attachments/assets/cd4b9833-f597-4212-a059-40bbc1e40361" width="200">
+  <img src="https://github.com/user-attachments/assets/cd4b9833-f597-4212-a059-40bbc1e40361](https://github.com/user-attachments/assets/923dafa4-e630-4ca2-8e9e-daeebb7b774d" width="200">
   <img src="https://github.com/user-attachments/assets/435ca71e-b097-410d-a7ea-699795706066" width="200">
   <img src="https://github.com/user-attachments/assets/7ad69dee-c5bb-4f9f-a00f-3444677abc3a" width="200">
   <br>
