@@ -1,6 +1,5 @@
 # ScoreMate ⚽️
 
-## Overview
 This is a simple iOS app built with SwiftUI to check live football standings, match schedules, and team fixtures. Supports light and dark mode.
 
 ## Why This Project
