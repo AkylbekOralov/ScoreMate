@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct LeagueHeaderView: View {
     let leagueModel: LeagueModel
     let screenHeight: CGFloat = UIScreen.main.bounds.height
+    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         VStack(spacing: Paddings.x2) {
@@ -18,9 +20,8 @@ struct LeagueHeaderView: View {
             
             Text(leagueModel.name)
                 .font(.system(size: FontSizes.title1, weight: .medium))
-                .foregroundColor(.white)
+                .foregroundColor(colors.inverseText)
         }
         .padding(.bottom, Paddings.x4)
     }
 }
-

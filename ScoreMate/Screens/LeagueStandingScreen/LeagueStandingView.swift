@@ -21,7 +21,7 @@ struct LeagueStandingView: View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
-                    Gradient.Stop(color: Color(UIColor.systemBackground), location: 0.00),
+                    Gradient.Stop(color: colors.appBackground, location: 0.00),
                     Gradient.Stop(color: colors.leagueAccentColor(name: leagueStandingViewModel.leagueModel.name), location: 0.25),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
@@ -46,9 +46,9 @@ struct LeagueStandingView: View {
                 }
                 .padding(.top, Paddings.x6)
                 .frame(maxHeight: .infinity)
-                .background(.background)
+                .background(colors.appBackground)
                 .cornerRadius(35, corners: [.topLeft, .topRight])
-                .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
+                .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
                 .ignoresSafeArea(.all, edges: .bottom)
             }
         }

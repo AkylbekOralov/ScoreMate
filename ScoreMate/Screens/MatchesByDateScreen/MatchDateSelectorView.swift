@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct MatchDateSelectorView: View {
     @StateObject var matchesByDateViewModel: MatchesByDateViewModel
+    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         ScrollViewReader { proxy in
@@ -23,7 +25,7 @@ struct MatchDateSelectorView: View {
                             Text(date.dateString)
                                 .font(.system(size: FontSizes.body, weight: .semibold))
                         }
-                        .foregroundColor(date.fullDateString == matchesByDateViewModel.selectedDate ? .white : .white.opacity(0.7))
+                        .foregroundColor(date.fullDateString == matchesByDateViewModel.selectedDate ? colors.inverseText : colors.matchesHeaderDivider)
                         .onTapGesture {
                                 matchesByDateViewModel.changeSelectedDate(dateString: date.fullDateString)
                         }

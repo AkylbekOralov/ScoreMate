@@ -10,8 +10,6 @@ import FactoryKit
 
 struct MatchFilterTabView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
-    var grayColor = Color(red: 0.44, green: 0.44, blue: 0.44)
-    var redColor = Color(red: 0.8, green: 0.18, blue: 0.17)
     @Injected(\.colors) private var colors: Colors
 
     init(teamMatchesViewModel: TeamMatchesViewModel) {
@@ -22,7 +20,7 @@ struct MatchFilterTabView: View {
         VStack {
             HStack(spacing: Paddings.x11) {
                 Text("Results")
-                    .foregroundColor(teamMatchesViewModel.selection == .results ? .white : grayColor)
+                    .foregroundColor(teamMatchesViewModel.selection == .results ? colors.inverseText : colors.inactiveText)
                     .animation(
                         Animation.easeInOut(duration: 0.2)
                     )
@@ -33,7 +31,7 @@ struct MatchFilterTabView: View {
                     }
                 
                 Text("Calendar")
-                    .foregroundColor(teamMatchesViewModel.selection == .calendar ? .white : grayColor)
+                    .foregroundColor(teamMatchesViewModel.selection == .calendar ? colors.inverseText : colors.inactiveText)
                     .animation(
                         Animation.easeInOut(duration: 0.2)
                     )
@@ -47,7 +45,7 @@ struct MatchFilterTabView: View {
             .frame(width: 226, height: 42)
             .background(
                 Rectangle()
-                    .fill(redColor)
+                    .fill(colors.selectionAccent)
                     .frame(width: teamMatchesViewModel.selection == .results ? 109 : 122, height: 36, alignment: .leading)
                     .cornerRadius(25)
                     .offset(x: teamMatchesViewModel.selection == .results ? -55 : 48)

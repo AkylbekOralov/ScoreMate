@@ -9,18 +9,6 @@ import SwiftUI
 
 @MainActor
 final class Colors: ObservableObject {
-    private enum AssetName {
-        static let aLeague = "ALeague"
-        static let tipicoBundesliga = "TipicoBundesliga"
-        static let superLiga = "SuperLiga"
-        static let cardBackgroundLight = "CardBackgroundLight"
-        static let cardBackgroundDark = "CardBackgroundDark"
-        static let teamMatchesScreenTopLight = "TeamMatchesScreenTopLight"
-        static let teamMatchesScreenTopDark = "TeamMatchesScreenTopDark"
-        static let matchFilterTabLight = "MatchFilterTabLight"
-        static let matchFilterTabDark = "MatchFilterTabDark"
-    }
-
     @AppStorage("selectedTheme") private var storedTheme: String = AppTheme.system.rawValue {
         didSet {
             objectWillChange.send()
@@ -29,6 +17,10 @@ final class Colors: ObservableObject {
     
     var selectedTheme: AppTheme {
         AppTheme(rawValue: storedTheme) ?? .system
+    }
+
+    var appBackground: Color {
+        Color(AssetName.appBackground)
     }
     
     var cardBackground: Color {
@@ -44,6 +36,54 @@ final class Colors: ObservableObject {
         }
     }
 
+    var primaryText: Color {
+        Color(AssetName.primaryText)
+    }
+
+    var inverseText: Color {
+        Color(AssetName.inverseText)
+    }
+
+    var secondaryText: Color {
+        Color(AssetName.secondaryText)
+    }
+
+    var inactiveText: Color {
+        Color(AssetName.inactiveText)
+    }
+
+    var selectionAccent: Color {
+        Color(AssetName.selectionAccent)
+    }
+
+    var tableDivider: Color {
+        Color(AssetName.tableDivider)
+    }
+
+    var matchesHeaderBackground: Color {
+        Color(AssetName.matchesHeaderBackground)
+    }
+
+    var matchesHeaderDivider: Color {
+        Color(AssetName.matchesHeaderDivider)
+    }
+
+    var errorText: Color {
+        Color(AssetName.errorText)
+    }
+
+    var actionButtonBackground: Color {
+        Color(AssetName.actionButtonBackground)
+    }
+
+    var actionButtonText: Color {
+        Color(AssetName.actionButtonText)
+    }
+
+    var cardShadow: Color {
+        Color(AssetName.cardShadow)
+    }
+
     func leagueAccentColor(name: String) -> Color {
         switch name {
         case "A-League":
@@ -57,7 +97,7 @@ final class Colors: ObservableObject {
         }
     }
     
-    var teamMathcesScreenTop: Color {
+    var teamMatchesScreenTop: Color {
         switch selectedTheme {
         case .light:
             return Color(AssetName.teamMatchesScreenTopLight)

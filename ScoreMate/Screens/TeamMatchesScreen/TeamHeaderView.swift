@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct TeamHeaderView: View {
     let league: LeagueModel
     let team: TeamModel
+    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         VStack(spacing: 0) {
@@ -19,12 +21,12 @@ struct TeamHeaderView: View {
             
             Text(team.name)
                 .font(.system(size: FontSizes.body, weight: .semibold))
-                .foregroundColor(.black)
+                .foregroundColor(colors.primaryText)
                 .padding(.bottom, Paddings.x2)
             
             Text("\(league.countryName) \(league.name)")
                 .font(.system(size: FontSizes.footNote))
-                .foregroundColor(Color(red: 0.38, green: 0.38, blue: 0.38))
+                .foregroundColor(colors.secondaryText)
         }
         .padding(.top, Paddings.x8)
         .padding(.bottom, Paddings.x4)

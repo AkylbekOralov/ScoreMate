@@ -11,7 +11,6 @@ import FactoryKit
 struct FinishedMatchView: View {
     let match: MatchModel
     let withDate: Bool
-    let screenWidth: CGFloat = UIScreen.main.bounds.width
     @Injected(\.colors) private var colors: Colors
 
     init(match: MatchModel, withDate: Bool) {
@@ -43,14 +42,14 @@ struct FinishedMatchView: View {
             if withDate {
                 Text(match.date)
                     .font(.system(size: FontSizes.caption))
-                    .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
+                    .foregroundColor(colors.inactiveText)
             }
         }
         .padding(.horizontal, Paddings.x11)
         .padding(.vertical, Paddings.x3)
         .background(colors.cardBackground)
         .cornerRadius(Radii.medium)
-        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
+        .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
     }
 }
 

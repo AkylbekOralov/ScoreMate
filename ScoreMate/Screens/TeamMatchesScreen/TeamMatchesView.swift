@@ -21,8 +21,8 @@ struct TeamMatchesView: View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
-                    Gradient.Stop(color: colors.teamMathcesScreenTop, location: 0.00),
-                    Gradient.Stop(color: Color(UIColor.systemBackground), location: 0.35),
+                    Gradient.Stop(color: colors.teamMatchesScreenTop, location: 0.00),
+                    Gradient.Stop(color: colors.appBackground, location: 0.35),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)

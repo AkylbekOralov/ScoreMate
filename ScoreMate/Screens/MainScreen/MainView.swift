@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import FactoryKit
 
 private struct ShakeDetector: UIViewControllerRepresentable {
     let onShake: () -> Void
@@ -46,6 +47,7 @@ struct MainView: View {
     @State var leaguesViewModel = LeaguesViewModel()
     @State var mathesByDateViewModel = MatchesByDateViewModel()
     @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
+    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         TabView {
@@ -64,7 +66,7 @@ struct MainView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
-        .accentColor(.primary)
+        .accentColor(colors.primaryText)
         .preferredColorScheme(selectedTheme.colorScheme)
         .background {
             #if DEBUG

@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct LeaguesView: View {
     @ObservedObject var leaguesViewModel: LeaguesViewModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
+    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         NavigationStack {
@@ -51,7 +53,7 @@ private extension LeaguesView {
     func errorView(errorMessage: String) -> some View {
         VStack(spacing: Paddings.x4) {
             Text(errorMessage)
-                .foregroundColor(.red)
+                .foregroundColor(colors.errorText)
                 .multilineTextAlignment(.leading)
             
             Button(action: {
@@ -60,8 +62,8 @@ private extension LeaguesView {
                 Text("Retry")
                     .font(.system(size: 18, weight: .bold))
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
+                    .background(colors.actionButtonBackground)
+                    .foregroundColor(colors.actionButtonText)
                     .cornerRadius(10)
             }
         }

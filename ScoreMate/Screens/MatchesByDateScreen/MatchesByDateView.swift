@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct MatchesByDateView: View {
     @ObservedObject var mathesByDateViewModel: MatchesByDateViewModel
+    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         VStack {
@@ -20,7 +22,7 @@ struct MatchesByDateView: View {
                     .rotationEffect(.degrees(mathesByDateViewModel.rotationAngle))
                     .animation(.easeInOut(duration: 0.5), value: mathesByDateViewModel.rotationAngle)
                 Rectangle()
-                    .fill(.white.opacity(0.7))
+                    .fill(colors.matchesHeaderDivider)
                     .frame(height: 1)
                     .padding(.bottom, Paddings.x2)
                 
@@ -28,7 +30,7 @@ struct MatchesByDateView: View {
             }
             .padding(.top, Paddings.x4)
             .padding(.bottom, Paddings.x4)
-            .background(Color(red: 0.75, green: 0.26, blue: 0.26))
+            .background(colors.matchesHeaderBackground)
             
             ScrollView {
                 VStack(spacing: Paddings.x4) {

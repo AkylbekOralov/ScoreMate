@@ -10,7 +10,6 @@ import FactoryKit
 
 struct UpcomingMatchView: View {
     let match: MatchModel
-    let screenWidth: CGFloat = UIScreen.main.bounds.width
     @Injected(\.colors) private var colors: Colors
 
     init(match: MatchModel) {
@@ -35,7 +34,7 @@ struct UpcomingMatchView: View {
             }
             Text(match.date)
                 .font(.system(size: FontSizes.caption))
-                .foregroundColor(Color(red: 0.44, green: 0.44, blue: 0.44))
+                .foregroundColor(colors.inactiveText)
                 .padding(.top, Paddings.x2)
             Text(match.time)
                 .font(.system(size: FontSizes.body, weight: .medium))
@@ -45,7 +44,7 @@ struct UpcomingMatchView: View {
         .padding(.vertical, Paddings.x3)
         .background(colors.cardBackground)
         .cornerRadius(Radii.medium)
-        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
+        .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
     }
 }
 

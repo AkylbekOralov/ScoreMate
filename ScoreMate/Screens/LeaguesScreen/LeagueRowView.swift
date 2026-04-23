@@ -33,6 +33,6 @@ struct LeagueRowView: View {
         .padding(.vertical, Paddings.x3)
         .background(colors.cardBackground)
         .cornerRadius(Radii.medium)
-        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 4)
+        .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
     }
 }

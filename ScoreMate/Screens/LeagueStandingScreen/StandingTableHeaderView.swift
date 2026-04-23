@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct StandingTableHeaderView: View {
+    @Injected(\.colors) private var colors: Colors
     
     var line: some View {
         Rectangle()
-            .fill(Color(red: 0.85, green: 0.85, blue: 0.85))
+            .fill(colors.tableDivider)
             .frame(height: 1)
     }
     
@@ -36,7 +38,7 @@ struct StandingTableHeaderView: View {
                     .frame(width: 25, alignment: .center)
             }
             .font(.system(size: FontSizes.body, weight: .medium))
-            .foregroundColor(Color(red: 0.38, green: 0.38, blue: 0.38))
+            .foregroundColor(colors.secondaryText)
             .padding(.horizontal, Paddings.x4)
             
             line
