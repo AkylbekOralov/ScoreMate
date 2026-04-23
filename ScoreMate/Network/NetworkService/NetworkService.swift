@@ -16,14 +16,18 @@ class NetworkService {
             
             AF.request(url, method: .get)
                 .validate()
-                .responseDecodable(of: dataType.self) { response in
+                .responseData { response in
                     switch response.result {
-                    case .success(let successfulResponse):
-                        completion(.success(successfulResponse))
+                    case .success(let data):
+                        do {
+                            let decodedResponse = try JSONDecoder().decode(dataType.self, from: data)
+                            completion(.success(decodedResponse))
+                        } catch {
+                            completion(.failure(.requestFailed("Response could not be decoded because of error: \(error.localizedDescription)")))
+                        }
                     case .failure(let error):
                         completion(.failure(.requestFailed(error.localizedDescription)))
                     }
                 }
         }
 }
-

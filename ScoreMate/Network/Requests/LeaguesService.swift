@@ -15,19 +15,13 @@ class LeaguesService {
             switch result {
             case .success(let data):
                 let leagues: [LeagueModel] = data.data?.compactMap { league in
-                    guard
-                        let id = Int(league.id),
-                        let countryId = Int(league.countryId),
-                        let currentSeasonId = Int(league.currentSeasonId)
-                    else { return nil }
-                    
                     return LeagueModel(
-                        id: id,
+                        id: league.id,
                         name: league.name,
                         countryName: league.countryName,
-                        countryId: countryId,
+                        countryId: league.countryId,
                         countryCode: league.countryCode,
-                        currentSeasonId: currentSeasonId
+                        currentSeasonId: league.currentSeasonId
                     )
                 } ?? []
                 
