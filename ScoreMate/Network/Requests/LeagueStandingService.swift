@@ -20,7 +20,7 @@ class LeagueStandingService {
         NetworkService.getData(url: url, dataType: StandingResponse.self) { result in
             switch result {
             case .success(let data):
-                let leagueStanding: [TeamModel] = data.data?.standings?.compactMap { team in
+                let leagueStanding: [TeamModel] = data.data?.standings.compactMap { team in
                     
                     return TeamModel(
                         id: team.teamId,

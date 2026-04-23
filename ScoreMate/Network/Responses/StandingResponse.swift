@@ -12,7 +12,27 @@ struct StandingResponse: Decodable {
 }
 
 struct LeagueStandingsData: Decodable {
-    let standings: [TeamModelData]?
+    let standings: [TeamModelData]
+
+    enum CodingKeys: String, CodingKey {
+        case standings
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        if let flatStandings = try? container.decode([TeamModelData].self, forKey: .standings) {
+            standings = flatStandings
+            return
+        }
+
+        if let groupedStandings = try? container.decode([[TeamModelData]].self, forKey: .standings) {
+            standings = groupedStandings.first ?? []
+            return
+        }
+
+        standings = []
+    }
 }
 
 struct TeamModelData: Decodable {
