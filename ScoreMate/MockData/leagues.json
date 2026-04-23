@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1523,
+      "name": "Premier League",
+      "country_name": "England",
+      "country_id": 41,
+      "cc": "en",
+      "current_season_id": 24001
+    },
+    {
+      "id": 302,
+      "name": "La Liga",
+      "country_name": "Spain",
+      "country_id": 214,
+      "cc": "es",
+      "current_season_id": 24002
+    },
+    {
+      "id": 564,
+      "name": "Serie A",
+      "country_name": "Italy",
+      "country_id": 107,
+      "cc": "it",
+      "current_season_id": 24003
+    }
+  ]
+}

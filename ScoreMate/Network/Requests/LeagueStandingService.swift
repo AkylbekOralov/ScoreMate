@@ -17,7 +17,11 @@ class LeagueStandingService {
     func fetchLeagueStanding(completion: @escaping (Result<[TeamModel], APIError>) -> Void) {
         let url = APIEndpoints.shared.leagueStanding(seasonId: self.seasonId)
         
-        NetworkService.getData(url: url, dataType: StandingResponse.self) { result in
+        NetworkService.getData(
+            url: url,
+            dataType: StandingResponse.self,
+            mockFileName: "league_standing"
+        ) { result in
             switch result {
             case .success(let data):
                 let leagueStanding: [TeamModel] = data.data?.standings.compactMap { team in

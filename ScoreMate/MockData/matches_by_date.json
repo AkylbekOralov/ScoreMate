@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50001,
+      "status_name": "Finished",
+      "time": {
+        "date": "2026-04-24",
+        "time": "18:30:00"
+      },
+      "teams": {
+        "home": {
+          "id": 9001,
+          "name": "Arsenal",
+          "short_code": "ARS"
+        },
+        "away": {
+          "id": 9002,
+          "name": "Liverpool",
+          "short_code": "LIV"
+        }
+      },
+      "scores": {
+        "home_score": "2",
+        "away_score": "1"
+      }
+    },
+    {
+      "id": 50002,
+      "status_name": "Notstarted",
+      "time": {
+        "date": "2026-04-24",
+        "time": "21:00:00"
+      },
+      "teams": {
+        "home": {
+          "id": 9003,
+          "name": "Manchester City",
+          "short_code": "MCI"
+        },
+        "away": {
+          "id": 9004,
+          "name": "Aston Villa",
+          "short_code": "AVL"
+        }
+      },
+      "scores": {
+        "home_score": "0",
+        "away_score": "0"
+      }
+    },
+    {
+      "id": 50003,
+      "status_name": "Finished",
+      "time": {
+        "date": "2026-04-24",
+        "time": "23:15:00"
+      },
+      "teams": {
+        "home": {
+          "id": 9005,
+          "name": "Tottenham",
+          "short_code": "TOT"
+        },
+        "away": {
+          "id": 9006,
+          "name": "Chelsea",
+          "short_code": "CHE"
+        }
+      },
+      "scores": {
+        "home_score": "3",
+        "away_score": "3"
+      }
+    }
+  ]
+}

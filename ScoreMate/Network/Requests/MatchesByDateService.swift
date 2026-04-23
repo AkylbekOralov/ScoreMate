@@ -9,7 +9,11 @@ class MatchesByDateService {
     func fetchMatchesByDate(date: String, completion: @escaping (Result<[MatchModel], APIError>) -> Void)  {
         let url = APIEndpoints.shared.matchesByDate(date: date)
         
-        NetworkService.getData(url: url, dataType: TeamMatchesResponse.self) { result in
+        NetworkService.getData(
+            url: url,
+            dataType: TeamMatchesResponse.self,
+            mockFileName: "matches_by_date"
+        ) { result in
             switch result {
             case .success(let data):
                 let matchesByDate: [MatchModel] = data.data?.compactMap { match in
@@ -48,5 +52,4 @@ class MatchesByDateService {
         }
     }
 }
-
 

@@ -12,7 +12,12 @@ class NetworkService {
     static func getData<T: Decodable>(
         url: String,
         dataType: T.Type,
+        mockFileName: String,
         completion: @escaping (Result<T, APIError>) -> Void) {
+            if NetworkConfiguration.useMockData {
+                completion(MockDataLoader.load(fileName: mockFileName, as: dataType))
+                return
+            }
             
             AF.request(url, method: .get)
                 .validate()

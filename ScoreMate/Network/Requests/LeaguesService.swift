@@ -11,7 +11,11 @@ class LeaguesService {
     func fetchLeagues(completion: @escaping (Result<[LeagueModel], APIError>) -> Void) {
         let url = APIEndpoints.shared.leagues()
         
-        NetworkService.getData(url: url, dataType: LeaguesResponse.self) { result in
+        NetworkService.getData(
+            url: url,
+            dataType: LeaguesResponse.self,
+            mockFileName: "leagues"
+        ) { result in
             switch result {
             case .success(let data):
                 let leagues: [LeagueModel] = data.data?.compactMap { league in

@@ -1,0 +1,56 @@
+{
+  "data": {
+    "standings": [
+      {
+        "team_id": 9001,
+        "team_name": "Arsenal",
+        "overall": {
+          "games_played": 32,
+          "goals_scored": 68,
+          "goals_against": 27,
+          "points": 74
+        }
+      },
+      {
+        "team_id": 9002,
+        "team_name": "Liverpool",
+        "overall": {
+          "games_played": 32,
+          "goals_scored": 71,
+          "goals_against": 31,
+          "points": 73
+        }
+      },
+      {
+        "team_id": 9003,
+        "team_name": "Manchester City",
+        "overall": {
+          "games_played": 31,
+          "goals_scored": 69,
+          "goals_against": 29,
+          "points": 70
+        }
+      },
+      {
+        "team_id": 9004,
+        "team_name": "Aston Villa",
+        "overall": {
+          "games_played": 32,
+          "goals_scored": 60,
+          "goals_against": 42,
+          "points": 63
+        }
+      },
+      {
+        "team_id": 9005,
+        "team_name": "Tottenham",
+        "overall": {
+          "games_played": 32,
+          "goals_scored": 58,
+          "goals_against": 46,
+          "points": 60
+        }
+      }
+    ]
+  }
+}
