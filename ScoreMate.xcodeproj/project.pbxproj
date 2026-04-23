@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6373A20F2D4BA49600D8F37B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6373A20E2D4BA49600D8F37B /* Alamofire */; };
+		63AB7F512F9AA8670085B66C /* DebugSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63AB7F502F9AA8670085B66C /* DebugSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63AB7F512F9AA8670085B66C /* DebugSwift in Frameworks */,
 				6373A20F2D4BA49600D8F37B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = ScoreMate;
 			packageProductDependencies = (
 				6373A20E2D4BA49600D8F37B /* Alamofire */,
+				63AB7F502F9AA8670085B66C /* DebugSwift */,
 			);
 			productName = ScoreMate;
 			productReference = 63331EA72D422A4A007D88F5 /* ScoreMate.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				63AB7F4F2F9AA8670085B66C /* XCRemoteSwiftPackageReference "DebugSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 63331EA82D422A4A007D88F5 /* Products */;
@@ -347,6 +351,14 @@
 				version = 5.8.1;
 			};
 		};
+		63AB7F4F2F9AA8670085B66C /* XCRemoteSwiftPackageReference "DebugSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DebugSwift/DebugSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -354,6 +366,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6373A20D2D4BA49600D8F37B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		63AB7F502F9AA8670085B66C /* DebugSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63AB7F4F2F9AA8670085B66C /* XCRemoteSwiftPackageReference "DebugSwift" */;
+			productName = DebugSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
