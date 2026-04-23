@@ -5,7 +5,7 @@
 //  Created by Akylbek Oralov on 08.03.2025.
 //
 
-struct TeamMatchesModel {
+struct TeamMatchesModel: Sendable {
     var finishedMatches: [MatchModel]
     var upcomingMatches: [MatchModel]
 }

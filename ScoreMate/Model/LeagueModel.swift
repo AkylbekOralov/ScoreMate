@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LeagueModel: Identifiable {
+struct LeagueModel: Identifiable, Sendable {
     var id: Int
     var name: String
     var countryName: String
@@ -15,4 +15,3 @@ struct LeagueModel: Identifiable {
     var countryCode: String
     var currentSeasonId: Int
 }
-

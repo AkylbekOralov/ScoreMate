@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 final class Colors: ObservableObject {
     static let shared = Colors()
     

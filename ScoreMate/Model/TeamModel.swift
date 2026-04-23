@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamModel: Identifiable {
+struct TeamModel: Identifiable, Sendable {
     var id: Int
     var name: String
     var gamesPlayed: Int

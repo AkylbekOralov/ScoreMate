@@ -5,7 +5,7 @@
 //  Created by Akylbek Oralov on 04.03.2025.
 //
 
-public class APIEndpoints {
+public final class APIEndpoints: Sendable {
     public static let shared = APIEndpoints()
     
     private let baseURL = "https://api.soccersapi.com/v2.2"
@@ -36,7 +36,7 @@ public class APIEndpoints {
     }
 }
 
-fileprivate class ApiCall {
+fileprivate final class ApiCall: Sendable {
     private let index = 0
     private let encryptedList: [(String, String)] = [
         ("leSjMEi+SeR7oTfvJZfbMXJbnQhxaLTnj+BrN7ksjQ5ED0kWAYnHjGi/fpIQ", "bMadb+V/c425SiG4/qgU8FbcZwzZo9knG6C1Cxm+AuA8XxnIacRUkhcQCkvmUA6j4c/l03QfPen6TfE6"),

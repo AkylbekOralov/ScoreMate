@@ -8,7 +8,8 @@
 import Foundation
 import Alamofire
 
-class MatchesByDateViewModel: ObservableObject {
+@MainActor
+final class MatchesByDateViewModel: ObservableObject {
     @Published var dates: [DateModel] = []
     @Published var selectedDate: String = ""
     @Published var selectedDateMatches: [MatchModel]?
@@ -75,18 +76,16 @@ class MatchesByDateViewModel: ObservableObject {
         self.errorMessage = nil
         
         matchesByDateService.fetchMatchesByDate(date: self.selectedDate) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let matchesByDate):
-                    if matchesByDate.isEmpty {
-                        self.selectedDateMatches = nil
-                    } else {
-                        self.selectedDateMatches = matchesByDate
-                    }
-                case .failure(let error):
-                    print("MatchesByDateViewModel fetchSelectedDateMatches error: \(error.localizedDescription)")
-                    self.errorMessage = error.localizedDescription
+            switch result {
+            case .success(let matchesByDate):
+                if matchesByDate.isEmpty {
+                    self.selectedDateMatches = nil
+                } else {
+                    self.selectedDateMatches = matchesByDate
                 }
+            case .failure(let error):
+                print("MatchesByDateViewModel fetchSelectedDateMatches error: \(error.localizedDescription)")
+                self.errorMessage = error.localizedDescription
             }
         }
     }

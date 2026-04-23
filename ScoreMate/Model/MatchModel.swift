@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MatchModel: Identifiable, Equatable {
+struct MatchModel: Identifiable, Equatable, Sendable {
     let id: Int
     let statusName: String
     let date: String

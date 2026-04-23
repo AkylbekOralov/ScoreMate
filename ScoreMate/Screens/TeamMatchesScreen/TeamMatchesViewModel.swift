@@ -8,7 +8,8 @@
 import Foundation
 import Alamofire
 
-class TeamMatchesViewModel: ObservableObject {
+@MainActor
+final class TeamMatchesViewModel: ObservableObject {
     enum TeamMatchesSelection {
         case results
         case calendar
@@ -49,16 +50,14 @@ class TeamMatchesViewModel: ObservableObject {
         self.errorMessage = nil
         
         teamMatchesService.fetchTeamMatches(seasonId: league.currentSeasonId, teamId: team.id) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let teamMatchesModel):
-                    self.finishedMatches = teamMatchesModel.finishedMatches
-                    self.upcomingMatches = teamMatchesModel.upcomingMatches
-                    self.setDisplayedMatches()
-                case .failure(let error):
-                    print("TeamMatchesViewModel: fetchMatches error: \(error.localizedDescription)")
-                    self.errorMessage = error.localizedDescription
-                }
+            switch result {
+            case .success(let teamMatchesModel):
+                self.finishedMatches = teamMatchesModel.finishedMatches
+                self.upcomingMatches = teamMatchesModel.upcomingMatches
+                self.setDisplayedMatches()
+            case .failure(let error):
+                print("TeamMatchesViewModel: fetchMatches error: \(error.localizedDescription)")
+                self.errorMessage = error.localizedDescription
             }
         }
     }

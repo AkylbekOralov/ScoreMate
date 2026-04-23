@@ -42,7 +42,7 @@ struct MatchDateSelectorView: View {
                     proxy.scrollTo(matchesByDateViewModel.selectedDate, anchor: .center)
                 }
             }
-            .onChange(of: matchesByDateViewModel.selectedDate) { newValue in
+            .onChange(of: matchesByDateViewModel.selectedDate) { _, newValue in
                 withAnimation(.easeInOut(duration: 0.5)) {
                     proxy.scrollTo(newValue, anchor: .center)
                 }

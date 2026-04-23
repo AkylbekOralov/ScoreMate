@@ -8,7 +8,8 @@
 import Foundation
 import Alamofire
 
-class LeaguesViewModel: ObservableObject {
+@MainActor
+final class LeaguesViewModel: ObservableObject {
     @Published var leagues: [LeagueModel] = []
     @Published var errorMessage: String? = nil
     
@@ -23,14 +24,12 @@ class LeaguesViewModel: ObservableObject {
         self.errorMessage = nil
         
         leaguesService.fetchLeagues { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let leagues):
-                    self.leagues = leagues
-                case .failure(let error):
-                    print("LeaguesViewModel fetchLeagues error: \(error.localizedDescription)")
-                    self.errorMessage = error.localizedDescription
-                }
+            switch result {
+            case .success(let leagues):
+                self.leagues = leagues
+            case .failure(let error):
+                print("LeaguesViewModel fetchLeagues error: \(error.localizedDescription)")
+                self.errorMessage = error.localizedDescription
             }
         }
     }

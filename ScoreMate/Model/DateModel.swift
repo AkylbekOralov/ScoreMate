@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DateModel: Identifiable {
+public struct DateModel: Identifiable, Sendable {
     let dayOfWeek: String
     let dateString: String
     let fullDateString: String
