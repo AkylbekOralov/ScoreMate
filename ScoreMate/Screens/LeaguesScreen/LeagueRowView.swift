@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct LeagueRowView: View {
     let leagueModel: LeagueModel
-    @ObservedObject private var colors = Colors.shared
+    @Injected(\.colors) private var colors: Colors
+
+    init(leagueModel: LeagueModel) {
+        self.leagueModel = leagueModel
+    }
     
     var body: some View {
         HStack(spacing: Paddings.x3) {

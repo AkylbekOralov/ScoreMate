@@ -5,11 +5,23 @@
 //  Created by Akylbek Oralov on 05.03.2025.
 //
 
-class MatchesByDateService {
+protocol MatchesByDateServicing: Sendable {
+    func fetchMatchesByDate(date: String, completion: @escaping (Result<[MatchModel], APIError>) -> Void)
+}
+
+final class MatchesByDateService: MatchesByDateServicing {
+    private let apiEndpoints: APIEndpointsProviding
+    private let networkService: NetworkServing
+
+    init(apiEndpoints: APIEndpointsProviding, networkService: NetworkServing) {
+        self.apiEndpoints = apiEndpoints
+        self.networkService = networkService
+    }
+
     func fetchMatchesByDate(date: String, completion: @escaping (Result<[MatchModel], APIError>) -> Void)  {
-        let url = APIEndpoints.shared.matchesByDate(date: date)
+        let url = apiEndpoints.matchesByDate(date: date)
         
-        NetworkService.getData(
+        networkService.getData(
             url: url,
             dataType: TeamMatchesResponse.self,
             mockFileName: "matches_by_date"
@@ -52,4 +64,3 @@ class MatchesByDateService {
         }
     }
 }
-

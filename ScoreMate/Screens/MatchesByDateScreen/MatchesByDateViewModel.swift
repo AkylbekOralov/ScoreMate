@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import FactoryKit
 
 @MainActor
 final class MatchesByDateViewModel: ObservableObject {
@@ -18,9 +19,10 @@ final class MatchesByDateViewModel: ObservableObject {
     @Published var rotationAngle: Double = 0
     private var rotationDirection: Double = 1
     
-    private var matchesByDateService: MatchesByDateService = MatchesByDateService()
+    private let matchesByDateService: MatchesByDateServicing
 
-    init() {
+    init(matchesByDateService: MatchesByDateServicing = Container.shared.matchesByDateService()) {
+        self.matchesByDateService = matchesByDateService
         generateRecentDates()
         fetchSelectedDateMatches()
     }

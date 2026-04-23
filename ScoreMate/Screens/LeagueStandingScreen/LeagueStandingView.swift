@@ -6,17 +6,23 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct LeagueStandingView: View {
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
     @Environment(\.dismiss) private var dismiss
+    @Injected(\.colors) private var colors: Colors
+
+    init(leagueStandingViewModel: LeagueStandingViewModel) {
+        self._leagueStandingViewModel = StateObject(wrappedValue: leagueStandingViewModel)
+    }
     
     var body: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
                     Gradient.Stop(color: Color(UIColor.systemBackground), location: 0.00),
-                    Gradient.Stop(color: Colors.shared.leagueAccentColor(name: leagueStandingViewModel.leagueModel.name), location: 0.25),
+                    Gradient.Stop(color: colors.leagueAccentColor(name: leagueStandingViewModel.leagueModel.name), location: 0.25),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)

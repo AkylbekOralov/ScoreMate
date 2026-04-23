@@ -7,17 +7,23 @@
 
 import Foundation
 
-class LeagueStandingService {
-    private let seasonId: String
-    
-    init(seasonId: String) {
-        self.seasonId = seasonId
+protocol LeagueStandingServicing: Sendable {
+    func fetchLeagueStanding(seasonId: String, completion: @escaping (Result<[TeamModel], APIError>) -> Void)
+}
+
+final class LeagueStandingService: LeagueStandingServicing {
+    private let apiEndpoints: APIEndpointsProviding
+    private let networkService: NetworkServing
+
+    init(apiEndpoints: APIEndpointsProviding, networkService: NetworkServing) {
+        self.apiEndpoints = apiEndpoints
+        self.networkService = networkService
     }
     
-    func fetchLeagueStanding(completion: @escaping (Result<[TeamModel], APIError>) -> Void) {
-        let url = APIEndpoints.shared.leagueStanding(seasonId: self.seasonId)
+    func fetchLeagueStanding(seasonId: String, completion: @escaping (Result<[TeamModel], APIError>) -> Void) {
+        let url = apiEndpoints.leagueStanding(seasonId: seasonId)
         
-        NetworkService.getData(
+        networkService.getData(
             url: url,
             dataType: StandingResponse.self,
             mockFileName: "league_standing"

@@ -7,16 +7,17 @@
 
 import Foundation
 import Alamofire
+import FactoryKit
 
 @MainActor
 final class LeaguesViewModel: ObservableObject {
     @Published var leagues: [LeagueModel] = []
     @Published var errorMessage: String? = nil
     
-    private let leaguesService: LeaguesService
+    private let leaguesService: LeaguesServicing
     
-    init() {
-        self.leaguesService = LeaguesService()
+    init(leaguesService: LeaguesServicing = Container.shared.leaguesService()) {
+        self.leaguesService = leaguesService
         fetchLeagues()
     }
     

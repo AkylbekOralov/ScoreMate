@@ -5,9 +5,14 @@
 //  Created by Akylbek Oralov on 04.03.2025.
 //
 
-public final class APIEndpoints: Sendable {
-    public static let shared = APIEndpoints()
-    
+protocol APIEndpointsProviding: Sendable {
+    func leagues() -> String
+    func leagueStanding(seasonId: String) -> String
+    func matchesByDate(date: String) -> String
+    func teamMatches(seasonId: String, teamId: String) -> String
+}
+
+public final class APIEndpoints: APIEndpointsProviding, Sendable {
     private let baseURL = "https://api.soccersapi.com/v2.2"
     private let api: ApiCall
     private let user: String

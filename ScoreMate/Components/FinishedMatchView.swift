@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct FinishedMatchView: View {
     let match: MatchModel
     let withDate: Bool
     let screenWidth: CGFloat = UIScreen.main.bounds.width
-    @ObservedObject private var colors = Colors.shared
+    @Injected(\.colors) private var colors: Colors
+
+    init(match: MatchModel, withDate: Bool) {
+        self.match = match
+        self.withDate = withDate
+    }
     
     var body: some View {
         VStack(spacing: Paddings.x2) {

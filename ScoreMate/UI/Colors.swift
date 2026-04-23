@@ -9,8 +9,6 @@ import SwiftUI
 
 @MainActor
 final class Colors: ObservableObject {
-    static let shared = Colors()
-    
     @AppStorage("selectedTheme") private var storedTheme: String = AppTheme.system.rawValue {
         didSet {
             objectWillChange.send()

@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct UpcomingMatchView: View {
     let match: MatchModel
     let screenWidth: CGFloat = UIScreen.main.bounds.width
-    @ObservedObject private var colors = Colors.shared
+    @Injected(\.colors) private var colors: Colors
+
+    init(match: MatchModel) {
+        self.match = match
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -63,4 +68,3 @@ struct UpcomingMatchView_Preview: PreviewProvider {
         UpcomingMatchView(match: match)
     }
 }
-

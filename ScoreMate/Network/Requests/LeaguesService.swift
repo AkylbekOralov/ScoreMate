@@ -7,11 +7,23 @@
 
 import Foundation
 
-class LeaguesService {
+protocol LeaguesServicing: Sendable {
+    func fetchLeagues(completion: @escaping (Result<[LeagueModel], APIError>) -> Void)
+}
+
+final class LeaguesService: LeaguesServicing {
+    private let apiEndpoints: APIEndpointsProviding
+    private let networkService: NetworkServing
+
+    init(apiEndpoints: APIEndpointsProviding, networkService: NetworkServing) {
+        self.apiEndpoints = apiEndpoints
+        self.networkService = networkService
+    }
+
     func fetchLeagues(completion: @escaping (Result<[LeagueModel], APIError>) -> Void) {
-        let url = APIEndpoints.shared.leagues()
+        let url = apiEndpoints.leagues()
         
-        NetworkService.getData(
+        networkService.getData(
             url: url,
             dataType: LeaguesResponse.self,
             mockFileName: "leagues"

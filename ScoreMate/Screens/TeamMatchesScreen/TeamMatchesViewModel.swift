@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import FactoryKit
 
 @MainActor
 final class TeamMatchesViewModel: ObservableObject {
@@ -23,12 +24,17 @@ final class TeamMatchesViewModel: ObservableObject {
     @Published var selection: TeamMatchesSelection
     @Published var errorMessage: String? = nil
     
-    private var teamMatchesService: TeamMatchesService = TeamMatchesService()
+    private let teamMatchesService: TeamMatchesServicing
     
-    init(league: LeagueModel, team: TeamModel) {
+    init(
+        league: LeagueModel,
+        team: TeamModel,
+        teamMatchesService: TeamMatchesServicing = Container.shared.teamMatchesService()
+    ) {
         self.league = league
         self.team = team
         self.selection = .results
+        self.teamMatchesService = teamMatchesService
         fetchMatches()
     }
     

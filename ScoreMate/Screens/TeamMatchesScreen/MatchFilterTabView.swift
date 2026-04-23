@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct MatchFilterTabView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
     var grayColor = Color(red: 0.44, green: 0.44, blue: 0.44)
     var redColor = Color(red: 0.8, green: 0.18, blue: 0.17)
-    @ObservedObject private var colors = Colors.shared
+    @Injected(\.colors) private var colors: Colors
+
+    init(teamMatchesViewModel: TeamMatchesViewModel) {
+        self._teamMatchesViewModel = StateObject(wrappedValue: teamMatchesViewModel)
+    }
     
     var body: some View {
         VStack {

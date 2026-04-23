@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import SwiftUI
+import FactoryKit
 
 @MainActor
 final class LeagueStandingViewModel: ObservableObject {
@@ -15,13 +16,14 @@ final class LeagueStandingViewModel: ObservableObject {
     @Published var leagueStanding: [TeamModel] = []
     @Published var errorMessage: String? = nil
     
-    private let leagueStandingService: LeagueStandingService
+    private let leagueStandingService: LeagueStandingServicing
     
-    init(leagueModel: LeagueModel) {
+    init(
+        leagueModel: LeagueModel,
+        leagueStandingService: LeagueStandingServicing = Container.shared.leagueStandingService()
+    ) {
         self.leagueModel = leagueModel
-        self.leagueStandingService = LeagueStandingService(
-            seasonId: String(leagueModel.currentSeasonId)
-        )
+        self.leagueStandingService = leagueStandingService
         
         fetchLeagueStanding()
     }
@@ -29,7 +31,7 @@ final class LeagueStandingViewModel: ObservableObject {
     private func fetchLeagueStanding() {
         self.errorMessage = nil
         
-        leagueStandingService.fetchLeagueStanding { result in
+        leagueStandingService.fetchLeagueStanding(seasonId: String(leagueModel.currentSeasonId)) { result in
             switch result {
             case .success(let leagueStanding):
                 self.leagueStanding = leagueStanding

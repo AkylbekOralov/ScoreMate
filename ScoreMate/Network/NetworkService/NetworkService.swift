@@ -8,12 +8,13 @@
 import Foundation
 import Alamofire
 
-class NetworkService {
-    static func getData<T: Decodable>(
+final class DefaultNetworkService: NetworkServing {
+    func getData<T: Decodable>(
         url: String,
         dataType: T.Type,
         mockFileName: String,
-        completion: @escaping (Result<T, APIError>) -> Void) {
+        completion: @escaping (Result<T, APIError>) -> Void
+    ) {
             if NetworkConfiguration.useMockData {
                 completion(MockDataLoader.load(fileName: mockFileName, as: dataType))
                 return

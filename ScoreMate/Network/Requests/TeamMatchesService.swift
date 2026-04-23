@@ -7,11 +7,23 @@
 
 import Foundation
 
-class TeamMatchesService {
+protocol TeamMatchesServicing: Sendable {
+    func fetchTeamMatches(seasonId: Int, teamId: Int, completion: @escaping (Result<TeamMatchesModel, APIError>) -> Void)
+}
+
+final class TeamMatchesService: TeamMatchesServicing {
+    private let apiEndpoints: APIEndpointsProviding
+    private let networkService: NetworkServing
+
+    init(apiEndpoints: APIEndpointsProviding, networkService: NetworkServing) {
+        self.apiEndpoints = apiEndpoints
+        self.networkService = networkService
+    }
+
     func fetchTeamMatches(seasonId: Int, teamId: Int, completion: @escaping (Result<TeamMatchesModel, APIError>) -> Void) {
-        let url = APIEndpoints.shared.teamMatches(seasonId: String(seasonId), teamId: String(teamId))
+        let url = apiEndpoints.teamMatches(seasonId: String(seasonId), teamId: String(teamId))
          
-        NetworkService.getData(
+        networkService.getData(
             url: url,
             dataType: TeamMatchesResponse.self,
             mockFileName: "team_matches"

@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct TeamMatchesView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject private var colors = Colors.shared
+    @Injected(\.colors) private var colors: Colors
+
+    init(teamMatchesViewModel: TeamMatchesViewModel) {
+        self._teamMatchesViewModel = StateObject(wrappedValue: teamMatchesViewModel)
+    }
     
     var body: some View {
         ZStack(alignment: .topLeading) {
