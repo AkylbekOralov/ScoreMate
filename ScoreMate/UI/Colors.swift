@@ -9,6 +9,18 @@ import SwiftUI
 
 @MainActor
 final class Colors: ObservableObject {
+    private enum AssetName {
+        static let aLeague = "ALeague"
+        static let tipicoBundesliga = "TipicoBundesliga"
+        static let superLiga = "SuperLiga"
+        static let cardBackgroundLight = "CardBackgroundLight"
+        static let cardBackgroundDark = "CardBackgroundDark"
+        static let teamMatchesScreenTopLight = "TeamMatchesScreenTopLight"
+        static let teamMatchesScreenTopDark = "TeamMatchesScreenTopDark"
+        static let matchFilterTabLight = "MatchFilterTabLight"
+        static let matchFilterTabDark = "MatchFilterTabDark"
+    }
+
     @AppStorage("selectedTheme") private var storedTheme: String = AppTheme.system.rawValue {
         didSet {
             objectWillChange.send()
@@ -22,50 +34,52 @@ final class Colors: ObservableObject {
     var cardBackground: Color {
         switch selectedTheme {
         case .light:
-            return .white
+            return Color(AssetName.cardBackgroundLight)
         case .dark:
-            return Color(.systemGray6)
+            return Color(AssetName.cardBackgroundDark)
         case .system:
-            return colorScheme == .dark ? Color(.systemGray6) : .white
+            return colorScheme == .dark
+                ? Color(AssetName.cardBackgroundDark)
+                : Color(AssetName.cardBackgroundLight)
         }
     }
-    
-    var aLeague: Color = Color(red: 1, green: 0.45, blue: 0.21)
-    var tipicoBundusligo: Color = Color(red: 0.84, green: 0.13, blue: 0.17)
-    var superLiga: Color = Color(red: 0, green: 0.35, blue: 0.61)
-    
+
     func leagueAccentColor(name: String) -> Color {
         switch name {
         case "A-League":
-            return aLeague
+            return Color(AssetName.aLeague)
         case "Tipico Bundesliga":
-            return tipicoBundusligo
+            return Color(AssetName.tipicoBundesliga)
         case "Superliga":
-            return superLiga
+            return Color(AssetName.superLiga)
         default:
-            return superLiga
+            return Color(AssetName.superLiga)
         }
     }
     
     var teamMathcesScreenTop: Color {
         switch selectedTheme {
         case .light:
-            return Color(red: 0.88, green: 0.91, blue: 0.93)
+            return Color(AssetName.teamMatchesScreenTopLight)
         case .dark:
-            return Color(.systemGray6)
+            return Color(AssetName.teamMatchesScreenTopDark)
         case .system:
-            return colorScheme == .dark ? Color(.systemGray6) : Color(red: 0.88, green: 0.91, blue: 0.93)
+            return colorScheme == .dark
+                ? Color(AssetName.teamMatchesScreenTopDark)
+                : Color(AssetName.teamMatchesScreenTopLight)
         }
     }
     
     var matchFilterTab: Color {
         switch selectedTheme {
         case .light:
-            return Color(red: 0.96, green: 0.96, blue: 0.96)
+            return Color(AssetName.matchFilterTabLight)
         case .dark:
-            return Color(.systemGray6)
+            return Color(AssetName.matchFilterTabDark)
         case .system:
-            return colorScheme == .dark ? Color(.systemGray6) : Color(red: 0.96, green: 0.96, blue: 0.96)
+            return colorScheme == .dark
+                ? Color(AssetName.matchFilterTabDark)
+                : Color(AssetName.matchFilterTabLight)
         }
     }
     
