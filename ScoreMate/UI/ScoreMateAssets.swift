@@ -40,6 +40,7 @@ enum ScoreMateAsset: Sendable {
         static let teamMatchesScreenTopDark = ScoreMateColorAsset(name: "TeamMatchesScreenTopDark")
         static let teamMatchesScreenTopLight = ScoreMateColorAsset(name: "TeamMatchesScreenTopLight")
         static let tipicoBundesliga = ScoreMateColorAsset(name: "TipicoBundesliga")
+        static let selectorBackground = ScoreMateColorAsset(name: "SelectorBackground")
     }
 
     enum Images {

@@ -51,7 +51,7 @@ struct MatchFilterTabView: View {
                     .offset(x: teamMatchesViewModel.selection == .results ? -55 : 48)
             )
         }
-        .background(SmColors.cardBackground(theme: selectedTheme, systemColorScheme: colorScheme))
+        .background(SmColors.selectorBackground(theme: selectedTheme, systemColorScheme: colorScheme))
         .cornerRadius(25)
     }
 }

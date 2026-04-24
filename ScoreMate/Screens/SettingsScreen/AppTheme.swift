@@ -44,6 +44,14 @@ extension AppTheme {
 }
 
 extension SmColors {
+    static func selectorBackground(theme: AppTheme, systemColorScheme: ColorScheme) -> Color {
+        theme.themedColor(
+            light: selectorBackground,
+            dark: cardBackgroundDark,
+            systemColorScheme: systemColorScheme
+        )
+    }
+    
     static func cardBackground(theme: AppTheme, systemColorScheme: ColorScheme) -> Color {
         theme.themedColor(
             light: cardBackgroundLight,
