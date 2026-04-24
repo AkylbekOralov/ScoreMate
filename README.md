@@ -54,12 +54,12 @@ This structure helps me keep responsibilities clear: UI stays inside feature scr
 
 ### Folder Guides
 
-- [DI](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/DI/README.md)
-- [Model](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/Model/README.md)
-- [Network](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/Network/README.md)
-- [Screens](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/Screens/README.md)
-- [UI](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/UI/README.md)
-- [UI Components](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/UI/Components/README.md)
+- [DI](ScoreMate/DI/README.md)
+- [Model](ScoreMate/Model/README.md)
+- [Network](ScoreMate/Network/README.md)
+- [Screens](ScoreMate/Screens/README.md)
+- [UI](ScoreMate/UI/README.md)
+- [UI Components](ScoreMate/UI/Components/README.md)
 
 ## Tech Stack
 
