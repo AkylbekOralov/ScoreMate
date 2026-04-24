@@ -1,24 +1,67 @@
-# ScoreMate ⚽️
+# ScoreMate
 
-This is a simple iOS app built with SwiftUI to check live football standings, match schedules, and team fixtures. Supports light and dark mode.
+ScoreMate is a SwiftUI iOS app for exploring football leagues, standings, team fixtures, and daily matches. I built it as a hands-on project to strengthen my iOS fundamentals and to practice writing code that is clean, structured, and easy to extend.
 
-## Why This Project
-Built as a hands-on learning experience with SwiftUI and iOS development, ScoreMate integrates a free-tier football API to provide real data from three leagues.
+## What It Shows
+
+- SwiftUI app structure with reusable screens and components
+- MVVM presentation flow with dedicated view models per feature
+- Network layer separated from UI and business logic
+- Dependency injection with `Factory`
+- Light and dark mode support
+- Mock-data driven development for safer UI iteration
 
 ## Features
-- Browse available football leagues
-- View live league standings
-- Check upcoming and past matches for any team
-- Explore daily match schedules
-- Optimized for both light and dark mode
 
-## Technologies Used
-- Swift + SwiftUI
+- Browse football leagues
+- Open league standings
+- View finished and upcoming matches for a team
+- Check matches by selected date
+- Switch app theme in Settings
+
+## Architecture
+
+The project follows an MVVM-style structure:
+
+- `View`: renders UI and handles user interaction
+- `ViewModel`: owns screen state and coordinates data loading
+- `Service`: fetches and maps remote data
+- `Model` / `Response`: keeps domain models separate from API payloads
+
+For dependency injection, the `DI` folder contains a `Factory` container. It registers shared dependencies such as API endpoints, the network service, and feature services. This keeps view models easier to test, reduces tight coupling, and makes the project more consistent as it grows.
+
+## Project Structure
+
+```text
+ScoreMate
+├── Components/          # Reusable SwiftUI views
+├── DI/                  # Dependency injection container built with Factory
+├── Model/               # App domain models
+├── MockData/            # Local JSON files for previewing and development
+├── Network/
+│   ├── NetworkService/  # Core networking, endpoints, config, errors
+│   ├── Requests/        # Feature-specific services
+│   └── Responses/       # API response models
+├── Screens/             # Feature screens, views, and view models
+├── UI/                  # Design constants and shared UI helpers
+├── Assets.xcassets/     # Images and app assets
+├── Colors.xcassets/     # Color palette
+└── ScoreMateApp.swift   # App entry point
+```
+
+This structure helps me keep responsibilities clear: UI stays inside feature screens, shared views live in `Components`, networking stays isolated, and design values are centralized in `UI`.
+
+## Tech Stack
+
+- Swift
+- SwiftUI
 - MVVM
 - Alamofire
-- SoccersAPI
+- Factory
+- DebugSwift
 
 ## Screenshots
+
 <p align="left">  
   <img src="https://github.com/user-attachments/assets/923dafa4-e630-4ca2-8e9e-daeebb7b774d" width="200">
   <img src="https://github.com/user-attachments/assets/a04deb03-4af5-40a3-8f2e-a28e756238bb" width="200">
