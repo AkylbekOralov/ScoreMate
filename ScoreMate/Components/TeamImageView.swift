@@ -17,7 +17,7 @@ struct TeamImageView: View {
                     .resizable()
                     .scaledToFit()
             } else if phase.error != nil {
-                Image("UnknownTeam")
+                SmImages.unknownTeam.swiftUIImage
                     .resizable()
                     .scaledToFit()
             } else {

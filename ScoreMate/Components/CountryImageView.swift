@@ -18,7 +18,7 @@ struct CountryImageView: View {
                     .scaledToFit()
                     .cornerRadius(Radii.small)
             } else if phase.error != nil {
-                Image("UnknownCountry")
+                SmImages.unknownCountry.swiftUIImage
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(Radii.small)

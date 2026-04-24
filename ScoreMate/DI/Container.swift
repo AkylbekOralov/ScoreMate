@@ -9,10 +9,6 @@ import FactoryKit
 import Foundation
 
 extension Container {
-    var colors: Factory<Colors> {
-        self { @MainActor in Colors() }.singleton
-    }
-    
     var apiEndpoints: Factory<APIEndpoints> {
         self { APIEndpoints() }.singleton
     }

@@ -6,23 +6,21 @@
 //
 
 import SwiftUI
-import FactoryKit
 
 struct MatchesByDateView: View {
     @ObservedObject var mathesByDateViewModel: MatchesByDateViewModel
-    @Injected(\.colors) private var colors: Colors
     
     var body: some View {
         VStack {
             VStack(spacing: 0) {
-                Image("football23")
+                SmImages.football23.swiftUIImage
                     .resizable()
                     .scaledToFit()
                     .frame(width: 25, height: 25)
                     .rotationEffect(.degrees(mathesByDateViewModel.rotationAngle))
                     .animation(.easeInOut(duration: 0.5), value: mathesByDateViewModel.rotationAngle)
                 Rectangle()
-                    .fill(colors.matchesHeaderDivider)
+                    .fill(SmColors.matchesHeaderDivider.swiftUIColor)
                     .frame(height: 1)
                     .padding(.bottom, Paddings.x2)
                 
@@ -30,7 +28,7 @@ struct MatchesByDateView: View {
             }
             .padding(.top, Paddings.x4)
             .padding(.bottom, Paddings.x4)
-            .background(colors.matchesHeaderBackground)
+            .background(SmColors.matchesHeaderBackground.swiftUIColor)
             
             ScrollView {
                 VStack(spacing: Paddings.x4) {

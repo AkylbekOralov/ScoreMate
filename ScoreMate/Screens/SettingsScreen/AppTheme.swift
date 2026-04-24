@@ -28,3 +28,56 @@ enum AppTheme: String, CaseIterable, Identifiable {
         }
     }
 }
+
+extension AppTheme {
+    func resolvedColorScheme(using systemColorScheme: ColorScheme) -> ColorScheme {
+        colorScheme ?? systemColorScheme
+    }
+
+    func themedColor(
+        light: ScoreMateColorAsset,
+        dark: ScoreMateColorAsset,
+        systemColorScheme: ColorScheme
+    ) -> Color {
+        resolvedColorScheme(using: systemColorScheme) == .dark ? dark.swiftUIColor : light.swiftUIColor
+    }
+}
+
+extension SmColors {
+    static func cardBackground(theme: AppTheme, systemColorScheme: ColorScheme) -> Color {
+        theme.themedColor(
+            light: cardBackgroundLight,
+            dark: cardBackgroundDark,
+            systemColorScheme: systemColorScheme
+        )
+    }
+
+    static func teamMatchesScreenTop(theme: AppTheme, systemColorScheme: ColorScheme) -> Color {
+        theme.themedColor(
+            light: teamMatchesScreenTopLight,
+            dark: teamMatchesScreenTopDark,
+            systemColorScheme: systemColorScheme
+        )
+    }
+
+    static func matchFilterTab(theme: AppTheme, systemColorScheme: ColorScheme) -> Color {
+        theme.themedColor(
+            light: matchFilterTabLight,
+            dark: matchFilterTabDark,
+            systemColorScheme: systemColorScheme
+        )
+    }
+
+    static func leagueAccentColor(name: String) -> Color {
+        switch name {
+        case "A-League":
+            return aLeague.swiftUIColor
+        case "Tipico Bundesliga":
+            return tipicoBundesliga.swiftUIColor
+        case "Superliga":
+            return superLiga.swiftUIColor
+        default:
+            return superLiga.swiftUIColor
+        }
+    }
+}

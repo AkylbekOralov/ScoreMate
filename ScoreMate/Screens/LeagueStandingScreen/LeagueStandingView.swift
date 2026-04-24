@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import FactoryKit
 
 struct LeagueStandingView: View {
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
     @Environment(\.dismiss) private var dismiss
-    @Injected(\.colors) private var colors: Colors
 
     init(leagueStandingViewModel: LeagueStandingViewModel) {
         self._leagueStandingViewModel = StateObject(wrappedValue: leagueStandingViewModel)
@@ -21,8 +19,8 @@ struct LeagueStandingView: View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
-                    Gradient.Stop(color: colors.appBackground, location: 0.00),
-                    Gradient.Stop(color: colors.leagueAccentColor(name: leagueStandingViewModel.leagueModel.name), location: 0.25),
+                    Gradient.Stop(color: SmColors.appBackground.swiftUIColor, location: 0.00),
+                    Gradient.Stop(color: SmColors.leagueAccentColor(name: leagueStandingViewModel.leagueModel.name), location: 0.25),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)
@@ -33,7 +31,7 @@ struct LeagueStandingView: View {
             Button(action: {
                 dismiss()
             }) {
-                Image("backButton")
+                SmImages.backButton.swiftUIImage
                     .padding(.leading, Paddings.x4)
                     .padding(.top, Paddings.x1)
             }
@@ -46,9 +44,9 @@ struct LeagueStandingView: View {
                 }
                 .padding(.top, Paddings.x6)
                 .frame(maxHeight: .infinity)
-                .background(colors.appBackground)
+                .background(SmColors.appBackground.swiftUIColor)
                 .cornerRadius(35, corners: [.topLeft, .topRight])
-                .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
+                .shadow(color: SmColors.cardShadow.swiftUIColor, radius: 15, x: 0, y: 4)
                 .ignoresSafeArea(.all, edges: .bottom)
             }
         }

@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-import FactoryKit
 
 struct TeamMatchesView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
     @Environment(\.dismiss) private var dismiss
-    @Injected(\.colors) private var colors: Colors
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
+    @Environment(\.colorScheme) private var colorScheme
 
     init(teamMatchesViewModel: TeamMatchesViewModel) {
         self._teamMatchesViewModel = StateObject(wrappedValue: teamMatchesViewModel)
@@ -21,8 +21,8 @@ struct TeamMatchesView: View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
                 stops: [
-                    Gradient.Stop(color: colors.teamMatchesScreenTop, location: 0.00),
-                    Gradient.Stop(color: colors.appBackground, location: 0.35),
+                    Gradient.Stop(color: SmColors.teamMatchesScreenTop(theme: selectedTheme, systemColorScheme: colorScheme), location: 0.00),
+                    Gradient.Stop(color: SmColors.appBackground.swiftUIColor, location: 0.35),
                 ],
                 startPoint: UnitPoint(x: 0.5, y: 0),
                 endPoint: UnitPoint(x: 0.5, y: 1)
@@ -32,7 +32,7 @@ struct TeamMatchesView: View {
             Button(action: {
                 dismiss()
             }) {
-                Image("backButton")
+                SmImages.backButton.swiftUIImage
                     .padding(.leading, Paddings.x4)
                     .padding(.top, Paddings.x1)
             }
@@ -45,7 +45,7 @@ struct TeamMatchesView: View {
                     MatchFilterTabView(teamMatchesViewModel: teamMatchesViewModel)
                 }
                 .padding(3)
-                .background(colors.cardBackground)
+                .background(SmColors.cardBackground(theme: selectedTheme, systemColorScheme: colorScheme))
                 .cornerRadius(25)
 
                 ScrollView {

@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import FactoryKit
 
 struct LeagueRowView: View {
     let leagueModel: LeagueModel
-    @Injected(\.colors) private var colors: Colors
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
+    @Environment(\.colorScheme) private var colorScheme
 
     init(leagueModel: LeagueModel) {
         self.leagueModel = leagueModel
@@ -26,13 +26,13 @@ struct LeagueRowView: View {
             
             Spacer()
             
-            Image("chevronForward")
+            SmImages.chevronForward.swiftUIImage
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, Paddings.x4)
         .padding(.vertical, Paddings.x3)
-        .background(colors.cardBackground)
+        .background(SmColors.cardBackground(theme: selectedTheme, systemColorScheme: colorScheme))
         .cornerRadius(Radii.medium)
-        .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
+        .shadow(color: SmColors.cardShadow.swiftUIColor, radius: 15, x: 0, y: 4)
     }
 }

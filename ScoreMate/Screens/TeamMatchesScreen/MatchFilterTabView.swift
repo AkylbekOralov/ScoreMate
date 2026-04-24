@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import FactoryKit
 
 struct MatchFilterTabView: View {
     @StateObject var teamMatchesViewModel: TeamMatchesViewModel
-    @Injected(\.colors) private var colors: Colors
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
+    @Environment(\.colorScheme) private var colorScheme
 
     init(teamMatchesViewModel: TeamMatchesViewModel) {
         self._teamMatchesViewModel = StateObject(wrappedValue: teamMatchesViewModel)
@@ -20,7 +20,7 @@ struct MatchFilterTabView: View {
         VStack {
             HStack(spacing: Paddings.x11) {
                 Text("Results")
-                    .foregroundColor(teamMatchesViewModel.selection == .results ? colors.inverseText : colors.inactiveText)
+                    .foregroundColor(teamMatchesViewModel.selection == .results ? SmColors.inverseText.swiftUIColor : SmColors.inactiveText.swiftUIColor)
                     .animation(
                         Animation.easeInOut(duration: 0.2)
                     )
@@ -31,7 +31,7 @@ struct MatchFilterTabView: View {
                     }
                 
                 Text("Calendar")
-                    .foregroundColor(teamMatchesViewModel.selection == .calendar ? colors.inverseText : colors.inactiveText)
+                    .foregroundColor(teamMatchesViewModel.selection == .calendar ? SmColors.inverseText.swiftUIColor : SmColors.inactiveText.swiftUIColor)
                     .animation(
                         Animation.easeInOut(duration: 0.2)
                     )
@@ -45,13 +45,13 @@ struct MatchFilterTabView: View {
             .frame(width: 226, height: 42)
             .background(
                 Rectangle()
-                    .fill(colors.selectionAccent)
+                    .fill(SmColors.selectionAccent.swiftUIColor)
                     .frame(width: teamMatchesViewModel.selection == .results ? 109 : 122, height: 36, alignment: .leading)
                     .cornerRadius(25)
                     .offset(x: teamMatchesViewModel.selection == .results ? -55 : 48)
             )
         }
-        .background(colors.cardBackground)
+        .background(SmColors.cardBackground(theme: selectedTheme, systemColorScheme: colorScheme))
         .cornerRadius(25)
     }
 }

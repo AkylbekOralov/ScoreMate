@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import FactoryKit
 
 struct UpcomingMatchView: View {
     let match: MatchModel
-    @Injected(\.colors) private var colors: Colors
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .system
+    @Environment(\.colorScheme) private var colorScheme
 
     init(match: MatchModel) {
         self.match = match
@@ -34,7 +34,7 @@ struct UpcomingMatchView: View {
             }
             Text(match.date)
                 .font(.system(size: FontSizes.caption))
-                .foregroundColor(colors.inactiveText)
+                .foregroundColor(SmColors.inactiveText.swiftUIColor)
                 .padding(.top, Paddings.x2)
             Text(match.time)
                 .font(.system(size: FontSizes.body, weight: .medium))
@@ -42,9 +42,9 @@ struct UpcomingMatchView: View {
         }
         .padding(.horizontal, Paddings.x11)
         .padding(.vertical, Paddings.x3)
-        .background(colors.cardBackground)
+        .background(SmColors.cardBackground(theme: selectedTheme, systemColorScheme: colorScheme))
         .cornerRadius(Radii.medium)
-        .shadow(color: colors.cardShadow, radius: 15, x: 0, y: 4)
+        .shadow(color: SmColors.cardShadow.swiftUIColor, radius: 15, x: 0, y: 4)
     }
 }
 
