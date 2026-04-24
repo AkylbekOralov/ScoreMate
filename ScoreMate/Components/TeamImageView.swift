@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TeamImageView: View {
     let teamId: Int
+    private let apiEndpoints: APIEndpointsProviding = APIEndpoints()
     
     var body: some View {
-        AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/soccer/teams/100/\(teamId).png")) { phase in
+        AsyncImage(url: apiEndpoints.teamImage(teamId: teamId)) { phase in
             if let image = phase.image {
                 image
                     .resizable()

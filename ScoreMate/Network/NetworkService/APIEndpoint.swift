@@ -5,15 +5,21 @@
 //  Created by Akylbek Oralov on 04.03.2025.
 //
 
+import Foundation
+
 protocol APIEndpointsProviding: Sendable {
     func leagues() -> String
     func leagueStanding(seasonId: String) -> String
     func matchesByDate(date: String) -> String
     func teamMatches(seasonId: String, teamId: String) -> String
+    func countryImage(countryCode: String) -> URL?
+    func leagueImage(leagueId: Int) -> URL?
+    func teamImage(teamId: Int) -> URL?
 }
 
 public final class APIEndpoints: APIEndpointsProviding, Sendable {
     private let baseURL = "https://api.soccersapi.com/v2.2"
+    private let imageBaseURL = "https://cdn.soccersapi.com/images"
     private let api: ApiCall
     private let user: String
     private let token: String
@@ -38,6 +44,18 @@ public final class APIEndpoints: APIEndpointsProviding, Sendable {
     
     public func teamMatches(seasonId: String, teamId: String) -> String {
         return "https://api.soccersapi.com/v2.2/fixtures/?user=\(user)&token=\(token)&t=season&season_id=\(seasonId)&team_id=\(teamId)"
+    }
+
+    public func countryImage(countryCode: String) -> URL? {
+        URL(string: "\(imageBaseURL)/countries/30/\(countryCode).png")
+    }
+
+    public func leagueImage(leagueId: Int) -> URL? {
+        URL(string: "\(imageBaseURL)/soccer/leagues/100/\(leagueId).png")
+    }
+
+    public func teamImage(teamId: Int) -> URL? {
+        URL(string: "\(imageBaseURL)/soccer/teams/100/\(teamId).png")
     }
 }
 

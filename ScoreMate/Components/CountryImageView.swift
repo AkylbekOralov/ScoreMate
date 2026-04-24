@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CountryImageView: View {
     let countryCode: String
+    private let apiEndpoints: APIEndpointsProviding = APIEndpoints()
     
     var body: some View {
-        AsyncImage(url: URL(string: "https://cdn.soccersapi.com/images/countries/30/\(countryCode).png")) { phase in
+        AsyncImage(url: apiEndpoints.countryImage(countryCode: countryCode)) { phase in
             if let image = phase.image {
                 image
                     .resizable()
