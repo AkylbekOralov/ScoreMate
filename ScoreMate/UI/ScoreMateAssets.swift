@@ -21,6 +21,7 @@ enum ScoreMateAsset: Sendable {
         static let actionButtonBackground = ScoreMateColorAsset(name: "ActionButtonBackground")
         static let actionButtonText = ScoreMateColorAsset(name: "ActionButtonText")
         static let appBackground = ScoreMateColorAsset(name: "AppBackground")
+        static let backButtonTint = ScoreMateColorAsset(name: "BackButtonTint")
         static let cardBackgroundDark = ScoreMateColorAsset(name: "CardBackgroundDark")
         static let cardBackgroundLight = ScoreMateColorAsset(name: "CardBackgroundLight")
         static let cardShadow = ScoreMateColorAsset(name: "CardShadow")

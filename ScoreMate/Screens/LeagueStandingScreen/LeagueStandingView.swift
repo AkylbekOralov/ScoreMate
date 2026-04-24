@@ -32,6 +32,8 @@ struct LeagueStandingView: View {
                 dismiss()
             }) {
                 SmImages.backButton.swiftUIImage
+                    .renderingMode(.template)
+                    .foregroundStyle(SmColors.backButtonTint.swiftUIColor)
                     .padding(.leading, Paddings.x4)
                     .padding(.top, Paddings.x1)
             }
