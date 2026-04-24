@@ -54,9 +54,9 @@ struct TeamMatchesView: View {
                     VStack(spacing: Paddings.x4) {
                         ForEach(teamMatchesViewModel.displayedMatches) { match in
                             if teamMatchesViewModel.selection == .results {
-                                FinishedMatchView(match: match, withDate: true)
+                                LegacyFinishedMatchView(match: match, withDate: true)
                             } else {
-                                UpcomingMatchView(match: match)
+                                LegacyUpcomingMatchView(match: match)
                             }
                         }
                     }

@@ -12,6 +12,11 @@ struct MatchModel: Identifiable, Equatable, Sendable {
     let statusName: String
     let date: String
     let time: String
+    let leagueName: String
+    let leagueCountryName: String
+    let groupName: String
+    let stageName: String
+    let roundName: String
     let homeTeam: String
     let homeTeamCode: String
     let homeTeamId: Int

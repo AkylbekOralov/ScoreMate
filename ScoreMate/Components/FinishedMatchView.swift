@@ -17,39 +17,74 @@ struct FinishedMatchView: View {
         self.match = match
         self.withDate = withDate
     }
+
+    private var competitionLabel: String {
+        "\(match.leagueCountryName) • \(match.leagueName)"
+    }
+
+    private var matchContextLabel: String {
+        "\(match.roundName) • \(match.stageName)"
+    }
     
     var body: some View {
-        VStack(spacing: Paddings.x2) {
-            HStack(spacing: Paddings.x1) {
-                HStack(spacing: Paddings.x4) {
-                    Text(match.homeTeamCode)
-                        .font(.system(size: FontSizes.caption))
-                    TeamImageView(teamId: match.homeTeamId)
-                        .frame(width: 41, height: 41)
-                }
+        VStack(spacing: Paddings.x3) {
+            Text(competitionLabel)
+                .font(.system(size: FontSizes.caption))
+                .foregroundColor(SmColors.inactiveText.swiftUIColor)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            HStack(spacing: Paddings.x2) {
+                teamColumn(
+                    code: match.homeTeamCode,
+                    name: match.homeTeam,
+                    teamId: match.homeTeamId
+                )
+
                 Text("\(match.homeScore)-\(match.awayScore)")
-                    .font(.system(size: FontSizes.body, weight: .medium))
+                    .font(.system(size: FontSizes.body, weight: .semibold))
                     .padding(.vertical, Paddings.x1)
                     .padding(.horizontal, Paddings.x2)
+                    .background(Color(.systemGray5))
                     .cornerRadius(19)
-                HStack(spacing: Paddings.x4) {
-                    TeamImageView(teamId: match.awayTeamId)
-                        .frame(width: 41, height: 41)
-                    Text(match.awayTeamCode)
-                        .font(.system(size: FontSizes.caption))
+
+                teamColumn(
+                    code: match.awayTeamCode,
+                    name: match.awayTeam,
+                    teamId: match.awayTeamId
+                )
+            }
+
+            HStack {
+                Text(matchContextLabel)
+                Spacer()
+                if withDate {
+                    Text(match.date)
                 }
             }
-            if withDate {
-                Text(match.date)
-                    .font(.system(size: FontSizes.caption))
-                    .foregroundColor(SmColors.inactiveText.swiftUIColor)
-            }
+            .font(.system(size: FontSizes.caption))
+            .foregroundColor(SmColors.inactiveText.swiftUIColor)
         }
         .padding(.horizontal, Paddings.x11)
         .padding(.vertical, Paddings.x3)
         .background(SmColors.cardBackground(theme: selectedTheme, systemColorScheme: colorScheme))
         .cornerRadius(Radii.medium)
         .shadow(color: SmColors.cardShadow.swiftUIColor, radius: 15, x: 0, y: 4)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private func teamColumn(code: String, name: String, teamId: Int) -> some View {
+        VStack(spacing: Paddings.x1) {
+            TeamImageView(teamId: teamId)
+                .frame(width: 41, height: 41)
+            Text(code)
+                .font(.system(size: FontSizes.caption, weight: .medium))
+            Text(name)
+                .font(.system(size: FontSizes.caption))
+                .foregroundColor(SmColors.inactiveText.swiftUIColor)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 
@@ -59,6 +94,11 @@ struct FinishedMatchView_Preview: PreviewProvider {
         statusName: "Finished",
         date: "2024-10-19",
         time: "18:00",
+        leagueName: "A-League",
+        leagueCountryName: "Australia",
+        groupName: "A-League 24/25",
+        stageName: "Regular Season - A-League 24/25",
+        roundName: "8",
         homeTeam: "Auckland FC",
         homeTeamCode: "AUC",
         homeTeamId: 1931466026,

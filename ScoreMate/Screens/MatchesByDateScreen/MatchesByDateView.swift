@@ -37,16 +37,22 @@ struct MatchesByDateView: View {
                     } else if let matches = mathesByDateViewModel.selectedDateMatches {
                         ForEach(matches) { match in
                             if match.statusName == "Finished" {
-                                FinishedMatchView(match: match, withDate: false)
+                                HStack {
+                                    FinishedMatchView(match: match, withDate: false)
+                                    Spacer(minLength: 0)
+                                }
                             } else if match.statusName == "Notstarted" {
-                                UpcomingMatchView(match: match)
+                                HStack {
+                                    UpcomingMatchView(match: match)
+                                    Spacer(minLength: 0)
+                                }
                             }
                         }
                     } else {
                         Text("No matches")
                     }
                 }
-                .frame(maxWidth: .infinity)
+                .padding(.horizontal, Paddings.x4)
                 .padding(.top, Paddings.x8)
             }
         }
