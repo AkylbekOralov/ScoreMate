@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LeagueTableView: View {
     @StateObject var leagueStandingViewModel: LeagueStandingViewModel
+    @State private var activeTooltip: StandingHeaderTooltip?
     
     var body: some View {
         VStack(spacing: Paddings.x2) {
@@ -18,9 +19,15 @@ struct LeagueTableView: View {
                     .padding(.leading, Paddings.x4)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                withAnimation(.easeInOut(duration: 0.18)) {
+                    activeTooltip = nil
+                }
+            }
             
             VStack(spacing: Paddings.x1)  {
-                StandingTableHeaderView()
+                StandingTableHeaderView(activeTooltip: $activeTooltip)
                 
                 ScrollView {
                     VStack {
@@ -44,6 +51,14 @@ struct LeagueTableView: View {
                     .padding(.horizontal, Paddings.x4 )
                     .padding(.top, Paddings.x2)
                 }
+                .simultaneousGesture(
+                    TapGesture()
+                        .onEnded {
+                            withAnimation(.easeInOut(duration: 0.18)) {
+                                activeTooltip = nil
+                            }
+                        }
+                )
             }
         }
     }
