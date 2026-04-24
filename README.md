@@ -34,7 +34,6 @@ For dependency injection, the `DI` folder contains a `Factory` container. It reg
 
 ```text
 ScoreMate
-├── Components/          # Reusable SwiftUI views
 ├── DI/                  # Dependency injection container built with Factory
 ├── Model/               # App domain models
 ├── MockData/            # Local JSON files for previewing and development
@@ -43,13 +42,24 @@ ScoreMate
 │   ├── Requests/        # Feature-specific services
 │   └── Responses/       # API response models
 ├── Screens/             # Feature screens, views, and view models
-├── UI/                  # Design constants and shared UI helpers
+├── UI/
+│   ├── Components/      # Reusable SwiftUI views
+│   └── ...              # Design constants and shared UI helpers
 ├── Assets.xcassets/     # Images and app assets
 ├── Colors.xcassets/     # Color palette
 └── ScoreMateApp.swift   # App entry point
 ```
 
-This structure helps me keep responsibilities clear: UI stays inside feature screens, shared views live in `Components`, networking stays isolated, and design values are centralized in `UI`.
+This structure helps me keep responsibilities clear: UI stays inside feature screens, shared views live in `UI/Components`, networking stays isolated, and design values are centralized in `UI`.
+
+### Folder Guides
+
+- [DI](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/DI/README.md)
+- [Model](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/Model/README.md)
+- [Network](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/Network/README.md)
+- [Screens](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/Screens/README.md)
+- [UI](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/UI/README.md)
+- [UI Components](/Users/oralov/Documents/apps/ScoreMate/ScoreMate/UI/Components/README.md)
 
 ## Tech Stack
 
