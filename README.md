@@ -1,6 +1,6 @@
 # ScoreMate
 
-ScoreMate is a SwiftUI iOS app for exploring football leagues, standings, team fixtures, and daily matches. I built it as a hands-on project to strengthen my iOS fundamentals and to practice writing code that is clean, structured, and easy to extend.
+This is a SwiftUI iOS app for exploring football leagues, standings, team fixtures, and daily matches. I built it as a hands-on project to strengthen my iOS fundamentals and to practice writing code that is clean, structured, and easy to extend.
 
 ## What It Shows
 
