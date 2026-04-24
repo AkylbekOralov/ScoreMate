@@ -1,56 +1,1082 @@
 {
-  "data": {
-    "standings": [
-      {
-        "team_id": 9001,
-        "team_name": "Arsenal",
-        "overall": {
-          "games_played": 32,
-          "goals_scored": 68,
-          "goals_against": 27,
-          "points": 74
+  "meta" : {
+    "pages" : 1,
+    "requests_left" : 99,
+    "count" : 0,
+    "plan" : "Free Plan",
+    "msg" : null,
+    "total" : 1,
+    "page" : 1,
+    "user" : "akylbekoralov2003"
+  },
+  "data" : {
+    "has_groups" : 1,
+    "number_standings" : 3,
+    "standings" : [
+      [
+        {
+          "points" : 38,
+          "team_name" : "SK Sturm Graz",
+          "total" : 22,
+          "recent_form" : "DDDWD",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 7,
+            "points" : 22,
+            "position" : 1,
+            "lost" : 3,
+            "goals_diff" : 9,
+            "games_played" : 11,
+            "draw" : 1,
+            "goals_scored" : 21,
+            "goals_against" : 12
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 12,
+            "points" : 38,
+            "position" : 1,
+            "lost" : 8,
+            "goals_diff" : 7,
+            "games_played" : 22,
+            "draw" : 2,
+            "goals_scored" : 33,
+            "goals_against" : 26
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 16,
+            "position" : 7,
+            "lost" : 5,
+            "goals_diff" : -2,
+            "games_played" : 11,
+            "draw" : 1,
+            "goals_scored" : 12,
+            "goals_against" : 14
+          },
+          "result" : "Championship round",
+          "team_id" : 2874,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 37,
+          "team_name" : "FC Salzburg",
+          "total" : 22,
+          "recent_form" : "WWLWD",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 5,
+            "points" : 19,
+            "position" : 2,
+            "lost" : 2,
+            "goals_diff" : 8,
+            "games_played" : 11,
+            "draw" : 4,
+            "goals_scored" : 20,
+            "goals_against" : 12
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 10,
+            "points" : 37,
+            "position" : 2,
+            "lost" : 5,
+            "goals_diff" : 16,
+            "games_played" : 22,
+            "draw" : 7,
+            "goals_scored" : 42,
+            "goals_against" : 26
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 18,
+            "position" : 3,
+            "lost" : 3,
+            "goals_diff" : 8,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 22,
+            "goals_against" : 14
+          },
+          "result" : "Championship round",
+          "team_id" : 104,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 37,
+          "team_name" : "LASK",
+          "total" : 22,
+          "recent_form" : "DDWWL",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 4,
+            "points" : 15,
+            "position" : 6,
+            "lost" : 4,
+            "goals_diff" : -1,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 14,
+            "goals_against" : 15
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 11,
+            "points" : 37,
+            "position" : 3,
+            "lost" : 7,
+            "goals_diff" : 2,
+            "games_played" : 22,
+            "draw" : 4,
+            "goals_scored" : 32,
+            "goals_against" : 30
+          },
+          "home" : {
+            "won" : 7,
+            "points" : 22,
+            "position" : 1,
+            "lost" : 3,
+            "goals_diff" : 3,
+            "games_played" : 11,
+            "draw" : 1,
+            "goals_scored" : 18,
+            "goals_against" : 15
+          },
+          "result" : "Championship round",
+          "team_id" : 91,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 36,
+          "team_name" : "FK Austria Wien",
+          "total" : 22,
+          "recent_form" : "LLDLW",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 6,
+            "points" : 19,
+            "position" : 3,
+            "lost" : 4,
+            "goals_diff" : 5,
+            "games_played" : 11,
+            "draw" : 1,
+            "goals_scored" : 20,
+            "goals_against" : 15
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 11,
+            "points" : 36,
+            "position" : 4,
+            "lost" : 8,
+            "goals_diff" : 4,
+            "games_played" : 22,
+            "draw" : 3,
+            "goals_scored" : 34,
+            "goals_against" : 30
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 17,
+            "position" : 5,
+            "lost" : 4,
+            "goals_diff" : -1,
+            "games_played" : 11,
+            "draw" : 2,
+            "goals_scored" : 14,
+            "goals_against" : 15
+          },
+          "result" : "Championship round",
+          "team_id" : 2871,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 33,
+          "team_name" : "SK Rapid Wien",
+          "total" : 22,
+          "recent_form" : "LDDLW",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 4,
+            "points" : 16,
+            "position" : 5,
+            "lost" : 3,
+            "goals_diff" : -1,
+            "games_played" : 11,
+            "draw" : 4,
+            "goals_scored" : 12,
+            "goals_against" : 13
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 9,
+            "points" : 33,
+            "position" : 5,
+            "lost" : 7,
+            "goals_diff" : 1,
+            "games_played" : 22,
+            "draw" : 6,
+            "goals_scored" : 26,
+            "goals_against" : 25
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 17,
+            "position" : 6,
+            "lost" : 4,
+            "goals_diff" : 2,
+            "games_played" : 11,
+            "draw" : 2,
+            "goals_scored" : 14,
+            "goals_against" : 12
+          },
+          "result" : "Championship round",
+          "team_id" : 2867,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 33,
+          "team_name" : "TSV Hartberg",
+          "total" : 22,
+          "recent_form" : "WDDLL",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 4,
+            "points" : 17,
+            "position" : 4,
+            "lost" : 2,
+            "goals_diff" : 3,
+            "games_played" : 11,
+            "draw" : 5,
+            "goals_scored" : 16,
+            "goals_against" : 13
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 8,
+            "points" : 33,
+            "position" : 6,
+            "lost" : 5,
+            "goals_diff" : 5,
+            "games_played" : 22,
+            "draw" : 9,
+            "goals_scored" : 29,
+            "goals_against" : 24
+          },
+          "home" : {
+            "won" : 4,
+            "points" : 16,
+            "position" : 8,
+            "lost" : 3,
+            "goals_diff" : 2,
+            "games_played" : 11,
+            "draw" : 4,
+            "goals_scored" : 13,
+            "goals_against" : 11
+          },
+          "result" : "Championship round",
+          "team_id" : 2873,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 31,
+          "team_name" : "WSG Tirol",
+          "total" : 22,
+          "recent_form" : "DDLWL",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 3,
+            "points" : 13,
+            "position" : 8,
+            "lost" : 4,
+            "goals_diff" : -3,
+            "games_played" : 11,
+            "draw" : 4,
+            "goals_scored" : 13,
+            "goals_against" : 16
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 8,
+            "points" : 31,
+            "position" : 7,
+            "lost" : 7,
+            "goals_diff" : 1,
+            "games_played" : 22,
+            "draw" : 7,
+            "goals_scored" : 31,
+            "goals_against" : 30
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 18,
+            "position" : 4,
+            "lost" : 3,
+            "goals_diff" : 4,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 18,
+            "goals_against" : 14
+          },
+          "result" : "Relegation Round",
+          "team_id" : 2870,
+          "status" : "Relegation"
+        },
+        {
+          "points" : 29,
+          "team_name" : "SCR Altach",
+          "total" : 22,
+          "recent_form" : "DDWLD",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 2,
+            "points" : 9,
+            "position" : 10,
+            "lost" : 6,
+            "goals_diff" : -5,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 8,
+            "goals_against" : 13
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 7,
+            "points" : 29,
+            "position" : 8,
+            "lost" : 7,
+            "goals_diff" : -1,
+            "games_played" : 22,
+            "draw" : 8,
+            "goals_scored" : 22,
+            "goals_against" : 23
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 20,
+            "position" : 2,
+            "lost" : 1,
+            "goals_diff" : 4,
+            "games_played" : 11,
+            "draw" : 5,
+            "goals_scored" : 14,
+            "goals_against" : 10
+          },
+          "result" : "Relegation Round",
+          "team_id" : 2876,
+          "status" : "Relegation"
+        },
+        {
+          "points" : 28,
+          "team_name" : "SV Ried",
+          "total" : 22,
+          "recent_form" : "WDDWL",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 4,
+            "points" : 13,
+            "position" : 7,
+            "lost" : 6,
+            "goals_diff" : -3,
+            "games_played" : 11,
+            "draw" : 1,
+            "goals_scored" : 14,
+            "goals_against" : 17
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 8,
+            "points" : 28,
+            "position" : 9,
+            "lost" : 10,
+            "goals_diff" : -4,
+            "games_played" : 22,
+            "draw" : 4,
+            "goals_scored" : 26,
+            "goals_against" : 30
+          },
+          "home" : {
+            "won" : 4,
+            "points" : 15,
+            "position" : 9,
+            "lost" : 4,
+            "goals_diff" : -1,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 12,
+            "goals_against" : 13
+          },
+          "result" : "Relegation Round",
+          "team_id" : 1080,
+          "status" : "Relegation"
+        },
+        {
+          "points" : 26,
+          "team_name" : "Wolfsberger AC",
+          "total" : 22,
+          "recent_form" : "LDDLD",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 3,
+            "points" : 11,
+            "position" : 9,
+            "lost" : 6,
+            "goals_diff" : -3,
+            "games_played" : 11,
+            "draw" : 2,
+            "goals_scored" : 15,
+            "goals_against" : 18
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 7,
+            "points" : 26,
+            "position" : 10,
+            "lost" : 10,
+            "goals_diff" : -1,
+            "games_played" : 22,
+            "draw" : 5,
+            "goals_scored" : 31,
+            "goals_against" : 32
+          },
+          "home" : {
+            "won" : 4,
+            "points" : 15,
+            "position" : 10,
+            "lost" : 4,
+            "goals_diff" : 2,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 16,
+            "goals_against" : 14
+          },
+          "result" : "Relegation Round",
+          "team_id" : 2869,
+          "status" : "Relegation"
+        },
+        {
+          "points" : 20,
+          "team_name" : "Grazer AK",
+          "total" : 22,
+          "recent_form" : "LDLWW",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 1,
+            "points" : 6,
+            "position" : 11,
+            "lost" : 7,
+            "goals_diff" : -13,
+            "games_played" : 11,
+            "draw" : 3,
+            "goals_scored" : 7,
+            "goals_against" : 20
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 4,
+            "points" : 20,
+            "position" : 11,
+            "lost" : 10,
+            "goals_diff" : -14,
+            "games_played" : 22,
+            "draw" : 8,
+            "goals_scored" : 22,
+            "goals_against" : 36
+          },
+          "home" : {
+            "won" : 3,
+            "points" : 14,
+            "position" : 11,
+            "lost" : 3,
+            "goals_diff" : -1,
+            "games_played" : 11,
+            "draw" : 5,
+            "goals_scored" : 15,
+            "goals_against" : 16
+          },
+          "result" : "Relegation Round",
+          "team_id" : 1095,
+          "status" : "Relegation"
+        },
+        {
+          "points" : 15,
+          "team_name" : "BW Linz",
+          "total" : 22,
+          "recent_form" : "WDWLW",
+          "group_name" : "Bundesliga 25\/26",
+          "away" : {
+            "won" : 1,
+            "points" : 5,
+            "position" : 12,
+            "lost" : 8,
+            "goals_diff" : -12,
+            "games_played" : 11,
+            "draw" : 2,
+            "goals_scored" : 6,
+            "goals_against" : 18
+          },
+          "group" : "Bundesliga",
+          "overall" : {
+            "won" : 4,
+            "points" : 15,
+            "position" : 12,
+            "lost" : 15,
+            "goals_diff" : -16,
+            "games_played" : 22,
+            "draw" : 3,
+            "goals_scored" : 20,
+            "goals_against" : 36
+          },
+          "home" : {
+            "won" : 3,
+            "points" : 10,
+            "position" : 12,
+            "lost" : 7,
+            "goals_diff" : -4,
+            "games_played" : 11,
+            "draw" : 1,
+            "goals_scored" : 14,
+            "goals_against" : 18
+          },
+          "result" : "Relegation Round",
+          "team_id" : 1092,
+          "status" : "Relegation"
         }
-      },
-      {
-        "team_id": 9002,
-        "team_name": "Liverpool",
-        "overall": {
-          "games_played": 32,
-          "goals_scored": 71,
-          "goals_against": 31,
-          "points": 73
+      ],
+      [
+        {
+          "points" : 29,
+          "team_name" : "SK Sturm Graz",
+          "total" : 28,
+          "recent_form" : "DDDWD",
+          "group_name" : "Bundesliga 25\/26, Championship Round",
+          "away" : {
+            "won" : 9,
+            "points" : 29,
+            "position" : 1,
+            "lost" : 3,
+            "goals_diff" : 14,
+            "games_played" : 14,
+            "draw" : 2,
+            "goals_scored" : 29,
+            "goals_against" : 15
+          },
+          "group" : "Championship Round",
+          "overall" : {
+            "won" : 14,
+            "points" : 29,
+            "position" : 1,
+            "lost" : 8,
+            "goals_diff" : 12,
+            "games_played" : 28,
+            "draw" : 6,
+            "goals_scored" : 43,
+            "goals_against" : 31
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 19,
+            "position" : 4,
+            "lost" : 5,
+            "goals_diff" : -2,
+            "games_played" : 14,
+            "draw" : 4,
+            "goals_scored" : 14,
+            "goals_against" : 16
+          },
+          "result" : "Champions League Qualification",
+          "team_id" : 2874,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 28,
+          "team_name" : "FC Salzburg",
+          "total" : 28,
+          "recent_form" : "WWLWD",
+          "group_name" : "Bundesliga 25\/26, Championship Round",
+          "away" : {
+            "won" : 7,
+            "points" : 26,
+            "position" : 2,
+            "lost" : 2,
+            "goals_diff" : 11,
+            "games_played" : 14,
+            "draw" : 5,
+            "goals_scored" : 26,
+            "goals_against" : 15
+          },
+          "group" : "Championship Round",
+          "overall" : {
+            "won" : 13,
+            "points" : 28,
+            "position" : 2,
+            "lost" : 7,
+            "goals_diff" : 19,
+            "games_played" : 28,
+            "draw" : 8,
+            "goals_scored" : 53,
+            "goals_against" : 34
+          },
+          "home" : {
+            "won" : 6,
+            "points" : 21,
+            "position" : 2,
+            "lost" : 5,
+            "goals_diff" : 8,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 27,
+            "goals_against" : 19
+          },
+          "result" : "Champions League Qualification",
+          "team_id" : 104,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 27,
+          "team_name" : "LASK",
+          "total" : 28,
+          "recent_form" : "DDWWL",
+          "group_name" : "Bundesliga 25\/26, Championship Round",
+          "away" : {
+            "won" : 5,
+            "points" : 19,
+            "position" : 6,
+            "lost" : 5,
+            "goals_diff" : -2,
+            "games_played" : 14,
+            "draw" : 4,
+            "goals_scored" : 20,
+            "goals_against" : 22
+          },
+          "group" : "Championship Round",
+          "overall" : {
+            "won" : 13,
+            "points" : 27,
+            "position" : 3,
+            "lost" : 8,
+            "goals_diff" : 4,
+            "games_played" : 28,
+            "draw" : 7,
+            "goals_scored" : 43,
+            "goals_against" : 39
+          },
+          "home" : {
+            "won" : 8,
+            "points" : 27,
+            "position" : 1,
+            "lost" : 3,
+            "goals_diff" : 6,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 23,
+            "goals_against" : 17
+          },
+          "result" : "Conference League Qualification",
+          "team_id" : 91,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 24,
+          "team_name" : "SK Rapid Wien",
+          "total" : 28,
+          "recent_form" : "LDDLW",
+          "group_name" : "Bundesliga 25\/26, Championship Round",
+          "away" : {
+            "won" : 5,
+            "points" : 21,
+            "position" : 5,
+            "lost" : 3,
+            "goals_diff" : 0,
+            "games_played" : 14,
+            "draw" : 6,
+            "goals_scored" : 16,
+            "goals_against" : 16
+          },
+          "group" : "Championship Round",
+          "overall" : {
+            "won" : 11,
+            "points" : 24,
+            "position" : 4,
+            "lost" : 9,
+            "goals_diff" : 0,
+            "games_played" : 28,
+            "draw" : 8,
+            "goals_scored" : 34,
+            "goals_against" : 34
+          },
+          "home" : {
+            "won" : 6,
+            "points" : 20,
+            "position" : 3,
+            "lost" : 6,
+            "goals_diff" : 0,
+            "games_played" : 14,
+            "draw" : 2,
+            "goals_scored" : 18,
+            "goals_against" : 18
+          },
+          "result" : "Qualification Playoffs",
+          "team_id" : 2867,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 22,
+          "team_name" : "TSV Hartberg",
+          "total" : 28,
+          "recent_form" : "WDDLL",
+          "group_name" : "Bundesliga 25\/26, Championship Round",
+          "away" : {
+            "won" : 5,
+            "points" : 22,
+            "position" : 3,
+            "lost" : 2,
+            "goals_diff" : 5,
+            "games_played" : 14,
+            "draw" : 7,
+            "goals_scored" : 18,
+            "goals_against" : 13
+          },
+          "group" : "Championship Round",
+          "overall" : {
+            "won" : 9,
+            "points" : 22,
+            "position" : 5,
+            "lost" : 7,
+            "goals_diff" : 5,
+            "games_played" : 28,
+            "draw" : 12,
+            "goals_scored" : 34,
+            "goals_against" : 29
+          },
+          "home" : {
+            "won" : 4,
+            "points" : 17,
+            "position" : 6,
+            "lost" : 5,
+            "goals_diff" : 0,
+            "games_played" : 14,
+            "draw" : 5,
+            "goals_scored" : 16,
+            "goals_against" : 16
+          },
+          "result" : "Qualification Playoffs",
+          "team_id" : 2873,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 22,
+          "team_name" : "FK Austria Wien",
+          "total" : 28,
+          "recent_form" : "LLDLW",
+          "group_name" : "Bundesliga 25\/26, Championship Round",
+          "away" : {
+            "won" : 7,
+            "points" : 22,
+            "position" : 4,
+            "lost" : 6,
+            "goals_diff" : 1,
+            "games_played" : 14,
+            "draw" : 1,
+            "goals_scored" : 23,
+            "goals_against" : 22
+          },
+          "group" : "Championship Round",
+          "overall" : {
+            "won" : 12,
+            "points" : 22,
+            "position" : 6,
+            "lost" : 12,
+            "goals_diff" : -5,
+            "games_played" : 28,
+            "draw" : 4,
+            "goals_scored" : 41,
+            "goals_against" : 46
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 18,
+            "position" : 5,
+            "lost" : 6,
+            "goals_diff" : -6,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 18,
+            "goals_against" : 24
+          },
+          "result" : null,
+          "team_id" : 2871,
+          "status" : "Same"
         }
-      },
-      {
-        "team_id": 9003,
-        "team_name": "Manchester City",
-        "overall": {
-          "games_played": 31,
-          "goals_scored": 69,
-          "goals_against": 29,
-          "points": 70
+      ],
+      [
+        {
+          "points" : 25,
+          "team_name" : "SV Ried",
+          "total" : 28,
+          "recent_form" : "WDDWL",
+          "group_name" : "Bundesliga 25\/26, Relegation Round",
+          "away" : {
+            "won" : 4,
+            "points" : 15,
+            "position" : 1,
+            "lost" : 7,
+            "goals_diff" : -4,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 17,
+            "goals_against" : 21
+          },
+          "group" : "Relegation Round",
+          "overall" : {
+            "won" : 11,
+            "points" : 25,
+            "position" : 1,
+            "lost" : 11,
+            "goals_diff" : -2,
+            "games_played" : 28,
+            "draw" : 6,
+            "goals_scored" : 36,
+            "goals_against" : 38
+          },
+          "home" : {
+            "won" : 7,
+            "points" : 24,
+            "position" : 2,
+            "lost" : 4,
+            "goals_diff" : 2,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 19,
+            "goals_against" : 17
+          },
+          "result" : "Qualification Playoffs",
+          "team_id" : 1080,
+          "status" : "Promotion"
+        },
+        {
+          "points" : 23,
+          "team_name" : "SCR Altach",
+          "total" : 28,
+          "recent_form" : "DDWLD",
+          "group_name" : "Bundesliga 25\/26, Relegation Round",
+          "away" : {
+            "won" : 2,
+            "points" : 11,
+            "position" : 3,
+            "lost" : 7,
+            "goals_diff" : -6,
+            "games_played" : 14,
+            "draw" : 5,
+            "goals_scored" : 13,
+            "goals_against" : 19
+          },
+          "group" : "Relegation Round",
+          "overall" : {
+            "won" : 9,
+            "points" : 23,
+            "position" : 2,
+            "lost" : 8,
+            "goals_diff" : 1,
+            "games_played" : 28,
+            "draw" : 11,
+            "goals_scored" : 31,
+            "goals_against" : 30
+          },
+          "home" : {
+            "won" : 7,
+            "points" : 27,
+            "position" : 1,
+            "lost" : 1,
+            "goals_diff" : 7,
+            "games_played" : 14,
+            "draw" : 6,
+            "goals_scored" : 18,
+            "goals_against" : 11
+          },
+          "result" : null,
+          "team_id" : 2876,
+          "status" : "Same"
+        },
+        {
+          "points" : 20,
+          "team_name" : "WSG Tirol",
+          "total" : 28,
+          "recent_form" : "DDLWL",
+          "group_name" : "Bundesliga 25\/26, Relegation Round",
+          "away" : {
+            "won" : 3,
+            "points" : 14,
+            "position" : 2,
+            "lost" : 6,
+            "goals_diff" : -9,
+            "games_played" : 14,
+            "draw" : 5,
+            "goals_scored" : 14,
+            "goals_against" : 23
+          },
+          "group" : "Relegation Round",
+          "overall" : {
+            "won" : 9,
+            "points" : 20,
+            "position" : 3,
+            "lost" : 10,
+            "goals_diff" : -7,
+            "games_played" : 28,
+            "draw" : 9,
+            "goals_scored" : 38,
+            "goals_against" : 45
+          },
+          "home" : {
+            "won" : 6,
+            "points" : 22,
+            "position" : 3,
+            "lost" : 4,
+            "goals_diff" : 2,
+            "games_played" : 14,
+            "draw" : 4,
+            "goals_scored" : 24,
+            "goals_against" : 22
+          },
+          "result" : null,
+          "team_id" : 2870,
+          "status" : "Same"
+        },
+        {
+          "points" : 20,
+          "team_name" : "Grazer AK",
+          "total" : 28,
+          "recent_form" : "LDLWW",
+          "group_name" : "Bundesliga 25\/26, Relegation Round",
+          "away" : {
+            "won" : 2,
+            "points" : 9,
+            "position" : 5,
+            "lost" : 9,
+            "goals_diff" : -11,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 13,
+            "goals_against" : 24
+          },
+          "group" : "Relegation Round",
+          "overall" : {
+            "won" : 7,
+            "points" : 20,
+            "position" : 4,
+            "lost" : 12,
+            "goals_diff" : -9,
+            "games_played" : 28,
+            "draw" : 9,
+            "goals_scored" : 33,
+            "goals_against" : 42
+          },
+          "home" : {
+            "won" : 5,
+            "points" : 21,
+            "position" : 4,
+            "lost" : 3,
+            "goals_diff" : 2,
+            "games_played" : 14,
+            "draw" : 6,
+            "goals_scored" : 20,
+            "goals_against" : 18
+          },
+          "result" : null,
+          "team_id" : 1095,
+          "status" : "Same"
+        },
+        {
+          "points" : 17,
+          "team_name" : "BW Linz",
+          "total" : 28,
+          "recent_form" : "WDWLW",
+          "group_name" : "Bundesliga 25\/26, Relegation Round",
+          "away" : {
+            "won" : 1,
+            "points" : 6,
+            "position" : 6,
+            "lost" : 10,
+            "goals_diff" : -15,
+            "games_played" : 14,
+            "draw" : 3,
+            "goals_scored" : 8,
+            "goals_against" : 23
+          },
+          "group" : "Relegation Round",
+          "overall" : {
+            "won" : 7,
+            "points" : 17,
+            "position" : 5,
+            "lost" : 17,
+            "goals_diff" : -10,
+            "games_played" : 28,
+            "draw" : 4,
+            "goals_scored" : 33,
+            "goals_against" : 43
+          },
+          "home" : {
+            "won" : 6,
+            "points" : 19,
+            "position" : 5,
+            "lost" : 7,
+            "goals_diff" : 5,
+            "games_played" : 14,
+            "draw" : 1,
+            "goals_scored" : 25,
+            "goals_against" : 20
+          },
+          "result" : null,
+          "team_id" : 1092,
+          "status" : "Same"
+        },
+        {
+          "points" : 16,
+          "team_name" : "Wolfsberger AC",
+          "total" : 28,
+          "recent_form" : "LDDLD",
+          "group_name" : "Bundesliga 25\/26, Relegation Round",
+          "away" : {
+            "won" : 3,
+            "points" : 11,
+            "position" : 4,
+            "lost" : 9,
+            "goals_diff" : -10,
+            "games_played" : 14,
+            "draw" : 2,
+            "goals_scored" : 16,
+            "goals_against" : 26
+          },
+          "group" : "Relegation Round",
+          "overall" : {
+            "won" : 7,
+            "points" : 16,
+            "position" : 6,
+            "lost" : 13,
+            "goals_diff" : -8,
+            "games_played" : 28,
+            "draw" : 8,
+            "goals_scored" : 33,
+            "goals_against" : 41
+          },
+          "home" : {
+            "won" : 4,
+            "points" : 18,
+            "position" : 6,
+            "lost" : 4,
+            "goals_diff" : 2,
+            "games_played" : 14,
+            "draw" : 6,
+            "goals_scored" : 17,
+            "goals_against" : 15
+          },
+          "result" : "Relegation",
+          "team_id" : 2869,
+          "status" : "Relegation"
         }
-      },
-      {
-        "team_id": 9004,
-        "team_name": "Aston Villa",
-        "overall": {
-          "games_played": 32,
-          "goals_scored": 60,
-          "goals_against": 42,
-          "points": 63
-        }
-      },
-      {
-        "team_id": 9005,
-        "team_name": "Tottenham",
-        "overall": {
-          "games_played": 32,
-          "goals_scored": 58,
-          "goals_against": 46,
-          "points": 60
-        }
-      }
-    ]
+      ]
+    ],
+    "league_id" : 1005,
+    "season_id" : 15287
   }
 }

@@ -1,76 +1,212 @@
 {
-  "data": [
+  "meta" : {
+    "pages" : 1,
+    "requests_left" : 75,
+    "count" : 2,
+    "plan" : "Free Plan",
+    "msg" : null,
+    "total" : 2,
+    "page" : 1,
+    "user" : "akylbekoralov2003"
+  },
+  "data" : [
     {
-      "id": 50001,
-      "status_name": "Finished",
-      "time": {
-        "date": "2026-04-24",
-        "time": "18:30:00"
+      "status_period" : null,
+      "round_id" : "205626",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11817",
+      "season_id" : "15682",
+      "week" : "17",
+      "group_name" : "A-League 25\/26",
+      "stage_id" : "661",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1777023300,
+        "datetime" : "2026-04-24 09:35:00",
+        "time" : "09:35:00",
+        "date" : "2026-04-24"
       },
-      "teams": {
-        "home": {
-          "id": 9001,
-          "name": "Arsenal",
-          "short_code": "ARS"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "4-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "4",
+        "et_score" : null,
+        "ht_score" : "3-0"
+      },
+      "round_name" : "26",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 7
+      },
+      "info" : null,
+      "id" : 2479122,
+      "leg" : null,
+      "winner_team_id" : 122648729,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/122648729.png",
+          "id" : 122648729,
+          "short_code" : "MAC",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#e6ea0b",
+            "home_gk_second_color" : "#ffffff",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#050505",
+            "home_gk_main_color" : "#119b39"
+          },
+          "coach_id" : "9287",
+          "name" : "Macarthur FC",
+          "form" : "4-2-3-1"
         },
-        "away": {
-          "id": 9002,
-          "name": "Liverpool",
-          "short_code": "LIV"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1102.png",
+          "id" : 1102,
+          "short_code" : "WPH",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ff0082",
+            "away_main_color" : "#f6e552",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#f6f6f6",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : "12419",
+          "name" : "Wellington",
+          "form" : "4-2-3-1"
         }
       },
-      "scores": {
-        "home_score": "2",
-        "away_score": "1"
-      }
+      "league" : {
+        "id" : 974,
+        "country_name" : "Australia",
+        "country_code" : "au",
+        "type" : "",
+        "country_id" : "14",
+        "name" : "A-League",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/au.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "2784",
+      "stage_name" : "Regular Season - A-League 25\/26",
+      "venue_id" : "5060",
+      "attendance" : null,
+      "pitch" : null
     },
     {
-      "id": 50002,
-      "status_name": "Notstarted",
-      "time": {
-        "date": "2026-04-24",
-        "time": "21:00:00"
+      "status_period" : "2nd Half",
+      "round_id" : "213386",
+      "aggregate_id" : null,
+      "status" : 1,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "17",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : "58",
+        "timezone" : "UTC",
+        "timestamp" : 1777051800,
+        "datetime" : "2026-04-24 17:30:00",
+        "time" : "17:30:00",
+        "date" : "2026-04-24"
       },
-      "teams": {
-        "home": {
-          "id": 9003,
-          "name": "Manchester City",
-          "short_code": "MCI"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "29",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562875,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1092.png",
+          "id" : 1092,
+          "short_code" : "BWL",
+          "kit_colors" : {
+            "home_gk_number_color" : "#000000",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#ff0051",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#0043b3",
+            "home_gk_main_color" : "#e21313"
+          },
+          "coach_id" : "273",
+          "name" : "BW Linz",
+          "form" : "3-4-1-2"
         },
-        "away": {
-          "id": 9004,
-          "name": "Aston Villa",
-          "short_code": "AVL"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2876.png",
+          "id" : 2876,
+          "short_code" : "ALT",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ff6f00",
+            "away_main_color" : "#000000",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#f26900",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "4857",
+          "name" : "Altach",
+          "form" : "3-4-3"
         }
       },
-      "scores": {
-        "home_score": "0",
-        "away_score": "0"
-      }
-    },
-    {
-      "id": 50003,
-      "status_name": "Finished",
-      "time": {
-        "date": "2026-04-24",
-        "time": "23:15:00"
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
       },
-      "teams": {
-        "home": {
-          "id": 9005,
-          "name": "Tottenham",
-          "short_code": "TOT"
-        },
-        "away": {
-          "id": 9006,
-          "name": "Chelsea",
-          "short_code": "CHE"
-        }
-      },
-      "scores": {
-        "home_score": "3",
-        "away_score": "3"
-      }
+      "weather_report" : null,
+      "status_name" : "Inplay",
+      "referee_id" : "228",
+      "stage_name" : "Group stage",
+      "venue_id" : "1783382",
+      "attendance" : null,
+      "pitch" : null
     }
   ]
 }

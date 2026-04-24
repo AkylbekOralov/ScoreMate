@@ -1,124 +1,3182 @@
 {
-  "data": [
+  "meta" : {
+    "pages" : 1,
+    "requests_left" : 92,
+    "count" : 32,
+    "plan" : "Free Plan",
+    "msg" : null,
+    "total" : 32,
+    "page" : 1,
+    "user" : "akylbekoralov2003"
+  },
+  "data" : [
     {
-      "id": 60001,
-      "status_name": "Finished",
-      "time": {
-        "date": "2026-04-03",
-        "time": "19:45:00"
+      "status_period" : null,
+      "round_id" : "198312",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "31",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1754155800,
+        "datetime" : "2025-08-02 17:30:00",
+        "time" : "17:30:00",
+        "date" : "2025-08-02"
       },
-      "teams": {
-        "home": {
-          "id": 9001,
-          "name": "Arsenal",
-          "short_code": "ARS"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "1-1"
+      },
+      "round_name" : "1",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 1,
+        "away_position" : 1
+      },
+      "info" : null,
+      "id" : 2406958,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#75caf5"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
         },
-        "away": {
-          "id": 9007,
-          "name": "Brighton",
-          "short_code": "BHA"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/104.png",
+          "id" : 104,
+          "short_code" : "RBS",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ffee00",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#070707",
+            "away_second_color" : "#ff0000",
+            "away_gk_second_color" : "#ffee00",
+            "away_number_color" : "#ff0000"
+          },
+          "coach_id" : "6129",
+          "name" : "FC Salzburg",
+          "form" : "4-4-2"
         }
       },
-      "scores": {
-        "home_score": "2",
-        "away_score": "0"
-      }
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "228",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
     },
     {
-      "id": 60002,
-      "status_name": "Finished",
-      "time": {
-        "date": "2026-04-10",
-        "time": "20:00:00"
+      "status_period" : null,
+      "round_id" : "198577",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "32",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1754751600,
+        "datetime" : "2025-08-09 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-08-09"
       },
-      "teams": {
-        "home": {
-          "id": 9008,
-          "name": "Newcastle",
-          "short_code": "NEW"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "2",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 2,
+        "away_position" : 5
+      },
+      "info" : null,
+      "id" : 2410819,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2876.png",
+          "id" : 2876,
+          "short_code" : "ALT",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#f26900",
+            "home_number_color" : "#000000",
+            "home_main_color" : "#ffffff",
+            "home_gk_main_color" : "#ff6f00"
+          },
+          "coach_id" : "8449",
+          "name" : "Altach",
+          "form" : "3-4-1-2"
         },
-        "away": {
-          "id": 9001,
-          "name": "Arsenal",
-          "short_code": "ARS"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#75caf5",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "4-3-3"
         }
       },
-      "scores": {
-        "home_score": "1",
-        "away_score": "1"
-      }
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "536",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "191",
+      "attendance" : null,
+      "pitch" : null
     },
     {
-      "id": 60003,
-      "status_name": "Finished",
-      "time": {
-        "date": "2026-04-18",
-        "time": "18:00:00"
+      "status_period" : null,
+      "round_id" : "198761",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "33",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1755365400,
+        "datetime" : "2025-08-16 17:30:00",
+        "time" : "17:30:00",
+        "date" : "2025-08-16"
       },
-      "teams": {
-        "home": {
-          "id": 9001,
-          "name": "Arsenal",
-          "short_code": "ARS"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-3",
+        "ps_score" : null,
+        "away_score" : "3",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "1-3"
+      },
+      "round_name" : "3",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 10,
+        "away_position" : 5
+      },
+      "info" : null,
+      "id" : 2411082,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#75caf5"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
         },
-        "away": {
-          "id": 9006,
-          "name": "Chelsea",
-          "short_code": "CHE"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2874.png",
+          "id" : 2874,
+          "short_code" : "STU",
+          "kit_colors" : {
+            "away_gk_main_color" : "#01cee9",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#01c4dd",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : null,
+          "name" : "Sturm Graz",
+          "form" : "4-1-2-1-2"
         }
       },
-      "scores": {
-        "home_score": "4",
-        "away_score": "2"
-      }
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : null,
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
     },
     {
-      "id": 60004,
-      "status_name": "Notstarted",
-      "time": {
-        "date": "2026-04-28",
-        "time": "21:00:00"
+      "status_period" : null,
+      "round_id" : "198762",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "34",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1755961200,
+        "datetime" : "2025-08-23 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-08-23"
       },
-      "teams": {
-        "home": {
-          "id": 9009,
-          "name": "West Ham",
-          "short_code": "WHU"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "4",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 12,
+        "away_position" : 10
+      },
+      "info" : null,
+      "id" : 2411149,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1092.png",
+          "id" : 1092,
+          "short_code" : "BWL",
+          "kit_colors" : {
+            "home_gk_number_color" : "#000000",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#ff0051",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#0043b3",
+            "home_gk_main_color" : "#e21313"
+          },
+          "coach_id" : "7199",
+          "name" : "BW Linz",
+          "form" : "3-4-2-1"
         },
-        "away": {
-          "id": 9001,
-          "name": "Arsenal",
-          "short_code": "ARS"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#75caf5",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
         }
       },
-      "scores": {
-        "home_score": "0",
-        "away_score": "0"
-      }
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "710",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "1783382",
+      "attendance" : null,
+      "pitch" : null
     },
     {
-      "id": 60005,
-      "status_name": "Notstarted",
-      "time": {
-        "date": "2026-05-03",
-        "time": "17:30:00"
+      "status_period" : null,
+      "round_id" : "198788",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "35",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1756566000,
+        "datetime" : "2025-08-30 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-08-30"
       },
-      "teams": {
-        "home": {
-          "id": 9001,
-          "name": "Arsenal",
-          "short_code": "ARS"
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-3",
+        "ps_score" : null,
+        "away_score" : "3",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "0-2"
+      },
+      "round_name" : "5",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 10,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2411245,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/91.png",
+          "id" : 91,
+          "short_code" : "ASK",
+          "kit_colors" : {
+            "home_gk_number_color" : "#fbf9f9",
+            "home_second_color" : "#f4d205",
+            "home_gk_second_color" : "#ebebf0",
+            "home_number_color" : "#000000",
+            "home_main_color" : "#ffffff",
+            "home_gk_main_color" : "#e7e435"
+          },
+          "coach_id" : "12164",
+          "name" : "LASK",
+          "form" : "4-2-3-1"
         },
-        "away": {
-          "id": 9010,
-          "name": "Everton",
-          "short_code": "EVE"
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#75caf5",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
         }
       },
-      "scores": {
-        "home_score": "0",
-        "away_score": "0"
-      }
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "574",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "6164",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198790",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "37",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1757853000,
+        "datetime" : "2025-09-14 12:30:00",
+        "time" : "12:30:00",
+        "date" : "2025-09-14"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-1"
+      },
+      "round_name" : "6",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 7,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2411256,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#75caf5"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2873.png",
+          "id" : 2873,
+          "short_code" : "HTB",
+          "kit_colors" : {
+            "away_gk_main_color" : "#06e8ff",
+            "away_main_color" : "#0658c6",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#0658c6",
+            "away_gk_second_color" : "#55e452",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : null,
+          "name" : "Hartberg",
+          "form" : "5-3-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : null,
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198792",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "38",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1758380400,
+        "datetime" : "2025-09-20 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-09-20"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "3-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "3",
+        "et_score" : null,
+        "ht_score" : "0-2"
+      },
+      "round_name" : "7",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 7
+      },
+      "info" : null,
+      "id" : 2411299,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2871.png",
+          "id" : 2871,
+          "short_code" : "FAK",
+          "kit_colors" : {
+            "home_gk_number_color" : "#000000",
+            "home_second_color" : "#000000",
+            "home_gk_second_color" : "#ffff00",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#49317e",
+            "home_gk_main_color" : "#ffff00"
+          },
+          "coach_id" : "7195",
+          "name" : "Austria Wien",
+          "form" : "3-4-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#75caf5",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "228",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "1957",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198796",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "39",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1758985200,
+        "datetime" : "2025-09-27 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-09-27"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "8",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 12
+      },
+      "info" : null,
+      "id" : 2411306,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#75caf5"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "4-3-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1095.png",
+          "id" : 1095,
+          "short_code" : "GAK",
+          "kit_colors" : {
+            "away_gk_main_color" : "#a6a8a3",
+            "away_main_color" : "#fa0000",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#7c99e0",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "181",
+          "name" : "Grazer AK",
+          "form" : "4-3-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "536",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198799",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "40",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1759590000,
+        "datetime" : "2025-10-04 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-10-04"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "1-0"
+      },
+      "round_name" : "9",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2411341,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#75caf5"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2870.png",
+          "id" : 2870,
+          "short_code" : "WSG",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ff1300",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#c7c7c7",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#f21200",
+            "away_number_color" : "#019d52"
+          },
+          "coach_id" : "1132",
+          "name" : "Tirol",
+          "form" : "3-4-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "708",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198805",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "42",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1760799600,
+        "datetime" : "2025-10-18 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2025-10-18"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "1-0"
+      },
+      "round_name" : "10",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 2,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2411365,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2869.png",
+          "id" : 2869,
+          "short_code" : "WAC",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#fafafa",
+            "home_number_color" : "#000000",
+            "home_main_color" : "#ffffff",
+            "home_gk_main_color" : "#7de7c6"
+          },
+          "coach_id" : "3973",
+          "name" : "WAC",
+          "form" : "4-3-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#75caf5",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "4-3-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "534",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "192",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198806",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "43",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1761485400,
+        "datetime" : "2025-10-26 13:30:00",
+        "time" : "13:30:00",
+        "date" : "2025-10-26"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-2"
+      },
+      "round_name" : "11",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 7,
+        "away_position" : 3
+      },
+      "info" : null,
+      "id" : 2411371,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#e5f575"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2867.png",
+          "id" : 2867,
+          "short_code" : "SCR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e70db4",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#000000",
+            "away_second_color" : "#000024",
+            "away_gk_second_color" : "#e59604",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : "6009",
+          "name" : "Rapid Wien",
+          "form" : "3-5-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "574",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198809",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "44",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1762090200,
+        "datetime" : "2025-11-02 13:30:00",
+        "time" : "13:30:00",
+        "date" : "2025-11-02"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "4-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "4",
+        "et_score" : null,
+        "ht_score" : "2-1"
+      },
+      "round_name" : "12",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 2,
+        "away_position" : 9
+      },
+      "info" : null,
+      "id" : 2411392,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/104.png",
+          "id" : 104,
+          "short_code" : "RBS",
+          "kit_colors" : {
+            "home_gk_number_color" : "#070707",
+            "home_second_color" : "#ff0000",
+            "home_gk_second_color" : "#ffee00",
+            "home_number_color" : "#ff0000",
+            "home_main_color" : "#ffffff",
+            "home_gk_main_color" : "#ffee00"
+          },
+          "coach_id" : "6129",
+          "name" : "FC Salzburg",
+          "form" : "4-3-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e5f575",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "4-3-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "534",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2424",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198813",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "45",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1762617600,
+        "datetime" : "2025-11-08 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2025-11-08"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "13",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 11
+      },
+      "info" : null,
+      "id" : 2411411,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#e5f575"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1092.png",
+          "id" : 1092,
+          "short_code" : "BWL",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e21313",
+            "away_main_color" : "#0043b3",
+            "away_gk_number_color" : "#000000",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#ff0051",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "7199",
+          "name" : "BW Linz",
+          "form" : "3-4-2-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "708",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198815",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "47",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1763827200,
+        "datetime" : "2025-11-22 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2025-11-22"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "1-0"
+      },
+      "round_name" : "14",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 5,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2411426,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2873.png",
+          "id" : 2873,
+          "short_code" : "HTB",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#0658c6",
+            "home_gk_second_color" : "#55e452",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#0658c6",
+            "home_gk_main_color" : "#06e8ff"
+          },
+          "coach_id" : "7314",
+          "name" : "Hartberg",
+          "form" : "4-3-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e5f575",
+            "away_main_color" : "#e0cd4a",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#efcf2e",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "4-3-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "2351",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "1640",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198816",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "48",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1764432000,
+        "datetime" : "2025-11-29 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2025-11-29"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "15",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 7
+      },
+      "info" : null,
+      "id" : 2411433,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#e5f575"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2869.png",
+          "id" : 2869,
+          "short_code" : "WAC",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e96e0f",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#fafafa",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : "282",
+          "name" : "WAC",
+          "form" : "3-4-1-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "534",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198821",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "49",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1765036800,
+        "datetime" : "2025-12-06 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2025-12-06"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "1-1"
+      },
+      "round_name" : "16",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 4,
+        "away_position" : 9
+      },
+      "info" : null,
+      "id" : 2411460,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2867.png",
+          "id" : 2867,
+          "short_code" : "SCR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#000000",
+            "home_second_color" : "#fcfcfc",
+            "home_gk_second_color" : "#e59604",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#008878",
+            "home_gk_main_color" : "#e70db4"
+          },
+          "coach_id" : "6911",
+          "name" : "Rapid Wien",
+          "form" : "4-2-3-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e5f575",
+            "away_main_color" : "#ff7b00",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#060505"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-5-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "536",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "794",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198831",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "50",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1765641600,
+        "datetime" : "2025-12-13 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2025-12-13"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "3-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "3",
+        "et_score" : null,
+        "ht_score" : "1-0"
+      },
+      "round_name" : "17",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 8,
+        "away_position" : 9
+      },
+      "info" : null,
+      "id" : 2415281,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#11110f",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#11462e",
+            "home_gk_main_color" : "#e5f575"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2876.png",
+          "id" : 2876,
+          "short_code" : "ALT",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ff6f00",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#f26900",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : "8449",
+          "name" : "Altach",
+          "form" : "3-5-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "2385",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198834",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "06",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1770566400,
+        "datetime" : "2026-02-08 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2026-02-08"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "18",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 4,
+        "away_position" : 7
+      },
+      "info" : null,
+      "id" : 2411549,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2874.png",
+          "id" : 2874,
+          "short_code" : "STU",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#000000",
+            "home_gk_second_color" : "#01c4dd",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#000000",
+            "home_gk_main_color" : "#5be201"
+          },
+          "coach_id" : "8449",
+          "name" : "Sturm Graz",
+          "form" : "5-4-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e5f575",
+            "away_main_color" : "#ffff00",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "591",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "792",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198846",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "07",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1771084800,
+        "datetime" : "2026-02-14 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2026-02-14"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "1-0"
+      },
+      "round_name" : "19",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 7,
+        "away_position" : 2
+      },
+      "info" : null,
+      "id" : 2411639,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#e5f575"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/91.png",
+          "id" : 91,
+          "short_code" : "ASK",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e7e435",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#fbf9f9",
+            "away_second_color" : "#f4d205",
+            "away_gk_second_color" : "#ebebf0",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : "700",
+          "name" : "LASK",
+          "form" : "3-4-1-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "708",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198850",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "08",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1771767000,
+        "datetime" : "2026-02-22 13:30:00",
+        "time" : "13:30:00",
+        "date" : "2026-02-22"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "0-1"
+      },
+      "round_name" : "20",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 10,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2412116,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2870.png",
+          "id" : 2870,
+          "short_code" : "WSG",
+          "kit_colors" : {
+            "home_gk_number_color" : "#c7c7c7",
+            "home_second_color" : "#1ac213",
+            "home_gk_second_color" : "#f21200",
+            "home_number_color" : "#e2e2e2",
+            "home_main_color" : "#06f60f",
+            "home_gk_main_color" : "#ff1300"
+          },
+          "coach_id" : "1132",
+          "name" : "Tirol",
+          "form" : "3-4-2-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e5f575",
+            "away_main_color" : "#ffff00",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "534",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "1425",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198920",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "09",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1772380800,
+        "datetime" : "2026-03-01 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2026-03-01"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "2-0"
+      },
+      "round_name" : "21",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 11,
+        "away_position" : 7
+      },
+      "info" : null,
+      "id" : 2412137,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1095.png",
+          "id" : 1095,
+          "short_code" : "GAK",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#7c99e0",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#fa0000",
+            "home_gk_main_color" : "#a6a8a3"
+          },
+          "coach_id" : "181",
+          "name" : "Grazer AK",
+          "form" : "3-1-4-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e5f575",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-1-4-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "229",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "792",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "198924",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "11257",
+      "season_id" : "15287",
+      "week" : "10",
+      "group_name" : "Bundesliga 25\/26",
+      "stage_id" : "208",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1772985600,
+        "datetime" : "2026-03-08 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2026-03-08"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "22",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 8,
+        "away_position" : 4
+      },
+      "info" : null,
+      "id" : 2412165,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#e5f575"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-2-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2871.png",
+          "id" : 2871,
+          "short_code" : "FAK",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ffae00",
+            "away_main_color" : "#fdfdfd",
+            "away_gk_number_color" : "#000000",
+            "away_second_color" : "#fff1f3",
+            "away_gk_second_color" : "#ffff00",
+            "away_number_color" : "#4a3d69"
+          },
+          "coach_id" : "7195",
+          "name" : "Austria Wien",
+          "form" : "3-4-2-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "228",
+      "stage_name" : "Regular Season - Bundesliga 25\/26",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213050",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "11",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1773504000,
+        "datetime" : "2026-03-14 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2026-03-14"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 0,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "1-0"
+      },
+      "round_name" : "23",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2560145,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#d15e73"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "3-4-2-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2870.png",
+          "id" : 2870,
+          "short_code" : "WSG",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ff1300",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#c7c7c7",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#f21200",
+            "away_number_color" : "#019d52"
+          },
+          "coach_id" : null,
+          "name" : "Tirol",
+          "form" : "3-4-2-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : null,
+      "stage_name" : "Group stage",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213051",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "12",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1774108800,
+        "datetime" : "2026-03-21 16:00:00",
+        "time" : "16:00:00",
+        "date" : "2026-03-21"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 0,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "3-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "3",
+        "et_score" : null,
+        "ht_score" : "0-2"
+      },
+      "round_name" : "24",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2560153,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1092.png",
+          "id" : 1092,
+          "short_code" : "BWL",
+          "kit_colors" : {
+            "home_gk_number_color" : "#000000",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#ff0051",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#0043b3",
+            "home_gk_main_color" : "#e21313"
+          },
+          "coach_id" : null,
+          "name" : "BW Linz",
+          "form" : "3-4-2-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#d15e73",
+            "away_main_color" : "#ffff00",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "4-4-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : null,
+      "stage_name" : "Group stage",
+      "venue_id" : "1783382",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213227",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "14",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1775237400,
+        "datetime" : "2026-04-03 17:30:00",
+        "time" : "17:30:00",
+        "date" : "2026-04-03"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "3-2",
+        "ps_score" : null,
+        "away_score" : "2",
+        "home_score" : "3",
+        "et_score" : null,
+        "ht_score" : "0-1"
+      },
+      "round_name" : "25",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 9,
+        "away_position" : 8
+      },
+      "info" : null,
+      "id" : 2562223,
+      "leg" : null,
+      "winner_team_id" : "1080",
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#d15e73"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-1-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2876.png",
+          "id" : 2876,
+          "short_code" : "ALT",
+          "kit_colors" : {
+            "away_gk_main_color" : "#ff6f00",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#f26900",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : "4857",
+          "name" : "Altach",
+          "form" : "3-5-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "849",
+      "stage_name" : "Group stage",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213383",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "15",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1775919600,
+        "datetime" : "2026-04-11 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2026-04-11"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "0-0",
+        "ps_score" : null,
+        "away_score" : "0",
+        "home_score" : "0",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "26",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562857,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2869.png",
+          "id" : 2869,
+          "short_code" : "WAC",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#fafafa",
+            "home_number_color" : "#000000",
+            "home_main_color" : "#ffffff",
+            "home_gk_main_color" : "#106af1"
+          },
+          "coach_id" : "701",
+          "name" : "WAC",
+          "form" : "4-2-3-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#d15e73",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "534",
+      "stage_name" : "Group stage",
+      "venue_id" : "192",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213384",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "16",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1776447000,
+        "datetime" : "2026-04-17 17:30:00",
+        "time" : "17:30:00",
+        "date" : "2026-04-17"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "1-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "1",
+        "et_score" : null,
+        "ht_score" : "0-0"
+      },
+      "round_name" : "27",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562863,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1095.png",
+          "id" : 1095,
+          "short_code" : "GAK",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#7c99e0",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#fa0000",
+            "home_gk_main_color" : "#a6a8a3"
+          },
+          "coach_id" : "181",
+          "name" : "Grazer AK",
+          "form" : "3-1-4-2"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#d15e73",
+            "away_main_color" : "#ffff00",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#000000",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "3-4-3"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "772",
+      "stage_name" : "Group stage",
+      "venue_id" : "792",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213385",
+      "aggregate_id" : null,
+      "status" : 3,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "17",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : 90,
+        "timezone" : "UTC",
+        "timestamp" : 1776796200,
+        "datetime" : "2026-04-21 18:30:00",
+        "time" : "18:30:00",
+        "date" : "2026-04-21"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : "2-1",
+        "ps_score" : null,
+        "away_score" : "1",
+        "home_score" : "2",
+        "et_score" : null,
+        "ht_score" : "2-0"
+      },
+      "round_name" : "28",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562871,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#d15e73"
+          },
+          "coach_id" : "9366",
+          "name" : "SV Ried",
+          "form" : "4-2-3-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1095.png",
+          "id" : 1095,
+          "short_code" : "GAK",
+          "kit_colors" : {
+            "away_gk_main_color" : "#a6a8a3",
+            "away_main_color" : "#1e43a0",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#7c99e0",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : "181",
+          "name" : "Grazer AK",
+          "form" : "3-1-4-2"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Finished",
+      "referee_id" : "1421",
+      "stage_name" : "Group stage",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213386",
+      "aggregate_id" : null,
+      "status" : 0,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "17",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : null,
+        "timezone" : "UTC",
+        "timestamp" : 1777129200,
+        "datetime" : "2026-04-25 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2026-04-25"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : null,
+        "ps_score" : null,
+        "away_score" : null,
+        "home_score" : null,
+        "et_score" : null,
+        "ht_score" : null
+      },
+      "round_name" : "29",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562876,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2870.png",
+          "id" : 2870,
+          "short_code" : "WSG",
+          "kit_colors" : {
+            "home_gk_number_color" : "#c7c7c7",
+            "home_second_color" : "#ffffff",
+            "home_gk_second_color" : "#f21200",
+            "home_number_color" : "#019d52",
+            "home_main_color" : "#ffffff",
+            "home_gk_main_color" : "#ff1300"
+          },
+          "coach_id" : null,
+          "name" : "Tirol",
+          "form" : "3-4-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#d15e73",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "4-2-3-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Notstarted",
+      "referee_id" : null,
+      "stage_name" : "Group stage",
+      "venue_id" : "1425",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213387",
+      "aggregate_id" : null,
+      "status" : 0,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "18",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : null,
+        "timezone" : "UTC",
+        "timestamp" : 1777734000,
+        "datetime" : "2026-05-02 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2026-05-02"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : null,
+        "ps_score" : null,
+        "away_score" : null,
+        "home_score" : null,
+        "et_score" : null,
+        "ht_score" : null
+      },
+      "round_name" : "30",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562881,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#d15e73"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "4-2-3-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1092.png",
+          "id" : 1092,
+          "short_code" : "BWL",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e21313",
+            "away_main_color" : "#0043b3",
+            "away_gk_number_color" : "#000000",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#ff0051",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : null,
+          "name" : "BW Linz",
+          "form" : "5-4-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Notstarted",
+      "referee_id" : null,
+      "stage_name" : "Group stage",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213388",
+      "aggregate_id" : null,
+      "status" : 0,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "19",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : null,
+        "timezone" : "UTC",
+        "timestamp" : 1778338800,
+        "datetime" : "2026-05-09 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2026-05-09"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : null,
+        "ps_score" : null,
+        "away_score" : null,
+        "home_score" : null,
+        "et_score" : null,
+        "ht_score" : null
+      },
+      "round_name" : "31",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562887,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#030b0a",
+            "home_gk_second_color" : "#6fc0e9",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#046261",
+            "home_gk_main_color" : "#d15e73"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "4-2-3-1"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2869.png",
+          "id" : 2869,
+          "short_code" : "WAC",
+          "kit_colors" : {
+            "away_gk_main_color" : "#e96e0f",
+            "away_main_color" : "#ffffff",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#ffffff",
+            "away_gk_second_color" : "#fafafa",
+            "away_number_color" : "#000000"
+          },
+          "coach_id" : null,
+          "name" : "WAC",
+          "form" : "3-4-2-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Notstarted",
+      "referee_id" : null,
+      "stage_name" : "Group stage",
+      "venue_id" : "2443",
+      "attendance" : null,
+      "pitch" : null
+    },
+    {
+      "status_period" : null,
+      "round_id" : "213389",
+      "aggregate_id" : null,
+      "status" : 0,
+      "group_id" : "13063",
+      "season_id" : "15287",
+      "week" : "20",
+      "group_name" : "Bundesliga 25\/26, Relegation Round",
+      "stage_id" : "6",
+      "time" : {
+        "minute" : null,
+        "timezone" : "UTC",
+        "timestamp" : 1778943600,
+        "datetime" : "2026-05-16 15:00:00",
+        "time" : "15:00:00",
+        "date" : "2026-05-16"
+      },
+      "assistants" : {
+        "first_assistant_id" : null,
+        "second_assistant_id" : null,
+        "fourth_assistant_id" : null
+      },
+      "coverage" : {
+        "has_tvs" : 1,
+        "has_lineups" : 1,
+        "has_standings" : 0
+      },
+      "deleted" : "0",
+      "scores" : {
+        "ft_score" : null,
+        "ps_score" : null,
+        "away_score" : null,
+        "home_score" : null,
+        "et_score" : null,
+        "ht_score" : null
+      },
+      "round_name" : "32",
+      "related_id" : null,
+      "standings" : {
+        "home_position" : 0,
+        "away_position" : 0
+      },
+      "info" : null,
+      "id" : 2562895,
+      "leg" : null,
+      "winner_team_id" : null,
+      "season_name" : "25\/26",
+      "teams" : {
+        "home" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/2876.png",
+          "id" : 2876,
+          "short_code" : "ALT",
+          "kit_colors" : {
+            "home_gk_number_color" : "#ffffff",
+            "home_second_color" : "#000000",
+            "home_gk_second_color" : "#f26900",
+            "home_number_color" : "#ffffff",
+            "home_main_color" : "#000000",
+            "home_gk_main_color" : "#ff6f00"
+          },
+          "coach_id" : null,
+          "name" : "Altach",
+          "form" : "3-4-3"
+        },
+        "away" : {
+          "img" : "https:\/\/cdn.soccersapi.com\/images\/soccer\/teams\/80\/1080.png",
+          "id" : 1080,
+          "short_code" : "SVR",
+          "kit_colors" : {
+            "away_gk_main_color" : "#d15e73",
+            "away_main_color" : "#046261",
+            "away_gk_number_color" : "#ffffff",
+            "away_second_color" : "#030b0a",
+            "away_gk_second_color" : "#6fc0e9",
+            "away_number_color" : "#ffffff"
+          },
+          "coach_id" : null,
+          "name" : "SV Ried",
+          "form" : "4-2-3-1"
+        }
+      },
+      "league" : {
+        "id" : 1005,
+        "country_name" : "Austria",
+        "country_code" : "at",
+        "type" : "Bundesliga, Relegation Round",
+        "country_id" : "15",
+        "name" : "Tipico Bundesliga",
+        "country_flag" : "https:\/\/cdn.soccersapi.com\/images\/countries\/30\/at.png"
+      },
+      "weather_report" : null,
+      "status_name" : "Notstarted",
+      "referee_id" : null,
+      "stage_name" : "Group stage",
+      "venue_id" : "191",
+      "attendance" : null,
+      "pitch" : null
     }
   ]
 }
