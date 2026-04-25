@@ -17,9 +17,27 @@
 		63331EA72D422A4A007D88F5 /* ScoreMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		63D5B0012FD36F8500A1B2C3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"DI/README.md",
+				"Model/README.md",
+				"Network/README.md",
+				"Screens/README.md",
+				"UI/Components/README.md",
+				"UI/README.md",
+			);
+			target = 63331EA62D422A4A007D88F5 /* ScoreMate */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		63331EA92D422A4A007D88F5 /* ScoreMate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				63D5B0012FD36F8500A1B2C3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
+			);
 			path = ScoreMate;
 			sourceTree = "<group>";
 		};
